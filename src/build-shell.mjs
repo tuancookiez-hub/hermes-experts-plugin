@@ -41,7 +41,11 @@ const registry = JSON.parse(fs.readFileSync(path.join(here, 'registry.json'), 'u
 // it must never promise). The agency-agents source contracts stay verbatim; the
 // remap is injected at build time, not laundered into the MIT text.
 const capabilities = fs.readFileSync(path.join(here, 'shared', 'capabilities.md'), 'utf8').trim()
-const soloTail = (fs.readFileSync(path.join(here, 'shared', 'solo-tail.md'), 'utf8').trim() + '\n\n' + capabilities).trim()
+// Phase 4 anti-slop standard: every solo agent must follow one INPUT/OUTPUT
+// contract + hard constraints + named failure traps. Injected at build time, so
+// the verbatim agency-agents contracts stay attribution-safe.
+const ioContract = fs.readFileSync(path.join(here, 'shared', 'io-contract.md'), 'utf8').trim()
+const soloTail = (fs.readFileSync(path.join(here, 'shared', 'solo-tail.md'), 'utf8').trim() + '\n\n' + capabilities + '\n\n' + ioContract).trim()
 const today = new Date().toISOString().slice(0, 10)
 
 const data = {

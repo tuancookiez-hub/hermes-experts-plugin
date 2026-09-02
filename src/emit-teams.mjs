@@ -103,6 +103,9 @@ domains.forEach((domain, i) => {
   for (const a of agents) byId[a.id] = a
 
   const capabilities = fs.readFileSync(path.join(sharedDir, 'capabilities.md'), 'utf8').trim()
+  // Phase 4 anti-slop standard: every lead enforces one INPUT/OUTPUT contract +
+  // hard constraints + named failure traps on its members. Injected at build time.
+  const ioContract = fs.readFileSync(path.join(sharedDir, 'io-contract.md'), 'utf8').trim()
 
   const subteams = compositions[domain]
   if (Array.isArray(subteams) && subteams.length) {
@@ -138,7 +141,7 @@ domains.forEach((domain, i) => {
       const leadTail = fs
         .readFileSync(path.join(sharedDir, 'team-lead-tail.md'), 'utf8')
         .trim()
-      const leadTailFull = (leadTail + '\n\n' + capabilities).trim()
+      const leadTailFull = (leadTail + '\n\n' + capabilities + '\n\n' + ioContract).trim()
 
       const membersMap = {}
       for (const a of members) membersMap[a.id] = a.contract

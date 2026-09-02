@@ -27,7 +27,8 @@ import http from 'node:http'
 const here = path.dirname(fileURLToPath(import.meta.url))
 const registry = JSON.parse(fs.readFileSync(path.join(here, 'src', 'registry.json'), 'utf8'))
 const soloTail = (fs.readFileSync(path.join(here, 'src', 'shared', 'solo-tail.md'), 'utf8').trim() + '\n\n' +
-  fs.readFileSync(path.join(here, 'src', 'shared', 'capabilities.md'), 'utf8').trim()).trim()
+  fs.readFileSync(path.join(here, 'src', 'shared', 'capabilities.md'), 'utf8').trim() + '\n\n' +
+  fs.readFileSync(path.join(here, 'src', 'shared', 'io-contract.md'), 'utf8').trim()).trim()
 
 const fail = []
 const assert = (cond, msg) => { if (!cond) fail.push(msg) }
@@ -75,9 +76,15 @@ function checkPayload(payload, label, team) {
   assert(/Tool reality in this environment/.test(sampleP), label + ': solo persona carries the Hermes capability map')
   assert(/web search toolset/.test(sampleP), label + ': capability map remaps WebSearch -> web search')
   assert(/do not reference, do not promise/.test(sampleP), label + ': capability map names the unavailable tools')
+  // Phase 4 anti-slop standard: every solo agent must follow one INPUT/OUTPUT
+  // contract + hard constraints + named failure traps.
+  assert(/Anti-Slop Contract Standard/.test(sampleP), label + ': solo persona carries the anti-slop I/O standard')
+  assert(/Named failure traps/.test(sampleP), label + ': solo persona carries the named failure traps')
   const lp = leadPersona(payload.leadHead, payload.leadTail, team.members.map((m) => ({ contract: payload.members[m.id] })))
   assert(lp.length > 2000 && lp.includes(team.lead.name), label + ': lead persona built and names the lead')
   assert(/Tool reality in this environment/.test(lp), label + ': lead persona carries the Hermes capability map')
+  assert(/Anti-Slop Contract Standard/.test(lp), label + ': lead persona carries the anti-slop I/O standard')
+  assert(/No fabricated evidence/.test(lp), label + ': lead persona carries the hard constraints')
   console.log('  members        :', keys.length)
   console.log('  missing/short  :', missing + ' / ' + short)
   console.log('  lead persona   :', lp.length, 'chars')
