@@ -1,5 +1,7 @@
 # Hermes Experts Plugin
 
+![Hero banner](assets/hero-banner.png)
+
 A **download-on-demand** expert catalog for [Hermes Desktop](https://hermes-agent.nousresearch.com).
 Instead of bundling every expert's full persona into the plugin, the plugin
 ships a lightweight **registry** (names, roles, tags) and fetches each team's
@@ -67,3 +69,12 @@ plugin.js  ──bundled registry──▶  all teams browseable offline
 - **Expert content:** MIT, adapted from `msitarzewski/agency-agents` with
   attribution — see `NOTICE-agency-agents.md` and `CONTENT-LICENSE.md`.
 - **Original signature teams:** authored from scratch; see `CONTENT-LICENSE.md`.
+- The WorkBuddy-derived teams from earlier local builds are **not** included
+  here.
+
+## Demo
+
+![Expert Center demo](assets/demo-expert-center.png)
+
+The Expert Center view inside Hermes Desktop: browse 55 teams / 353 experts,
+install a team to cache its contracts locally, or summon any expert on the fly.
