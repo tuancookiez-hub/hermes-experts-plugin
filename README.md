@@ -67,5 +67,3 @@ plugin.js  ──bundled registry──▶  all teams browseable offline
 - **Expert content:** MIT, adapted from `msitarzewski/agency-agents` with
   attribution — see `NOTICE-agency-agents.md` and `CONTENT-LICENSE.md`.
 - **Original signature teams:** authored from scratch; see `CONTENT-LICENSE.md`.
-- The WorkBuddy-derived teams from earlier local builds are **not** included
-  here.
