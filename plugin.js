@@ -31,8 +31,9 @@
  *   see NOTICE-agency-agents.md in the repo. The public catalog deliberately
  *   excludes the WorkBuddy-derived teams that exist only in the local build.
  *
- *   A team here is a DOMAIN (e.g. marketing): one synthetic lead that
- *   orchestrates the domain's specialists, plus those specialists as members.
+ *   A team here is a curated GROUP of specialists (e.g. the marketing domain is
+ *   split into sub-teams like Search & AEO, China Social, E-Commerce). Each team
+ *   has a specialized lead that orchestrates its members, plus those members.
  *   Installing a team caches every contract; summoning any expert auto-installs
  *   its team on the fly.
  *
