@@ -11,10 +11,10 @@ We are building a **download-on-demand expert catalog plugin** for **Hermes
 Desktop**. The plugin ships a small registry of experts; the full persona
 prose for each team lives in `teams/<id>.json` on GitHub and is fetched +
 cached in `localStorage` the first time the user installs or summons that
-team. Phase 1 (the foundation: repo scaffold + build split + downloader) is
-**done, verified, and pushed to GitHub**. Phases 2–6 (capability remap, richer
-teams, output contracts, original signature teams, bulk import of the rest of
-the catalog) are still open.
+team. Phase 1 (foundation), Phase 2 (capability remap), Phase 3 (composition into
+curated sub-teams), and Phase 4 (anti-slop I/O contract standard) are **done,
+verified, and pushed to GitHub**. Phases 5–6 (original signature teams, bulk
+import + publish) are open.
 
 Repo: `https://github.com/tuancookiez-hub/hermes-experts-plugin` (branch `main`)
 Local copy: `C:/Users/tuanc/hermes-experts-plugin`
@@ -78,11 +78,11 @@ Local copy: `C:/Users/tuanc/hermes-experts-plugin`
 
 ---
 
-## 3. Current state (Phase 1 complete)
+## 3. Current state (Phase 3 complete)
 
 Files in the repo (`C:/Users/tuanc/hermes-experts-plugin`):
 
-- `plugin.js` — **built artifact, 110 KB.** The installable plugin. Pushed.
+- `plugin.js` — **built artifact, ~120 KB.** The installable plugin. Pushed.
 - `src/template.js` — the runtime UI + downloader. `DATA` is injected at the
   `/*__DATA__*/` marker. Key functions: `ensurePayload`, `augmentTeam`,
   `isInstalled`, `installTeam`, `uninstallTeam`, `exportCache`, `importCache`.
@@ -92,7 +92,10 @@ Files in the repo (`C:/Users/tuanc/hermes-experts-plugin`):
   One entry per domain/team. `DATA.registry` in the built plugin.
 - `src/emit-teams.mjs` — reads `src/agency/<domain>/*.json`, writes
   `teams/<id>.json` (payload) + `src/registry.json`. Run: `node src/emit-teams.mjs`
-  (optionally `marketing` to limit to one domain).
+  (optionally `marketing` to limit to one domain). **Phase 3:** if `src/compositions.json`
+  has an entry for the domain, it emits ONE sub-team per curated group (using
+  `team-lead-head.md`/`team-lead-tail.md` + capability map); otherwise it falls
+  back to the original flat one-team-per-domain behaviour (`domain-lead-head/tail`).
 - `src/build-shell.mjs` — reads `src/registry.json` + `src/shared/solo-tail.md`,
   injects into `src/template.js` → `plugin.js`. Run:
   `node src/build-shell.mjs [--ref <git-ref>] [--out <path>]`.
@@ -101,15 +104,30 @@ Files in the repo (`C:/Users/tuanc/hermes-experts-plugin`):
   `{ id, name, role, remit, owns, tags, skills, contract, _source }`.
 - `src/shared/domain-lead-head.md` + `domain-lead-tail.md` — generic synthetic
   domain-orchestrator lead (WorkBuddy-style iron rules / parameter card /
-  routing / quality bar). `emit-teams.mjs` fills `{DOMAIN}`/`{COUNT}`.
+  routing / quality bar). `emit-teams.mjs` fills `{DOMAIN}`/`{COUNT}`. Used by the
+  flat (non-composed) fallback path.
+- `src/shared/team-lead-head.md` + `team-lead-tail.md` — **Phase 3** specialized
+  COMPOSED-team lead. `team-lead-head.md` uses `{NAME}`/`{COUNT}`/`{FOCUS}` (a
+  focused team lead instead of the flat domain-lead); `team-lead-tail.md` is the
+  parameter card. Consumed when a domain has a `src/compositions.json` entry.
+- `src/compositions.json` — **Phase 3** curated sub-team map keyed by domain. Each
+  entry lists `id` / `name` / `focus` / `tone` (one of the 6 UI tones) / `members[]`
+  (agent ids). Domains with no entry fall back to flat.
 - `src/shared/solo-tail.md` — shared tail appended to every solo persona.
+- `src/shared/capabilities.md` — **Phase 2** Hermes tool-reality map, injected into
+  every persona (soloTail + leadTail) at build time.
+- `src/shared/io-contract.md` — **Phase 4** anti-slop standard (INPUT/OUTPUT contract
+  + hard constraints + named failure traps), injected into every persona alongside
+  `capabilities.md` at build time.
 - `verify-render.mjs`, `verify-pipeline.mjs` — the two verification harnesses
   (see §5).
 - `LICENSE` (MIT for code), `NOTICE-agency-agents.md`, `CONTENT-LICENSE.md`,
   `README.md`, `.gitignore`.
 
-First catalog entry: **Marketing** = 1 synthetic lead + 36 agents (agency-agents
-MIT). `teams/marketing.json` = 467 KB, all 36 contracts non-empty.
+First catalog entry: **Marketing** is now 6 curated sub-teams (agency-agents MIT,
+36 agents total) instead of one flat blob — `search-aeo` (6), `western-social` (8),
+`china-social` (8), `media-production` (5), `ecommerce` (4), `content-comms` (5).
+Each payload is 54–97 KB; all 36 contracts non-empty. Defined in `src/compositions.json`.
 
 **Phase 2 (capability remap, #6) DONE:** a Hermes tool-reality map lives in
 `src/shared/capabilities.md` and is injected into **every** solo persona (via
@@ -118,6 +136,17 @@ tools (WebSearch/WebFetch/Read/Write/Edit/Task/Bash) to Hermes equivalents and
 names the unavailable tools (publishing APIs, WorkBuddy model IDs, voice cloning,
 lip sync, 3D gen). The agency-agents source contracts stay **verbatim** — the
 remap is injected, not laundered into the MIT text.
+
+**Phase 4 (anti-slop I/O standard, #8) DONE:** `src/shared/io-contract.md` defines a
+universal INPUT/OUTPUT contract + hard constraints + named failure traps, injected
+into **every** solo persona (`build-shell.mjs` → `soloTail`) and lead persona
+(`emit-teams.mjs` → `leadTail`) at build time — the same pattern as Phase 2. It
+stops confident slop: fabricated stats/citations, unkeepable promises (viral/#1/
+guaranteed), off-language output, and hidden tool gaps. The agency-agents source
+contracts stay **verbatim** — the standard is injected, not laundered. `verify-pipeline.mjs`
+asserts the standard reaches both solo + lead personas (Part A static + Part B local
+HTTP); Part C is structural-only because raw.githubusercontent.com is CDN-lagged.
+plugin.js ~117 → ~120 KB.
 
 **Local build `.13` is untouched** (413 KB, 8 WorkBuddy teams / 53 experts at
 `desktop-plugins/experts/plugin.js`). Do not overwrite it unless the user asks.
@@ -134,10 +163,14 @@ node verify-render.mjs         # mounts the page (stub host); 5 passes; bare-spe
 node verify-pipeline.mjs       # all agents resolve + build valid personas (static + live HTTP)
 ```
 
-`verify-pipeline.mjs` also confirms the REAL GitHub raw URL
-(`https://raw.githubusercontent.com/tuancookiez-hub/hermes-experts-plugin/main/teams/marketing.json`)
-returns HTTP 200. Always run both verifies after changing `src/template.js`,
-`emit-teams.mjs`, the shared lead files, or the agency data.
+`verify-pipeline.mjs` proves every agent (static + local HTTP) AND that every
+payload is live on GitHub. Part C is structural-only (existence + valid shape) — it
+is skipped when there is no network and fails on a 404 (catches a forgotten push);
+it does NOT content-assert the raw URL because raw.githubusercontent.com is CDN-cached
+and lags behind a push. The deep content checks (capability map + anti-slop standard)
+run on the local files in Part A/B, which are authoritative. Always run both verifies
+after changing `src/template.js`, `emit-teams.mjs`, `src/compositions.json`, the
+shared lead/contract files, or the agency data.
 
 To add a new domain from agency-agents: run `_import-agency.mjs <domain>` in the
 *other* tree (`.../experts-src/`), copy the resulting `experts/<domain>/*.json`
@@ -146,25 +179,25 @@ into `src/agency/<domain>/`, copy `experts/registry.json` if needed, then
 
 ---
 
-## 5. Open work (Phases 3–6)
+## 5. Open work (Phases 5–6)
 
-Tasks exist in the tracker: #7–#10 (Phase 2 / #6 is DONE). Each phase should end
-in working software.
+Phases 1–4 are DONE and pushed. Tasks #9–#10 remain. Each phase should end in
+working software.
 
 - **#6 Capability remap (Phase 2) — DONE.** See §3. The pattern to reuse: add a
   `src/shared/<topic>.md` and inject it into `soloTail` (build-shell.mjs) and
   `leadTail` (emit-teams.mjs). Keep agency-agents contracts verbatim.
-- **#7 Composition (Phase 3):** Audit Hermes's actual toolsets and rewrite
-  the Claude-Code tool names the agency agents reference (WebSearch / WebFetch /
-  Read / Write / Edit / Task / Bash) into Hermes equivalents. Add explicit
-  "what you CANNOT execute here" sections. Hermes has: `image_generate`,
-  `video_generate`, `vision_analyze` (images only), ffmpeg/whisper via terminal.
-  NOT available: WorkBuddy model IDs, publishing APIs, voice cloning, lip sync.
-- **#7 Composition (Phase 3):** Curate the flat solo agents into richer multi-
-  member teams with real leads + parameter cards (go beyond the synthetic
-  domain-lead). This is where the catalog becomes a *product*, not a dump.
-- **#8 Contracts (Phase 4):** Give every agent an INPUT/OUTPUT contract + hard
-  constraints + named failure traps (the anti-slop persona standard).
+- **#7 Composition (Phase 3) — DONE.** Marketing is no longer one flat 36-agent
+  blob: `src/compositions.json` curates it into 6 focused sub-teams, each with a
+  specialized lead (`team-lead-head.md` {NAME}/{COUNT}/{FOCUS}) + parameter card
+  (`team-lead-tail.md`) + the capability map. `emit-teams.mjs` emits one payload +
+  registry entry per sub-team; domains with no composition fall back to flat. The
+  stale `teams/marketing.json` was deleted. To compose another domain, add an
+  entry to `src/compositions.json` and re-run emit + build + verifies.
+- **#8 Contracts / anti-slop standard (Phase 4) — DONE.** Every agent follows a
+  universal INPUT/OUTPUT contract + hard constraints + named failure traps via
+  `src/shared/io-contract.md`, injected at build time (see §3). The standard is
+  generic across agents; per-agent bespoke contracts remain a possible deeper cut.
 - **#9 Original signature teams (Phase 5):** Author a few fully-original teams
   from scratch (no upstream source) — owned IP, the "signature" differentiator.
 - **#10 Bulk import + publish (Phase 6):** Import the remaining ~16 domains
@@ -200,9 +233,9 @@ Standing rules:
 
 ## 7. One-line restart for the next agent
 
-"Continue the Hermes Experts plugin (download-on-demand catalog). Phases 1–2 are
+"Continue the Hermes Experts plugin (download-on-demand catalog). Phases 1–4 are
 done and pushed to `tuancookiez-hub/hermes-experts-plugin`. Next: pick up at
-Task #7 (composition) — read `HANDOFF.md` and `MEMORY.md` in the repo/memory
+Task #9 (original signature teams) — read `HANDOFF.md` and `MEMORY.md` in the repo/memory
 first, then run `node src/emit-teams.mjs && node src/build-shell.mjs && node
 verify-render.mjs && node verify-pipeline.mjs` to confirm green before changing
 anything."
