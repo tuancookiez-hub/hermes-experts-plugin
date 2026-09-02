@@ -14,7 +14,9 @@ cached in `localStorage` the first time the user installs or summons that
 team. Phase 1 (foundation), Phase 2 (capability remap), Phase 3 (composition into
 curated sub-teams), and Phase 4 (anti-slop I/O contract standard) are **done,
 verified, and pushed to GitHub**. Phases 5–6 (original signature teams, bulk
-import + publish) are open.
+import + publish) are **done, verified, and pushed** — see §3 for the final catalog
+(55 teams / 298 agents + 55 leads = 353 summonable experts, 5 of them owned
+originals, payload ref pinned to `v1.0.0`).
 
 Repo: `https://github.com/tuancookiez-hub/hermes-experts-plugin` (branch `main`)
 Local copy: `C:/Users/tuanc/hermes-experts-plugin`
@@ -82,7 +84,8 @@ Local copy: `C:/Users/tuanc/hermes-experts-plugin`
 
 Files in the repo (`C:/Users/tuanc/hermes-experts-plugin`):
 
-- `plugin.js` — **built artifact, ~120 KB.** The installable plugin. Pushed.
+- `plugin.js` — **built artifact, ~472 KB** (registry + UI; contracts stay on GitHub). Pinned to
+  `v1.0.0` via `src/release.json`. The installable plugin. Pushed.
 - `src/template.js` — the runtime UI + downloader. `DATA` is injected at the
   `/*__DATA__*/` marker. Key functions: `ensurePayload`, `augmentTeam`,
   `isInstalled`, `installTeam`, `uninstallTeam`, `exportCache`, `importCache`.
@@ -99,9 +102,18 @@ Files in the repo (`C:/Users/tuanc/hermes-experts-plugin`):
 - `src/build-shell.mjs` — reads `src/registry.json` + `src/shared/solo-tail.md`,
   injects into `src/template.js` → `plugin.js`. Run:
   `node src/build-shell.mjs [--ref <git-ref>] [--out <path>]`.
-- `src/agency/<domain>/*.json` — the converted upstream agents (source of
-  payloads). Currently only `marketing/` (36 agents). Each has
-  `{ id, name, role, remit, owns, tags, skills, contract, _source }`.
+- `src/agency/<domain>/*.json` — the converted upstream MIT agents (source of
+  payloads). All 18 converted domains now present (academic, design, engineering,
+  finance, game-development, gis, healthcare, marketing, paid-media, product,
+  project-management, research, sales, security, specialized, support, testing,
+  spatial-computing). Each has `{ id, name, role, remit, owns, tags, skills, contract, _source }`.
+- `src/original/<team>/team.json` + members — **owned-IP** teams. emit-teams Phase 5 reads
+  this layout and sets `original:true` (the ONLY path that does). 5 teams: build-ship,
+  second-brain, shipit, founderstory, firstrevenue (15 agents). Authored via
+  `scripts/author-original.mjs`. Do NOT route these through `src/agency/` or `compositions.json`.
+- `src/release.json` — **single source of truth for the payload ref** (`ref:"v1.0.0"`).
+  build-shell.mjs bakes it into `DATA.github.ref`/`DATA.base`; verify-pipeline.mjs Part C
+  proves the SAME immutable tag over the network.
 - `src/shared/domain-lead-head.md` + `domain-lead-tail.md` — generic synthetic
   domain-orchestrator lead (WorkBuddy-style iron rules / parameter card /
   routing / quality bar). `emit-teams.mjs` fills `{DOMAIN}`/`{COUNT}`. Used by the
@@ -147,6 +159,15 @@ contracts stay **verbatim** — the standard is injected, not laundered. `verify
 asserts the standard reaches both solo + lead personas (Part A static + Part B local
 HTTP); Part C is structural-only because raw.githubusercontent.com is CDN-lagged.
 plugin.js ~117 → ~120 KB.
+
+**FINAL RELEASE STATE (2026-09-02, all phases done):** `v1.0.0` tagged + pushed
+(commit `d56d2b1`). Catalog = **55 teams / 298 member agents + 55 team leads = 353
+summonable experts** across 18 MIT domains + 5 owned original teams. `plugin.js` ~472 KB.
+Both harnesses GREEN: `verify-render.mjs` (5 passes, bare-spec CLEAN) and
+`verify-pipeline.mjs` (static + local HTTP + GitHub raw @ `v1.0.0` = 55/55). To add a
+domain later, run `src/import-agency.mjs`, drop the JSON into `src/agency/<domain>/`,
+add a `compositions.json` entry if large, then `emit-teams.mjs` + `build-shell.mjs` +
+both verifies; commit `plugin.js` + `teams/` + `src/registry.json` together.
 
 **Local build `.13` is untouched** (413 KB, 8 WorkBuddy teams / 53 experts at
 `desktop-plugins/experts/plugin.js`). Do not overwrite it unless the user asks.
@@ -198,11 +219,14 @@ working software.
   universal INPUT/OUTPUT contract + hard constraints + named failure traps via
   `src/shared/io-contract.md`, injected at build time (see §3). The standard is
   generic across agents; per-agent bespoke contracts remain a possible deeper cut.
-- **#9 Original signature teams (Phase 5):** Author a few fully-original teams
-  from scratch (no upstream source) — owned IP, the "signature" differentiator.
-- **#10 Bulk import + publish (Phase 6):** Import the remaining ~16 domains
-  (~362 agents), verify, **pin a release tag** and point `DATA.github.ref` at it,
-  publish. Keep the 8 WorkBuddy teams out permanently.
+- **#9 Original signature teams (Phase 5):** **DONE.** 5 owned-original teams
+  (build-ship, second-brain, shipit, founderstory, firstrevenue) authored via
+  `scripts/author-original.mjs` into `src/original/<team>/team.json` + members; emit flags
+  them `original:true`. 15 new agents across shipit/founderstory/firstrevenue.
+- **#10 Bulk import + publish (Phase 6):** **DONE.** All 18 MIT domains imported
+  (~283 converted agents), composed into 52 sub-teams + 3 flat, verify-pipeline hardened
+  (Part C structural-only for CDN lag), `src/release.json` pins `v1.0.0`, built + tagged +
+  pushed. 55 teams / 298 agents total. The 8 WorkBuddy teams stayed out permanently.
 
 Standing rules:
 - Public repo = agency-agents MIT catalog only. Never add the 8 WorkBuddy teams.
@@ -233,9 +257,9 @@ Standing rules:
 
 ## 7. One-line restart for the next agent
 
-"Continue the Hermes Experts plugin (download-on-demand catalog). Phases 1–4 are
-done and pushed to `tuancookiez-hub/hermes-experts-plugin`. Next: pick up at
-Task #9 (original signature teams) — read `HANDOFF.md` and `MEMORY.md` in the repo/memory
-first, then run `node src/emit-teams.mjs && node src/build-shell.mjs && node
-verify-render.mjs && node verify-pipeline.mjs` to confirm green before changing
-anything."
+"All phases (1–6) of the Hermes Experts plugin are DONE and pushed to
+`tuancookiez-hub/hermes-experts-plugin` @ `v1.0.0` — a complete MIT catalog
+(55 teams / 298 agents + 55 leads, 5 owned originals). To change anything, read
+`HANDOFF.md` + `MEMORY.md` first, edit under `src/`, then run
+`node src/emit-teams.mjs && node src/build-shell.mjs && node verify-render.mjs &&
+node verify-pipeline.mjs` to confirm green, bump `src/release.json` + tag, and push."
