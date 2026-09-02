@@ -9,6 +9,22 @@ full contract from this repository the moment you install or summon it. That
 keeps `plugin.js` small (~80 KB) no matter how many experts the catalog grows
 to.
 
+**55 teams · 298 agents + 55 leads · 353 summonable experts · MIT-licensed.**
+
+> **Maintainer note:** `HANDOFF.md` is the agent-friendly handoff (build order,
+> gotchas, when to push). This README is the public-facing entry point.
+
+## Quick start
+
+1. Download `plugin.js` from the latest release.
+2. Drop it into `<HERMES_HOME>/desktop-plugins/experts/plugin.js`.
+3. Open Hermes Desktop → click **Experts** in the left rail.
+4. Pick a team → click **Install** to cache contracts locally, or **Summon**
+   any expert on the fly (the team auto-installs on first use).
+5. After that it works offline.
+
+## Features
+
 - Browse the whole catalog **offline** (registry is bundled).
 - **Install** a team → its contracts are fetched from GitHub and cached in
   `localStorage`, so it works with no network afterwards.

@@ -1,0 +1,27 @@
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Render check (5 passes, bare-spec CLEAN)
+        run: node verify-render.mjs
+
+      - name: Pipeline check (55/55 static + HTTP + GitHub raw)
+        env:
+          GITHUB_REF: ${{ github.ref_name }}
+        run: node verify-pipeline.mjs
