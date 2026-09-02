@@ -36,7 +36,12 @@ const GITHUB = {
 }
 
 const registry = JSON.parse(fs.readFileSync(path.join(here, 'registry.json'), 'utf8'))
-const soloTail = fs.readFileSync(path.join(here, 'shared', 'solo-tail.md'), 'utf8').trim()
+// Phase 2 capability remap: the shared solo tail is appended with the Hermes
+// tool-reality map so EVERY solo agent knows how to actually execute (and what
+// it must never promise). The agency-agents source contracts stay verbatim; the
+// remap is injected at build time, not laundered into the MIT text.
+const capabilities = fs.readFileSync(path.join(here, 'shared', 'capabilities.md'), 'utf8').trim()
+const soloTail = (fs.readFileSync(path.join(here, 'shared', 'solo-tail.md'), 'utf8').trim() + '\n\n' + capabilities).trim()
 const today = new Date().toISOString().slice(0, 10)
 
 const data = {

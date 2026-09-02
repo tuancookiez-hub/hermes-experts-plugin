@@ -94,11 +94,16 @@ domains.forEach((domain, i) => {
     .replace(/\{DOMAIN\}/g, titleCase(domain))
     .replace(/\{COUNT\}/g, String(agents.length))
     .trim()
+  // Phase 2 capability remap: every lead gets the Hermes tool-reality map too,
+  // so the orchestrator routes on what actually exists (publishing APIs, voice
+  // cloning, lip sync, WorkBuddy model IDs are named as unavailable).
+  const capabilities = fs.readFileSync(path.join(here, 'shared', 'capabilities.md'), 'utf8').trim()
+  const leadTailFull = (leadTail + '\n\n' + capabilities).trim()
 
   // ── payload (the heavy file fetched on install) ──
   const membersMap = {}
   for (const a of agents) membersMap[a.id] = a.contract
-  const payload = { id: domain, leadHead: leadHead, leadTail: leadTail, members: membersMap }
+  const payload = { id: domain, leadHead: leadHead, leadTail: leadTailFull, members: membersMap }
   fs.writeFileSync(path.join(teamsDir, domain + '.json'), JSON.stringify(payload, null, 2))
 
   // ── registry entry (lightweight, bundled) ──

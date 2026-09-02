@@ -22,7 +22,8 @@ import { bareSpecifiers } from './src/bare-specifiers.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 const registry = JSON.parse(fs.readFileSync(path.join(here, 'src', 'registry.json'), 'utf8'))
-const soloTail = fs.readFileSync(path.join(here, 'src', 'shared', 'solo-tail.md'), 'utf8').trim()
+const soloTail = (fs.readFileSync(path.join(here, 'src', 'shared', 'solo-tail.md'), 'utf8').trim() + '\n\n' +
+  fs.readFileSync(path.join(here, 'src', 'shared', 'capabilities.md'), 'utf8').trim()).trim()
 const team = registry[0]
 const teamId = team.id
 const memberIds = team.members.map((m) => m.id)
@@ -65,8 +66,15 @@ function checkPayload(payload, label) {
   assert(missing === 0, label + ': every registry member resolves to a contract (' + missing + ' missing)')
   assert(short === 0, label + ': every contract is substantial (>400 chars) (' + short + ' too short)')
   assert(named === memberIds.length, label + ': solo persona built for all ' + memberIds.length + ' (' + named + ')')
+  // Phase 2 capability remap: the Hermes tool-reality map must reach BOTH the
+  // solo persona (via soloTail) and the lead persona (via leadTail).
+  const sampleP = soloPersona({ name: team.members[0].name, role: team.members[0].role, contract: payload.members[team.members[0].id] }, team.name)
+  assert(/Tool reality in this environment/.test(sampleP), label + ': solo persona carries the Hermes capability map')
+  assert(/web search toolset/.test(sampleP), label + ': capability map remaps WebSearch -> web search')
+  assert(/do not reference, do not promise/.test(sampleP), label + ': capability map names the unavailable tools')
   const lp = leadPersona(payload.leadHead, payload.leadTail, team.members.map((m) => ({ contract: payload.members[m.id] })))
   assert(lp.length > 2000 && lp.includes(team.lead.name), label + ': lead persona built and names the lead')
+  assert(/Tool reality in this environment/.test(lp), label + ': lead persona carries the Hermes capability map')
   console.log('  members        :', keys.length)
   console.log('  missing/short  :', missing + ' / ' + short)
   console.log('  lead persona   :', lp.length, 'chars')
