@@ -135,6 +135,12 @@ Files in the repo (`C:/Users/tuanc/hermes-experts-plugin`):
   (see §5).
 - `LICENSE` (MIT for code), `NOTICE-agency-agents.md`, `CONTENT-LICENSE.md`,
   `README.md`, `.gitignore`.
+- `assets/` — `hero-banner.png` (README hero, academic-infographic style),
+  `demo-expert-center.png` (Hermes Desktop Experts view). The folder is
+  committed; keep it lean.
+- `.github/workflows/verify.yml` — runs `verify-render.mjs` and
+  `verify-pipeline.mjs` on every push to `main` and on PRs. Catches a
+  broken `template.js` or `emit-teams.mjs` before merge.
 
 First catalog entry: **Marketing** is now 6 curated sub-teams (agency-agents MIT,
 36 agents total) instead of one flat blob — `search-aeo` (6), `western-social` (8),
