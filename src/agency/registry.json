@@ -1,0 +1,440 @@
+{
+  "domains": [
+    "marketing"
+  ],
+  "count": 36,
+  "experts": [
+    {
+      "id": "aa-marketing-aeo-foundations",
+      "name": "AEO Foundations Architect",
+      "domain": "marketing",
+      "remit": "Expert in AI Engine Optimization infrastructure — implements llms.txt, AI-aware robots.txt, token-budgeted content, structured Markdown availability, and agent discovery files so AI crawlers, citation engines, and browsing agents can find, parse, and act on your site",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-aeo-foundations.json",
+      "bytes": 14843
+    },
+    {
+      "id": "aa-marketing-agentic-search-optimizer",
+      "name": "Agentic Search Optimizer",
+      "domain": "marketing",
+      "remit": "Expert in WebMCP readiness and agentic task completion — audits whether AI agents can actually accomplish tasks on your site (book, buy, register, subscribe), implements WebMCP declarative and imperative patterns, and measures task completion rates across AI browsing agents",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-agentic-search-optimizer.json",
+      "bytes": 14980
+    },
+    {
+      "id": "aa-marketing-ai-citation-strategist",
+      "name": "AI Citation Strategist",
+      "domain": "marketing",
+      "remit": "Expert in AI recommendation engine optimization (AEO/GEO) — audits brand visibility across ChatGPT, Claude, Gemini, and Perplexity, identifies why competitors get cited instead, and delivers content fixes that improve AI citations",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-ai-citation-strategist.json",
+      "bytes": 8963
+    },
+    {
+      "id": "aa-marketing-app-store-optimizer",
+      "name": "App Store Optimizer",
+      "domain": "marketing",
+      "remit": "Expert app store marketing specialist focused on App Store Optimization (ASO), conversion rate optimization, and app discoverability",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-app-store-optimizer.json",
+      "bytes": 12805
+    },
+    {
+      "id": "aa-marketing-baidu-seo-specialist",
+      "name": "Baidu SEO Specialist",
+      "domain": "marketing",
+      "remit": "Expert Baidu search optimization specialist focused on Chinese search engine ranking, Baidu ecosystem integration, ICP compliance, Chinese keyword research, and mobile-first indexing for the China market.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-baidu-seo-specialist.json",
+      "bytes": 11940
+    },
+    {
+      "id": "aa-marketing-bilibili-content-strategist",
+      "name": "Bilibili Content Strategist",
+      "domain": "marketing",
+      "remit": "Expert Bilibili marketing specialist focused on UP主 growth, danmaku culture mastery, B站 algorithm optimization, community building, and branded content strategy for China's leading video community platform.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-bilibili-content-strategist.json",
+      "bytes": 10743
+    },
+    {
+      "id": "aa-marketing-book-co-author",
+      "name": "Book Co-Author",
+      "domain": "marketing",
+      "remit": "Strategic thought-leadership book collaborator for founders, experts, and operators turning voice notes, fragments, and positioning into structured first-person chapters.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-book-co-author.json",
+      "bytes": 4742
+    },
+    {
+      "id": "aa-marketing-carousel-growth-engine",
+      "name": "Carousel Growth Engine",
+      "domain": "marketing",
+      "remit": "Autonomous TikTok and Instagram carousel generation specialist.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-carousel-growth-engine.json",
+      "bytes": 14123
+    },
+    {
+      "id": "aa-marketing-china-ecommerce-operator",
+      "name": "China E-Commerce Operator",
+      "domain": "marketing",
+      "remit": "Expert China e-commerce operations specialist covering Taobao, Tmall, Pinduoduo, and JD ecosystems with deep expertise in product listing optimization, live commerce, store operations, 618/Double 11 campaigns, and cross-platform strategy.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-china-ecommerce-operator.json",
+      "bytes": 15995
+    },
+    {
+      "id": "aa-marketing-china-market-localization-strategist",
+      "name": "China Market Localization Strategist",
+      "domain": "marketing",
+      "remit": "Full-stack China market localization expert who transforms real-time trend signals into executable go-to-market strategies across Douyin, Xiaohongshu, WeChat, Bilibili, and beyond",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-china-market-localization-strategist.json",
+      "bytes": 15977
+    },
+    {
+      "id": "aa-marketing-content-creator",
+      "name": "Content Creator",
+      "domain": "marketing",
+      "remit": "Expert content strategist and creator for multi-platform campaigns.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-content-creator.json",
+      "bytes": 2729
+    },
+    {
+      "id": "aa-marketing-cross-border-ecommerce",
+      "name": "Cross-Border E-Commerce Specialist",
+      "domain": "marketing",
+      "remit": "Full-funnel cross-border e-commerce strategist covering Amazon, Shopee, Lazada, AliExpress, Temu, and TikTok Shop operations, international logistics and overseas warehousing, compliance and taxation, multilingual listing optimization, brand globalization, and DTC independent site development.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-cross-border-ecommerce.json",
+      "bytes": 16955
+    },
+    {
+      "id": "aa-marketing-douyin-strategist",
+      "name": "Douyin Strategist",
+      "domain": "marketing",
+      "remit": "Short-video marketing expert specializing in the Douyin platform, with deep expertise in recommendation algorithm mechanics, viral video planning, livestream commerce workflows, and full-funnel brand growth through content matrix strategies.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-douyin-strategist.json",
+      "bytes": 6561
+    },
+    {
+      "id": "aa-marketing-email-strategist",
+      "name": "Email Marketing Strategist",
+      "domain": "marketing",
+      "remit": "Expert email marketing strategist for CRM-driven campaigns, lifecycle automation, segmentation architecture, and deliverability.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-email-strategist.json",
+      "bytes": 15588
+    },
+    {
+      "id": "aa-marketing-global-podcast-strategist",
+      "name": "Global Podcast Strategist",
+      "domain": "marketing",
+      "remit": "Expert podcast growth specialist focused on show positioning, audience development, content strategy, and monetisation.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-global-podcast-strategist.json",
+      "bytes": 21084
+    },
+    {
+      "id": "aa-marketing-growth-hacker",
+      "name": "Growth Hacker",
+      "domain": "marketing",
+      "remit": "Expert growth strategist specializing in rapid user acquisition through data-driven experimentation.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-growth-hacker.json",
+      "bytes": 2647
+    },
+    {
+      "id": "aa-marketing-instagram-curator",
+      "name": "Instagram Curator",
+      "domain": "marketing",
+      "remit": "Expert Instagram marketing specialist focused on visual storytelling, community building, and multi-format content optimization.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-instagram-curator.json",
+      "bytes": 6215
+    },
+    {
+      "id": "aa-marketing-kuaishou-strategist",
+      "name": "Kuaishou Strategist",
+      "domain": "marketing",
+      "remit": "Expert Kuaishou marketing strategist specializing in short-video content for China's lower-tier city markets, live commerce operations, community trust building, and grassroots audience growth on 快手.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-kuaishou-strategist.json",
+      "bytes": 13145
+    },
+    {
+      "id": "aa-marketing-linkedin-content-creator",
+      "name": "LinkedIn Content Creator",
+      "domain": "marketing",
+      "remit": "Expert LinkedIn content strategist focused on thought leadership, personal brand building, and high-engagement professional content.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-linkedin-content-creator.json",
+      "bytes": 12723
+    },
+    {
+      "id": "aa-marketing-livestream-commerce-coach",
+      "name": "Livestream Commerce Coach",
+      "domain": "marketing",
+      "remit": "Veteran livestream e-commerce coach specializing in host training and live room operations across Douyin, Kuaishou, Taobao Live, and Channels, covering script design, product sequencing, paid-vs-organic traffic balancing, conversion closing techniques, and real-time data-driven optimization.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-livestream-commerce-coach.json",
+      "bytes": 16687
+    },
+    {
+      "id": "aa-marketing-multi-platform-publisher",
+      "name": "Multi-Platform Publisher",
+      "domain": "marketing",
+      "remit": "Expert orchestrator for one-click Chinese blog publishing.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-multi-platform-publisher.json",
+      "bytes": 11845
+    },
+    {
+      "id": "aa-marketing-podcast-strategist",
+      "name": "Podcast Strategist",
+      "domain": "marketing",
+      "remit": "Content strategy and operations expert for the Chinese podcast market, with deep expertise in Xiaoyuzhou, Ximalaya, and other major audio platforms, covering show positioning, audio production, audience growth, multi-platform distribution, and monetization to help podcast creators build sticky audio content brands.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-podcast-strategist.json",
+      "bytes": 17558
+    },
+    {
+      "id": "aa-marketing-pr-communications-manager",
+      "name": "PR & Communications Manager",
+      "domain": "marketing",
+      "remit": "Strategic public relations and communications specialist for media relations, press releases, crisis communications, executive thought leadership, brand reputation management, and integrated communications planning — building and protecting reputations through earned media, storytelling, and proactive narrative control",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-pr-communications-manager.json",
+      "bytes": 23273
+    },
+    {
+      "id": "aa-marketing-private-domain-operator",
+      "name": "Private Domain Operator",
+      "domain": "marketing",
+      "remit": "Expert in building enterprise WeChat (WeCom) private domain ecosystems, with deep expertise in SCRM systems, segmented community operations, Mini Program commerce integration, user lifecycle management, and full-funnel conversion optimization.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-private-domain-operator.json",
+      "bytes": 15764
+    },
+    {
+      "id": "aa-marketing-reddit-community-builder",
+      "name": "Reddit Community Builder",
+      "domain": "marketing",
+      "remit": "Expert Reddit marketing specialist focused on authentic community engagement, value-driven content creation, and long-term relationship building.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-reddit-community-builder.json",
+      "bytes": 7162
+    },
+    {
+      "id": "aa-marketing-seo-specialist",
+      "name": "SEO Specialist",
+      "domain": "marketing",
+      "remit": "Expert search engine optimization strategist specializing in technical SEO, content optimization, link authority building, and organic search growth.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-seo-specialist.json",
+      "bytes": 20823
+    },
+    {
+      "id": "aa-marketing-short-video-editing-coach",
+      "name": "Short-Video Editing Coach",
+      "domain": "marketing",
+      "remit": "Hands-on short-video editing coach covering the full post-production pipeline, with mastery of CapCut Pro, Premiere Pro, DaVinci Resolve, and Final Cut Pro across composition and camera language, color grading, audio engineering, motion graphics and VFX, subtitle design, multi-platform export optimization, editing workflow efficiency, and AI-assisted editing.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-short-video-editing-coach.json",
+      "bytes": 30249
+    },
+    {
+      "id": "aa-marketing-social-media-strategist",
+      "name": "Social Media Strategist",
+      "domain": "marketing",
+      "remit": "Expert social media strategist for LinkedIn, Twitter, and professional platforms.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-social-media-strategist.json",
+      "bytes": 6994
+    },
+    {
+      "id": "aa-marketing-tiktok-strategist",
+      "name": "TikTok Strategist",
+      "domain": "marketing",
+      "remit": "Expert TikTok marketing specialist focused on viral content creation, algorithm optimization, and community building.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-tiktok-strategist.json",
+      "bytes": 7222
+    },
+    {
+      "id": "aa-marketing-twitter-engager",
+      "name": "Twitter Engager",
+      "domain": "marketing",
+      "remit": "Expert Twitter marketing specialist focused on real-time engagement, thought leadership building, and community-driven growth.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-twitter-engager.json",
+      "bytes": 7387
+    },
+    {
+      "id": "aa-marketing-video-optimization-specialist",
+      "name": "Video Optimization Specialist",
+      "domain": "marketing",
+      "remit": "Video marketing strategist specializing in YouTube algorithm optimization, audience retention, chaptering, thumbnail concepts, and cross-platform video syndication.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-video-optimization-specialist.json",
+      "bytes": 5872
+    },
+    {
+      "id": "aa-marketing-wechat-official-account",
+      "name": "WeChat Official Account Manager",
+      "domain": "marketing",
+      "remit": "Expert WeChat Official Account (OA) strategist specializing in content marketing, subscriber engagement, and conversion optimization.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-wechat-official-account.json",
+      "bytes": 9422
+    },
+    {
+      "id": "aa-marketing-weibo-strategist",
+      "name": "Weibo Strategist",
+      "domain": "marketing",
+      "remit": "Full-spectrum operations expert for Sina Weibo, with deep expertise in trending topic mechanics, Super Topic community management, public sentiment monitoring, fan economy strategies, and Weibo advertising, helping brands achieve viral reach and sustained growth on China's leading public discourse platform.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-weibo-strategist.json",
+      "bytes": 15241
+    },
+    {
+      "id": "aa-marketing-x-twitter-intelligence-analyst",
+      "name": "X/Twitter Intelligence Analyst",
+      "domain": "marketing",
+      "remit": "Social intelligence specialist for X/Twitter research, trend detection, account monitoring, and evidence-backed audience insights using public signals and structured data workflows.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-x-twitter-intelligence-analyst.json",
+      "bytes": 9300
+    },
+    {
+      "id": "aa-marketing-xiaohongshu-specialist",
+      "name": "Xiaohongshu Specialist",
+      "domain": "marketing",
+      "remit": "Expert Xiaohongshu marketing specialist focused on lifestyle content, trend-driven strategies, and authentic community engagement.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-xiaohongshu-specialist.json",
+      "bytes": 9237
+    },
+    {
+      "id": "aa-marketing-zhihu-strategist",
+      "name": "Zhihu Strategist",
+      "domain": "marketing",
+      "remit": "Expert Zhihu marketing specialist focused on thought leadership, community credibility, and knowledge-driven engagement.",
+      "tags": [
+        "Marketing",
+        "Agentic"
+      ],
+      "file": "experts/marketing/marketing-zhihu-strategist.json",
+      "bytes": 11633
+    }
+  ]
+}

@@ -1,0 +1,927 @@
+[
+  {
+    "id": "marketing",
+    "name": "Marketing",
+    "avatar": {
+      "letter": "M",
+      "tone": "sky"
+    },
+    "memberTone": "sky",
+    "remit": "Browse and run 36 Marketing experts. Install the team to cache every contract locally, or summon any single expert on the fly.",
+    "startNote": "Brief me on the marketing outcome you want and the channel.",
+    "ported": true,
+    "lead": {
+      "id": "marketing-lead",
+      "name": "Marketing Lead",
+      "role": "Domain Orchestrator",
+      "remit": "Orchestrates 36 Marketing specialists and assembles their work.",
+      "tags": [
+        "Marketing"
+      ]
+    },
+    "leadSkills": [],
+    "skills": [],
+    "members": [
+      {
+        "id": "aa-marketing-aeo-foundations",
+        "name": "AEO Foundations Architect",
+        "role": "AEO Foundations Architect",
+        "remit": "Expert in AI Engine Optimization infrastructure — implements llms.txt, AI-aware robots.txt, token-budgeted content, structured Markdown availability, and agent discovery files so AI crawlers, citation engines, and browsing agents can find, parse, and act on your site",
+        "owns": "The foundation layer everyone skips — making sure AI systems can actually discover, read, and use your content before you worry about rankings, citations, or task completion",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the AEO Foundations Architect role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert in AI Engine Optimization infrastructure — implements llms.txt, AI-aware robots.txt, token-budgeted content, structured Markdown availability, and agent discovery files so AI crawlers, citation engines, and browsing agents can find, parse, and act on your site"
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-agentic-search-optimizer",
+        "name": "Agentic Search Optimizer",
+        "role": "Agentic Search Optimizer",
+        "remit": "Expert in WebMCP readiness and agentic task completion — audits whether AI agents can actually accomplish tasks on your site (book, buy, register, subscribe), implements WebMCP declarative and imperative patterns, and measures task completion rates across AI browsing agents",
+        "owns": "While everyone else is optimizing to get cited by AI, this agent makes sure AI can actually do the thing on your site",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Agentic Search Optimizer role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert in WebMCP readiness and agentic task completion — audits whether AI agents can actually accomplish tasks on your site (book, buy, register, subscribe), implements WebMCP declarative and imperative patterns, and measures task completion rates across AI browsing agents"
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-ai-citation-strategist",
+        "name": "AI Citation Strategist",
+        "role": "AI Citation Strategist",
+        "remit": "Expert in AI recommendation engine optimization (AEO/GEO) — audits brand visibility across ChatGPT, Claude, Gemini, and Perplexity, identifies why competitors get cited instead, and delivers content fixes that improve AI citations",
+        "owns": "Figures out why the AI recommends your competitor and rewires the signals so it recommends you instead",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the AI Citation Strategist role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert in AI recommendation engine optimization (AEO/GEO) — audits brand visibility across ChatGPT, Claude, Gemini, and Perplexity, identifies why competitors get cited instead, and delivers content fixes that improve AI citations"
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-app-store-optimizer",
+        "name": "App Store Optimizer",
+        "role": "App Store Optimizer",
+        "remit": "Expert app store marketing specialist focused on App Store Optimization (ASO), conversion rate optimization, and app discoverability",
+        "owns": "Gets your app found, downloaded, and loved in the store.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the App Store Optimizer role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert app store marketing specialist focused on App Store Optimization (ASO), conversion rate optimization, and app discoverability"
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-baidu-seo-specialist",
+        "name": "Baidu SEO Specialist",
+        "role": "Baidu SEO Specialist",
+        "remit": "Expert Baidu search optimization specialist focused on Chinese search engine ranking, Baidu ecosystem integration, ICP compliance, Chinese keyword research, and mobile-first indexing for the China market.",
+        "owns": "Masters Baidu's algorithm so your brand ranks in China's search ecosystem.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Baidu SEO Specialist role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert Baidu search optimization specialist focused on Chinese search engine ranking, Baidu ecosystem integration, ICP compliance, Chinese keyword research, and mobile-first indexing for the China market."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-bilibili-content-strategist",
+        "name": "Bilibili Content Strategist",
+        "role": "Bilibili Content Strategist",
+        "remit": "Expert Bilibili marketing specialist focused on UP主 growth, danmaku culture mastery, B站 algorithm optimization, community building, and branded content strategy for China's leading video community platform.",
+        "owns": "Speaks fluent danmaku and grows your brand on B站.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Bilibili Content Strategist role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert Bilibili marketing specialist focused on UP主 growth, danmaku culture mastery, B站 algorithm optimization, community building, and branded content strategy for China's leading video community platform."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-book-co-author",
+        "name": "Book Co-Author",
+        "role": "Book Co-Author",
+        "remit": "Strategic thought-leadership book collaborator for founders, experts, and operators turning voice notes, fragments, and positioning into structured first-person chapters.",
+        "owns": "Turns rough expertise into a recognizable book people can quote, remember, and buy into.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Book Co-Author role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Strategic thought-leadership book collaborator for founders, experts, and operators turning voice notes, fragments, and positioning into structured first-person chapters."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-carousel-growth-engine",
+        "name": "Carousel Growth Engine",
+        "role": "Carousel Growth Engine",
+        "remit": "Autonomous TikTok and Instagram carousel generation specialist.",
+        "owns": "Autonomously generates viral carousels from any URL and publishes them to feed.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Carousel Growth Engine role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Autonomous TikTok and Instagram carousel generation specialist. Analyzes any website URL with Playwright, generates viral 6-slide carousels via Gemini image generation, publishes directly to feed via Upload-Post API with auto trending music, fetches analytics, and iteratively improves through a data-driven learning loop."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-china-ecommerce-operator",
+        "name": "China E-Commerce Operator",
+        "role": "China E-Commerce Operator",
+        "remit": "Expert China e-commerce operations specialist covering Taobao, Tmall, Pinduoduo, and JD ecosystems with deep expertise in product listing optimization, live commerce, store operations, 618/Double 11 campaigns, and cross-platform strategy.",
+        "owns": "Runs your Taobao, Tmall, Pinduoduo, and JD storefronts like a native operator.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the China E-Commerce Operator role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert China e-commerce operations specialist covering Taobao, Tmall, Pinduoduo, and JD ecosystems with deep expertise in product listing optimization, live commerce, store operations, 618/Double 11 campaigns, and cross-platform strategy."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-china-market-localization-strategist",
+        "name": "China Market Localization Strategist",
+        "role": "China Market Localization Strategist",
+        "remit": "Full-stack China market localization expert who transforms real-time trend signals into executable go-to-market strategies across Douyin, Xiaohongshu, WeChat, Bilibili, and beyond",
+        "owns": "Turns China's chaotic trend landscape into a precision-guided marketing machine — data in, revenue out.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the China Market Localization Strategist role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Full-stack China market localization expert who transforms real-time trend signals into executable go-to-market strategies across Douyin, Xiaohongshu, WeChat, Bilibili, and beyond"
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-content-creator",
+        "name": "Content Creator",
+        "role": "Content Creator",
+        "remit": "Expert content strategist and creator for multi-platform campaigns.",
+        "owns": "Crafts compelling stories across every platform your audience lives on.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Content Creator role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert content strategist and creator for multi-platform campaigns. Develops editorial calendars, creates compelling copy, manages brand storytelling, and optimizes content for engagement across all digital channels."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-cross-border-ecommerce",
+        "name": "Cross-Border E-Commerce Specialist",
+        "role": "Cross-Border E-Commerce Specialist",
+        "remit": "Full-funnel cross-border e-commerce strategist covering Amazon, Shopee, Lazada, AliExpress, Temu, and TikTok Shop operations, international logistics and overseas warehousing, compliance and taxation, multilingual listing optimization, brand globalization, and DTC independent site development.",
+        "owns": "Takes your products from Chinese factories to global bestseller lists.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Cross-Border E-Commerce Specialist role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Full-funnel cross-border e-commerce strategist covering Amazon, Shopee, Lazada, AliExpress, Temu, and TikTok Shop operations, international logistics and overseas warehousing, compliance and taxation, multilingual listing optimization, brand globalization, and DTC independent site development."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-douyin-strategist",
+        "name": "Douyin Strategist",
+        "role": "Douyin Strategist",
+        "remit": "Short-video marketing expert specializing in the Douyin platform, with deep expertise in recommendation algorithm mechanics, viral video planning, livestream commerce workflows, and full-funnel brand growth through content matrix strategies.",
+        "owns": "Masters the Douyin algorithm so your short videos actually get seen.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Douyin Strategist role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Short-video marketing expert specializing in the Douyin platform, with deep expertise in recommendation algorithm mechanics, viral video planning, livestream commerce workflows, and full-funnel brand growth through content matrix strategies."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-email-strategist",
+        "name": "Email Marketing Strategist",
+        "role": "Email Marketing Strategist",
+        "remit": "Expert email marketing strategist for CRM-driven campaigns, lifecycle automation, segmentation architecture, and deliverability.",
+        "owns": "Turns a messy contact list into a segmented, automated revenue engine that sends the right message at the right time.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Email Marketing Strategist role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert email marketing strategist for CRM-driven campaigns, lifecycle automation, segmentation architecture, and deliverability. Designs sequences (welcome, nurture, reactivation, win-back, review, referral) grounded in 2025-2026 benchmarks, AI-driven personalization, and post-Apple MPP measurement."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-global-podcast-strategist",
+        "name": "Global Podcast Strategist",
+        "role": "Global Podcast Strategist",
+        "remit": "Expert podcast growth specialist focused on show positioning, audience development, content strategy, and monetisation.",
+        "owns": "Turns conversations into communities and episodes into growth engines.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Global Podcast Strategist role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert podcast growth specialist focused on show positioning, audience development, content strategy, and monetisation. Transforms raw ideas into authoritative audio brands that compound listeners and revenue over time on Spotify, Apple Podcasts, and YouTube."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-growth-hacker",
+        "name": "Growth Hacker",
+        "role": "Growth Hacker",
+        "remit": "Expert growth strategist specializing in rapid user acquisition through data-driven experimentation.",
+        "owns": "Finds the growth channel nobody's exploited yet — then scales it.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Growth Hacker role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert growth strategist specializing in rapid user acquisition through data-driven experimentation. Develops viral loops, optimizes conversion funnels, and finds scalable growth channels for exponential business growth."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-instagram-curator",
+        "name": "Instagram Curator",
+        "role": "Instagram Curator",
+        "remit": "Expert Instagram marketing specialist focused on visual storytelling, community building, and multi-format content optimization.",
+        "owns": "Masters the grid aesthetic and turns scrollers into an engaged community.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Instagram Curator role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert Instagram marketing specialist focused on visual storytelling, community building, and multi-format content optimization. Masters aesthetic development and drives meaningful engagement."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-kuaishou-strategist",
+        "name": "Kuaishou Strategist",
+        "role": "Kuaishou Strategist",
+        "remit": "Expert Kuaishou marketing strategist specializing in short-video content for China's lower-tier city markets, live commerce operations, community trust building, and grassroots audience growth on 快手.",
+        "owns": "Grows grassroots audiences and drives live commerce on 快手.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Kuaishou Strategist role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert Kuaishou marketing strategist specializing in short-video content for China's lower-tier city markets, live commerce operations, community trust building, and grassroots audience growth on 快手."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-linkedin-content-creator",
+        "name": "LinkedIn Content Creator",
+        "role": "LinkedIn Content Creator",
+        "remit": "Expert LinkedIn content strategist focused on thought leadership, personal brand building, and high-engagement professional content.",
+        "owns": "Turns professional expertise into scroll-stopping content that makes the right people find you.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the LinkedIn Content Creator role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert LinkedIn content strategist focused on thought leadership, personal brand building, and high-engagement professional content. Masters LinkedIn's algorithm and culture to drive inbound opportunities for founders, job seekers, developers, and anyone building a professional presence."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-livestream-commerce-coach",
+        "name": "Livestream Commerce Coach",
+        "role": "Livestream Commerce Coach",
+        "remit": "Veteran livestream e-commerce coach specializing in host training and live room operations across Douyin, Kuaishou, Taobao Live, and Channels, covering script design, product sequencing, paid-vs-organic traffic balancing, conversion closing techniques, and real-time data-driven optimization.",
+        "owns": "Coaches your livestream hosts from awkward beginners to million-yuan sellers.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Livestream Commerce Coach role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Veteran livestream e-commerce coach specializing in host training and live room operations across Douyin, Kuaishou, Taobao Live, and Channels, covering script design, product sequencing, paid-vs-organic traffic balancing, conversion closing techniques, and real-time data-driven optimization."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-multi-platform-publisher",
+        "name": "Multi-Platform Publisher",
+        "role": "Multi-Platform Publisher",
+        "remit": "Expert orchestrator for one-click Chinese blog publishing.",
+        "owns": "One article, all platforms, safely — the traffic conductor for Chinese content creators.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Multi-Platform Publisher role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert orchestrator for one-click Chinese blog publishing. Routes a single article to 知乎 / 小红书 / CSDN / B站 / 公众号 / 掘金 via Wechatsync (main channel) with xhs-mcp and biliup as specialized fallbacks. Handles per-platform content adaptation, draft-first publishing, rate control, and risk-avoidance. Does NOT auto-publish — always stops at draft for human review."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-podcast-strategist",
+        "name": "Podcast Strategist",
+        "role": "Podcast Strategist",
+        "remit": "Content strategy and operations expert for the Chinese podcast market, with deep expertise in Xiaoyuzhou, Ximalaya, and other major audio platforms, covering show positioning, audio production, audience growth, multi-platform distribution, and monetization to help podcast creators build sticky audio content brands.",
+        "owns": "Guides your podcast from concept to loyal audience in China's booming audio scene.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Podcast Strategist role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Content strategy and operations expert for the Chinese podcast market, with deep expertise in Xiaoyuzhou, Ximalaya, and other major audio platforms, covering show positioning, audio production, audience growth, multi-platform distribution, and monetization to help podcast creators build sticky audio content brands."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-pr-communications-manager",
+        "name": "PR & Communications Manager",
+        "role": "PR & Communications Manager",
+        "remit": "Strategic public relations and communications specialist for media relations, press releases, crisis communications, executive thought leadership, brand reputation management, and integrated communications planning — building and protecting reputations through earned media, storytelling, and proactive narrative control",
+        "owns": "Reputation is built in years and lost in minutes. Every message, every statement, every interview is either protecting or eroding the brand — there is no neutral.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the PR & Communications Manager role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Strategic public relations and communications specialist for media relations, press releases, crisis communications, executive thought leadership, brand reputation management, and integrated communications planning — building and protecting reputations through earned media, storytelling, and proactive narrative control"
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-private-domain-operator",
+        "name": "Private Domain Operator",
+        "role": "Private Domain Operator",
+        "remit": "Expert in building enterprise WeChat (WeCom) private domain ecosystems, with deep expertise in SCRM systems, segmented community operations, Mini Program commerce integration, user lifecycle management, and full-funnel conversion optimization.",
+        "owns": "Builds your WeChat private traffic empire from first contact to lifetime value.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Private Domain Operator role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert in building enterprise WeChat (WeCom) private domain ecosystems, with deep expertise in SCRM systems, segmented community operations, Mini Program commerce integration, user lifecycle management, and full-funnel conversion optimization."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-reddit-community-builder",
+        "name": "Reddit Community Builder",
+        "role": "Reddit Community Builder",
+        "remit": "Expert Reddit marketing specialist focused on authentic community engagement, value-driven content creation, and long-term relationship building.",
+        "owns": "Speaks fluent Reddit and builds community trust the authentic way.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Reddit Community Builder role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert Reddit marketing specialist focused on authentic community engagement, value-driven content creation, and long-term relationship building. Masters Reddit culture navigation."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-seo-specialist",
+        "name": "SEO Specialist",
+        "role": "SEO Specialist",
+        "remit": "Expert search engine optimization strategist specializing in technical SEO, content optimization, link authority building, and organic search growth.",
+        "owns": "Drives sustainable organic traffic through technical SEO and content strategy.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the SEO Specialist role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert search engine optimization strategist specializing in technical SEO, content optimization, link authority building, and organic search growth. Drives sustainable traffic through data-driven search strategies."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-short-video-editing-coach",
+        "name": "Short-Video Editing Coach",
+        "role": "Short-Video Editing Coach",
+        "remit": "Hands-on short-video editing coach covering the full post-production pipeline, with mastery of CapCut Pro, Premiere Pro, DaVinci Resolve, and Final Cut Pro across composition and camera language, color grading, audio engineering, motion graphics and VFX, subtitle design, multi-platform export optimization, editing workflow efficiency, and AI-assisted editing.",
+        "owns": "Turns raw footage into scroll-stopping short videos with professional polish.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Short-Video Editing Coach role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Hands-on short-video editing coach covering the full post-production pipeline, with mastery of CapCut Pro, Premiere Pro, DaVinci Resolve, and Final Cut Pro across composition and camera language, color grading, audio engineering, motion graphics and VFX, subtitle design, multi-platform export optimization, editing workflow efficiency, and AI-assisted editing."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-social-media-strategist",
+        "name": "Social Media Strategist",
+        "role": "Social Media Strategist",
+        "remit": "Expert social media strategist for LinkedIn, Twitter, and professional platforms.",
+        "owns": "Orchestrates cross-platform campaigns that build community and drive engagement.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Social Media Strategist role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert social media strategist for LinkedIn, Twitter, and professional platforms. Creates cross-platform campaigns, builds communities, manages real-time engagement, and develops thought leadership strategies."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-tiktok-strategist",
+        "name": "TikTok Strategist",
+        "role": "TikTok Strategist",
+        "remit": "Expert TikTok marketing specialist focused on viral content creation, algorithm optimization, and community building.",
+        "owns": "Rides the algorithm and builds community through authentic TikTok culture.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the TikTok Strategist role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert TikTok marketing specialist focused on viral content creation, algorithm optimization, and community building. Masters TikTok's unique culture and features for brand growth."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-twitter-engager",
+        "name": "Twitter Engager",
+        "role": "Twitter Engager",
+        "remit": "Expert Twitter marketing specialist focused on real-time engagement, thought leadership building, and community-driven growth.",
+        "owns": "Builds thought leadership and brand authority 280 characters at a time.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Twitter Engager role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert Twitter marketing specialist focused on real-time engagement, thought leadership building, and community-driven growth. Builds brand authority through authentic conversation participation and viral thread creation."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-video-optimization-specialist",
+        "name": "Video Optimization Specialist",
+        "role": "Video Optimization Specialist",
+        "remit": "Video marketing strategist specializing in YouTube algorithm optimization, audience retention, chaptering, thumbnail concepts, and cross-platform video syndication.",
+        "owns": "Energetic, data-driven, strategic, and hyper-focused on audience retention",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Video Optimization Specialist role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Video marketing strategist specializing in YouTube algorithm optimization, audience retention, chaptering, thumbnail concepts, and cross-platform video syndication."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-wechat-official-account",
+        "name": "WeChat Official Account Manager",
+        "role": "WeChat Official Account Manager",
+        "remit": "Expert WeChat Official Account (OA) strategist specializing in content marketing, subscriber engagement, and conversion optimization.",
+        "owns": "Grows loyal WeChat subscriber communities through consistent value delivery.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the WeChat Official Account Manager role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert WeChat Official Account (OA) strategist specializing in content marketing, subscriber engagement, and conversion optimization. Masters multi-format content and builds loyal communities through consistent value delivery."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-weibo-strategist",
+        "name": "Weibo Strategist",
+        "role": "Weibo Strategist",
+        "remit": "Full-spectrum operations expert for Sina Weibo, with deep expertise in trending topic mechanics, Super Topic community management, public sentiment monitoring, fan economy strategies, and Weibo advertising, helping brands achieve viral reach and sustained growth on China's leading public discourse platform.",
+        "owns": "Makes your brand trend on Weibo and keeps the conversation going.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Weibo Strategist role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Full-spectrum operations expert for Sina Weibo, with deep expertise in trending topic mechanics, Super Topic community management, public sentiment monitoring, fan economy strategies, and Weibo advertising, helping brands achieve viral reach and sustained growth on China's leading public discourse platform."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-x-twitter-intelligence-analyst",
+        "name": "X/Twitter Intelligence Analyst",
+        "role": "X/Twitter Intelligence Analyst",
+        "remit": "Social intelligence specialist for X/Twitter research, trend detection, account monitoring, and evidence-backed audience insights using public signals and structured data workflows.",
+        "owns": "Turns noisy X conversations into sourced market, audience, and risk intelligence.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the X/Twitter Intelligence Analyst role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Social intelligence specialist for X/Twitter research, trend detection, account monitoring, and evidence-backed audience insights using public signals and structured data workflows."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-xiaohongshu-specialist",
+        "name": "Xiaohongshu Specialist",
+        "role": "Xiaohongshu Specialist",
+        "remit": "Expert Xiaohongshu marketing specialist focused on lifestyle content, trend-driven strategies, and authentic community engagement.",
+        "owns": "Masters lifestyle content and aesthetic storytelling on 小红书.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Xiaohongshu Specialist role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert Xiaohongshu marketing specialist focused on lifestyle content, trend-driven strategies, and authentic community engagement. Masters micro-content creation and drives viral growth through aesthetic storytelling."
+          }
+        ]
+      },
+      {
+        "id": "aa-marketing-zhihu-strategist",
+        "name": "Zhihu Strategist",
+        "role": "Zhihu Strategist",
+        "remit": "Expert Zhihu marketing specialist focused on thought leadership, community credibility, and knowledge-driven engagement.",
+        "owns": "Builds brand authority through expert knowledge-sharing on 知乎.",
+        "tags": [
+          "Marketing",
+          "Agentic"
+        ],
+        "skills": [
+          {
+            "label": "Work with me",
+            "task": "Adopt the Zhihu Strategist role and tell me what you need to start."
+          },
+          {
+            "label": "What do you own?",
+            "task": "State your remit, your hard rules, and what you refuse to do."
+          },
+          {
+            "label": "Take this on",
+            "task": "Expert Zhihu marketing specialist focused on thought leadership, community credibility, and knowledge-driven engagement. Masters question-answering strategy and builds brand authority through authentic expertise sharing."
+          }
+        ]
+      }
+    ]
+  }
+]

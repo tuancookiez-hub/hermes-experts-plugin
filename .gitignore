@@ -1,0 +1,15 @@
+# dependencies
+node_modules/
+npm-debug.log*
+
+# os / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# verification harness scratch dir
+.render-work/
+
+# local secrets
+*.local.json
+.env
