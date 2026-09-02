@@ -25,7 +25,16 @@ function arg(name, fallback) {
   const i = args.indexOf(name)
   return i >= 0 && args[i + 1] ? args[i + 1] : fallback
 }
-const ref = arg('--ref', 'main')
+// Payload ref is pinned in src/release.json so the built plugin and
+// verify-pipeline.mjs always prove the SAME remote. Pinned to an immutable tag,
+// not a branch — a branch would let payloads change underneath installed caches.
+let pinnedRef = 'main'
+try {
+  pinnedRef = JSON.parse(fs.readFileSync(path.join(here, 'release.json'), 'utf8')).ref || 'main'
+} catch {
+  pinnedRef = 'main'
+}
+const ref = arg('--ref', pinnedRef)
 let out = arg('--out', path.join(root, 'plugin.js'))
 
 const GITHUB = {

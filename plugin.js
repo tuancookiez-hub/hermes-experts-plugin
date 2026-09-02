@@ -140,10 +140,10 @@ const DATA = {
   "github": {
     "owner": "tuancookiez-hub",
     "repo": "hermes-experts-plugin",
-    "ref": "main",
+    "ref": "v1.0.0",
     "payloadDir": "teams"
   },
-  "base": "https://raw.githubusercontent.com/tuancookiez-hub/hermes-experts-plugin/main/teams/",
+  "base": "https://raw.githubusercontent.com/tuancookiez-hub/hermes-experts-plugin/v1.0.0/teams/",
   "registry": [
     {
       "id": "academic",
@@ -3191,6 +3191,308 @@ const DATA = {
             {
               "label": "Take this on",
               "task": "Specialized pricing analyst who develops optimal pricing models through market research, competitor analysis, cost structure evaluation, and margin optimization — turning pricing from guesswork into a data-driven competitive advantage."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "firstrevenue",
+      "name": "First $1k",
+      "original": true,
+      "avatar": {
+        "letter": "F",
+        "tone": "sky"
+      },
+      "memberTone": "sky",
+      "remit": "Getting the first paying customers for a solo product — offer clarity, landing page, cold outreach, pricing, and the first-sale close. Getting the first paying customers for a solo product — offer clarity, landing page, cold outreach, pricing, and the first-sale close. An original team authored for this plugin — every contract is written for Hermes, with no upstream source.",
+      "startNote": "Tell me what you sell and who already needs it — we will get to the first paid invoice.",
+      "ported": true,
+      "lead": {
+        "id": "firstrevenue-lead",
+        "name": "First $1k Lead",
+        "role": "Team Orchestrator",
+        "remit": "Orchestrates 5 First $1k specialists and assembles their work.",
+        "tags": [
+          "First $1k"
+        ]
+      },
+      "leadSkills": [],
+      "skills": [],
+      "members": [
+        {
+          "id": "orig-firstrevenue-first-sale-closer",
+          "name": "First-Sale Closer",
+          "role": "First-Sale Closer",
+          "remit": "Gets the first paid invoice — turns interest into money without pressure.",
+          "owns": "The first yes, in writing.",
+          "tags": [
+            "First $1k",
+            "Original"
+          ],
+          "skills": [
+            {
+              "label": "Work with me",
+              "task": "Adopt the First-Sale Closer role and tell me what you need to start."
+            },
+            {
+              "label": "What do you own?",
+              "task": "State your remit, your hard rules, and what you refuse to do."
+            },
+            {
+              "label": "Take this on",
+              "task": "Gets the first paid invoice — turns interest into money without pressure."
+            }
+          ]
+        },
+        {
+          "id": "orig-firstrevenue-landing-writer",
+          "name": "Landing Writer",
+          "role": "Landing Writer",
+          "remit": "Writes the page with one job — a visitor becomes a buyer.",
+          "owns": "A page that converts, not a brochure.",
+          "tags": [
+            "First $1k",
+            "Original"
+          ],
+          "skills": [
+            {
+              "label": "Work with me",
+              "task": "Adopt the Landing Writer role and tell me what you need to start."
+            },
+            {
+              "label": "What do you own?",
+              "task": "State your remit, your hard rules, and what you refuse to do."
+            },
+            {
+              "label": "Take this on",
+              "task": "Writes the page with one job — a visitor becomes a buyer."
+            }
+          ]
+        },
+        {
+          "id": "orig-firstrevenue-offer-designer",
+          "name": "Offer Designer",
+          "role": "Offer Designer",
+          "remit": "Turns a skill into something a specific person pays for — the offer, not the hours.",
+          "owns": "An offer a named person says yes to.",
+          "tags": [
+            "First $1k",
+            "Original"
+          ],
+          "skills": [
+            {
+              "label": "Work with me",
+              "task": "Adopt the Offer Designer role and tell me what you need to start."
+            },
+            {
+              "label": "What do you own?",
+              "task": "State your remit, your hard rules, and what you refuse to do."
+            },
+            {
+              "label": "Take this on",
+              "task": "Turns a skill into something a specific person pays for — the offer, not the hours."
+            }
+          ]
+        },
+        {
+          "id": "orig-firstrevenue-outreach-specialist",
+          "name": "Outreach Specialist",
+          "role": "Outreach Specialist",
+          "remit": "Sends the message that gets a reply — ten real conversations, not a thousand impressions.",
+          "owns": "The ask that lands a yes or a useful no.",
+          "tags": [
+            "First $1k",
+            "Original"
+          ],
+          "skills": [
+            {
+              "label": "Work with me",
+              "task": "Adopt the Outreach Specialist role and tell me what you need to start."
+            },
+            {
+              "label": "What do you own?",
+              "task": "State your remit, your hard rules, and what you refuse to do."
+            },
+            {
+              "label": "Take this on",
+              "task": "Sends the message that gets a reply — ten real conversations, not a thousand impressions."
+            }
+          ]
+        },
+        {
+          "id": "orig-firstrevenue-pricing-strategist",
+          "name": "Pricing Strategist",
+          "role": "Pricing Strategist",
+          "remit": "Sets the number that feels obvious to say yes to — priced for the yes, not the max.",
+          "owns": "A price the buyer does not have to think about.",
+          "tags": [
+            "First $1k",
+            "Original"
+          ],
+          "skills": [
+            {
+              "label": "Work with me",
+              "task": "Adopt the Pricing Strategist role and tell me what you need to start."
+            },
+            {
+              "label": "What do you own?",
+              "task": "State your remit, your hard rules, and what you refuse to do."
+            },
+            {
+              "label": "Take this on",
+              "task": "Sets the number that feels obvious to say yes to — priced for the yes, not the max."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "founderstory",
+      "name": "Founder Story",
+      "original": true,
+      "avatar": {
+        "letter": "F",
+        "tone": "amber"
+      },
+      "memberTone": "amber",
+      "remit": "Turning a founder's raw experience into a consistent, ownable narrative — origin story, hooks, long-form, repurposing, and a voice guard. Turning a founder's raw experience into a consistent, ownable narrative — origin story, hooks, long-form, repurposing, and a voice guard. An original team authored for this plugin — every contract is written for Hermes, with no upstream source.",
+      "startNote": "Tell me whose story this is and what you want strangers to feel after reading it.",
+      "ported": true,
+      "lead": {
+        "id": "founderstory-lead",
+        "name": "Founder Story Lead",
+        "role": "Team Orchestrator",
+        "remit": "Orchestrates 5 Founder Story specialists and assembles their work.",
+        "tags": [
+          "Founder Story"
+        ]
+      },
+      "leadSkills": [],
+      "skills": [],
+      "members": [
+        {
+          "id": "orig-founderstory-hook-writer",
+          "name": "Hook Writer",
+          "role": "Hook Writer",
+          "remit": "Writes the first line that stops the scroll and earns the next sentence.",
+          "owns": "Opens strong so the rest gets read.",
+          "tags": [
+            "Founder Story",
+            "Original"
+          ],
+          "skills": [
+            {
+              "label": "Work with me",
+              "task": "Adopt the Hook Writer role and tell me what you need to start."
+            },
+            {
+              "label": "What do you own?",
+              "task": "State your remit, your hard rules, and what you refuse to do."
+            },
+            {
+              "label": "Take this on",
+              "task": "Writes the first line that stops the scroll and earns the next sentence."
+            }
+          ]
+        },
+        {
+          "id": "orig-founderstory-longform-essayist",
+          "name": "Long-Form Essayist",
+          "role": "Long-Form Essayist",
+          "remit": "Argues one idea with evidence — the essay that changes how they see their work.",
+          "owns": "The piece worth reading twice.",
+          "tags": [
+            "Founder Story",
+            "Original"
+          ],
+          "skills": [
+            {
+              "label": "Work with me",
+              "task": "Adopt the Long-Form Essayist role and tell me what you need to start."
+            },
+            {
+              "label": "What do you own?",
+              "task": "State your remit, your hard rules, and what you refuse to do."
+            },
+            {
+              "label": "Take this on",
+              "task": "Argues one idea with evidence — the essay that changes how they see their work."
+            }
+          ]
+        },
+        {
+          "id": "orig-founderstory-origin-crafter",
+          "name": "Origin Crafter",
+          "role": "Origin Crafter",
+          "remit": "Finds the real reason you started and shapes it into a 200-word origin that makes strangers care.",
+          "owns": "The founding story nobody can mistake for a press release.",
+          "tags": [
+            "Founder Story",
+            "Original"
+          ],
+          "skills": [
+            {
+              "label": "Work with me",
+              "task": "Adopt the Origin Crafter role and tell me what you need to start."
+            },
+            {
+              "label": "What do you own?",
+              "task": "State your remit, your hard rules, and what you refuse to do."
+            },
+            {
+              "label": "Take this on",
+              "task": "Finds the real reason you started and shapes it into a 200-word origin that makes strangers care."
+            }
+          ]
+        },
+        {
+          "id": "orig-founderstory-repurposer",
+          "name": "Repurposer",
+          "role": "Repurposer",
+          "remit": "Squeezes one long piece into ten posts without losing the point.",
+          "owns": "One asset, many formats, same argument.",
+          "tags": [
+            "Founder Story",
+            "Original"
+          ],
+          "skills": [
+            {
+              "label": "Work with me",
+              "task": "Adopt the Repurposer role and tell me what you need to start."
+            },
+            {
+              "label": "What do you own?",
+              "task": "State your remit, your hard rules, and what you refuse to do."
+            },
+            {
+              "label": "Take this on",
+              "task": "Squeezes one long piece into ten posts without losing the point."
+            }
+          ]
+        },
+        {
+          "id": "orig-founderstory-voice-keeper",
+          "name": "Voice Keeper",
+          "role": "Voice Keeper",
+          "remit": "Guards consistency — the style that is recognizably the founder across every channel.",
+          "owns": "One voice, everywhere.",
+          "tags": [
+            "Founder Story",
+            "Original"
+          ],
+          "skills": [
+            {
+              "label": "Work with me",
+              "task": "Adopt the Voice Keeper role and tell me what you need to start."
+            },
+            {
+              "label": "What do you own?",
+              "task": "State your remit, your hard rules, and what you refuse to do."
+            },
+            {
+              "label": "Take this on",
+              "task": "Guards consistency — the style that is recognizably the founder across every channel."
             }
           ]
         }
@@ -6542,6 +6844,157 @@ const DATA = {
             {
               "label": "Take this on",
               "task": "AppSec specialist who secures the software development lifecycle through threat modeling, secure code review, SAST/DAST integration, and developer security education that makes secure code the default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shipit",
+      "name": "Ship It",
+      "original": true,
+      "avatar": {
+        "letter": "S",
+        "tone": "emerald"
+      },
+      "memberTone": "emerald",
+      "remit": "Beating analysis paralysis and getting a real, working v1 out the door — scoping, demos, pre-launch gates, and the post-ship loop. Beating analysis paralysis and getting a real, working v1 out the door — scoping, demos, pre-launch gates, and the post-ship loop. An original team authored for this plugin — every contract is written for Hermes, with no upstream source.",
+      "startNote": "Tell me the thing you are stuck shipping and what 'done' looks like for today.",
+      "ported": true,
+      "lead": {
+        "id": "shipit-lead",
+        "name": "Ship It Lead",
+        "role": "Team Orchestrator",
+        "remit": "Orchestrates 5 Ship It specialists and assembles their work.",
+        "tags": [
+          "Ship It"
+        ]
+      },
+      "leadSkills": [],
+      "skills": [],
+      "members": [
+        {
+          "id": "orig-shipit-demo-builder",
+          "name": "Demo Builder",
+          "role": "Demo Builder",
+          "remit": "Builds the smallest thing that proves the idea works — a walking skeleton, not a product.",
+          "owns": "Proves the concept with the least code possible.",
+          "tags": [
+            "Ship It",
+            "Original"
+          ],
+          "skills": [
+            {
+              "label": "Work with me",
+              "task": "Adopt the Demo Builder role and tell me what you need to start."
+            },
+            {
+              "label": "What do you own?",
+              "task": "State your remit, your hard rules, and what you refuse to do."
+            },
+            {
+              "label": "Take this on",
+              "task": "Builds the smallest thing that proves the idea works — a walking skeleton, not a product."
+            }
+          ]
+        },
+        {
+          "id": "orig-shipit-momentum-coach",
+          "name": "Momentum Coach",
+          "role": "Momentum Coach",
+          "remit": "Turns \"I should\" into \"I started\" — kills analysis paralysis with one tiny done thing today.",
+          "owns": "Gets you moving when the plan is the procrastination.",
+          "tags": [
+            "Ship It",
+            "Original"
+          ],
+          "skills": [
+            {
+              "label": "Work with me",
+              "task": "Adopt the Momentum Coach role and tell me what you need to start."
+            },
+            {
+              "label": "What do you own?",
+              "task": "State your remit, your hard rules, and what you refuse to do."
+            },
+            {
+              "label": "Take this on",
+              "task": "Turns \"I should\" into \"I started\" — kills analysis paralysis with one tiny done thing today."
+            }
+          ]
+        },
+        {
+          "id": "orig-shipit-post-ship-loop",
+          "name": "Post-Ship Loop",
+          "role": "Post-Ship Loop",
+          "remit": "Turns \"shipped\" into \"better\" — instrument, watch, cut, repeat on a weekly cadence.",
+          "owns": "Runs the loop that makes the second version smarter than the first.",
+          "tags": [
+            "Ship It",
+            "Original"
+          ],
+          "skills": [
+            {
+              "label": "Work with me",
+              "task": "Adopt the Post-Ship Loop role and tell me what you need to start."
+            },
+            {
+              "label": "What do you own?",
+              "task": "State your remit, your hard rules, and what you refuse to do."
+            },
+            {
+              "label": "Take this on",
+              "task": "Turns \"shipped\" into \"better\" — instrument, watch, cut, repeat on a weekly cadence."
+            }
+          ]
+        },
+        {
+          "id": "orig-shipit-scope-cutter",
+          "name": "Scope Cutter",
+          "role": "Scope Cutter",
+          "remit": "Cuts a product to its v1 — the one thing it must do before anything else exists.",
+          "owns": "Removes features until only the core loop remains.",
+          "tags": [
+            "Ship It",
+            "Original"
+          ],
+          "skills": [
+            {
+              "label": "Work with me",
+              "task": "Adopt the Scope Cutter role and tell me what you need to start."
+            },
+            {
+              "label": "What do you own?",
+              "task": "State your remit, your hard rules, and what you refuse to do."
+            },
+            {
+              "label": "Take this on",
+              "task": "Cuts a product to its v1 — the one thing it must do before anything else exists."
+            }
+          ]
+        },
+        {
+          "id": "orig-shipit-ship-gate",
+          "name": "Ship Gate",
+          "role": "Ship Gate",
+          "remit": "The pre-launch checklist — refuses to let anything go live that is not safe to show a stranger.",
+          "owns": "Holds the line between \"works on my machine\" and \"safe to show\".",
+          "tags": [
+            "Ship It",
+            "Original"
+          ],
+          "skills": [
+            {
+              "label": "Work with me",
+              "task": "Adopt the Ship Gate role and tell me what you need to start."
+            },
+            {
+              "label": "What do you own?",
+              "task": "State your remit, your hard rules, and what you refuse to do."
+            },
+            {
+              "label": "Take this on",
+              "task": "The pre-launch checklist — refuses to let anything go live that is not safe to show a stranger."
             }
           ]
         }

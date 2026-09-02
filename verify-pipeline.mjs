@@ -151,7 +151,16 @@ for (const team of registry) {
 server.close()
 
 // ══ Part C: real GitHub raw URL (best-effort) ══
-const GITHUB_BASE = 'https://raw.githubusercontent.com/tuancookiez-hub/hermes-experts-plugin/main/teams/'
+// Pin to the SAME immutable ref the built plugin uses (src/release.json), so the
+// verifier can never pass against a different remote than what users will fetch.
+let PINNED_REF = 'main'
+try {
+  PINNED_REF = JSON.parse(fs.readFileSync(path.join(here, 'src', 'release.json'), 'utf8')).ref || 'main'
+} catch {
+  PINNED_REF = 'main'
+}
+const GITHUB_BASE =
+  'https://raw.githubusercontent.com/tuancookiez-hub/hermes-experts-plugin/' + PINNED_REF + '/teams/'
 let remoteTried = 0
 let remoteOk = 0
 for (const team of registry) {

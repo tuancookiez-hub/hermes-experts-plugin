@@ -1,0 +1,5 @@
+{
+  "ref": "v1.0.0",
+  "pinned": "2026-09-02",
+  "_comment": "Single source of truth for the payload ref. build-shell.mjs bakes this into DATA.github.ref / DATA.base, and verify-pipeline.mjs proves THAT SAME ref over the network — so the built plugin and the verifier can never disagree about which remote is live. Pin to an immutable tag, not a branch: a branch would let payloads change underneath installed caches. Override at build time with: node src/build-shell.mjs --ref main"
+}
