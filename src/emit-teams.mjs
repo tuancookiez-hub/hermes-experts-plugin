@@ -202,7 +202,7 @@ domains.forEach((domain, i) => {
   // Phase 2 capability remap: every lead gets the Hermes tool-reality map too,
   // so the orchestrator routes on what actually exists (publishing APIs, voice
   // cloning, lip sync, WorkBuddy model IDs are named as unavailable).
-  const leadTailFull = (leadTail + '\n\n' + capabilities).trim()
+  const leadTailFull = (leadTail + '\n\n' + capabilities + '\n\n' + ioContract).trim()
 
   // ── payload (the heavy file fetched on install) ──
   const membersMap = {}
@@ -251,6 +251,111 @@ domains.forEach((domain, i) => {
     '  ' + domain + ': ' + agents.length + ' agents -> teams/' + domain + '.json (' + kb + ' KB)'
   )
 })
+
+// ── Phase 5: ORIGINAL signature teams (authored by us, NO upstream source) ──
+// src/original/<team>/team.json holds { id, name, focus, tone } (+ optional
+// remit/startNote). Every other *.json in that dir is a member whose `contract`
+// we wrote ourselves — no `_source`, nothing derived from agency-agents.
+// These are the owned-IP teams that make the catalog more than a mirror.
+const originalDir = path.join(here, 'original')
+if (fs.existsSync(originalDir)) {
+  const shared = (f) => fs.readFileSync(path.join(sharedDir, f), 'utf8').trim()
+  const teamLeadHead = shared('team-lead-head.md')
+  const teamLeadTail = shared('team-lead-tail.md')
+  const sharedCapabilities = shared('capabilities.md')
+  const sharedIo = shared('io-contract.md')
+
+  const teamDirs = fs
+    .readdirSync(originalDir, { withFileTypes: true })
+    .filter((d) => d.isDirectory())
+    .map((d) => d.name)
+    .sort()
+
+  for (const dirName of teamDirs) {
+    const dir = path.join(originalDir, dirName)
+    const teamPath = path.join(dir, 'team.json')
+    if (!fs.existsSync(teamPath)) {
+      console.log('  skip original/' + dirName + ': no team.json')
+      continue
+    }
+    const meta = JSON.parse(fs.readFileSync(teamPath, 'utf8'))
+    const members = fs
+      .readdirSync(dir)
+      .filter((f) => f.endsWith('.json') && f !== 'team.json')
+      .map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')))
+      .sort((a, b) => a.name.localeCompare(b.name))
+    if (!members.length) {
+      console.log('  skip original/' + dirName + ': no members')
+      continue
+    }
+
+    const teamId = meta.id || dirName
+    const name = meta.name || titleCase(dirName)
+    const focus = meta.focus || ''
+    const tone = meta.tone || 'indigo'
+
+    // Same lead template the composed sub-teams use; we author the members.
+    const leadHead = teamLeadHead
+      .replace(/\{NAME\}/g, name)
+      .replace(/\{COUNT\}/g, String(members.length))
+      .replace(/\{FOCUS\}/g, focus)
+      .trim()
+    const leadTailFull = [teamLeadTail, sharedCapabilities, sharedIo].join('\n\n').trim()
+
+    const membersMap = {}
+    for (const a of members) membersMap[a.id] = a.contract
+    const payload = {
+      id: teamId,
+      original: true,
+      leadHead: leadHead,
+      leadTail: leadTailFull,
+      members: membersMap,
+    }
+    fs.writeFileSync(path.join(teamsDir, teamId + '.json'), JSON.stringify(payload, null, 2))
+
+    const focusSentence = focus.charAt(0).toUpperCase() + focus.slice(1)
+    registry.push({
+      id: teamId,
+      name: name,
+      // Provenance flag (informational). `ported` MUST stay true or template.js
+      // refuses to run the team (it gates runSolo/runLead on it).
+      original: true,
+      avatar: { letter: name.charAt(0), tone: tone },
+      memberTone: tone,
+      remit:
+        focusSentence +
+        '. ' +
+        (meta.remit ||
+          'An original team authored for this plugin — every contract is written for Hermes, with no upstream source.'),
+      startNote: meta.startNote || 'Tell me the ' + name + ' outcome you want.',
+      ported: true,
+      lead: {
+        id: teamId + '-lead',
+        name: name + ' Lead',
+        role: 'Team Orchestrator',
+        remit: 'Orchestrates ' + members.length + ' ' + name + ' specialists and assembles their work.',
+        tags: [name],
+      },
+      leadSkills: [],
+      skills: [],
+      members: members.map((a) => ({
+        id: a.id,
+        name: a.name,
+        role: a.role,
+        remit: a.remit || '',
+        owns: a.owns || '',
+        tags: a.tags || [],
+        skills: a.skills || [],
+      })),
+    })
+
+    totalAgents += members.length
+    const kb = (JSON.stringify(payload).length / 1024).toFixed(1)
+    console.log(
+      '  original/' + dirName + ': ' + members.length + ' agents -> teams/' + teamId + '.json (' + kb + ' KB)'
+    )
+  }
+}
 
 // Sort the registry so the catalog order is stable across runs.
 registry.sort((a, b) => a.name.localeCompare(b.name))

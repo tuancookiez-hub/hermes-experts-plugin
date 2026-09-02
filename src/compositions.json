@@ -1,5 +1,267 @@
 {
-  "_comment": "Curated sub-team composition for domains that are too flat as a single 36-agent blob. Each entry under a domain emits ONE teams/<id>.json payload + one registry entry. Member ids must match the `id` field inside src/agency/<domain>/*.json. Tones are limited to the 6 the UI supports: indigo, emerald, sky, rose, amber, violet.",
+  "design": [
+    {
+      "id": "ux-research-architecture",
+      "name": "UX Research & Architecture",
+      "focus": "research, information architecture, personas, inclusive design, and brand stewardship",
+      "tone": "indigo",
+      "members": [
+        "aa-design-ux-researcher",
+        "aa-design-ux-architect",
+        "aa-design-persona-walkthrough",
+        "aa-design-inclusive-visuals-specialist",
+        "aa-design-brand-guardian"
+      ]
+    },
+    {
+      "id": "visual-design-craft",
+      "name": "Visual Design & Craft",
+      "focus": "UI craft, finish-gate review, visual storytelling, delight, and image prompting",
+      "tone": "emerald",
+      "members": [
+        "aa-design-ui-designer",
+        "aa-design-ui-finish-gate-reviewer",
+        "aa-design-visual-storyteller",
+        "aa-design-whimsy-injector",
+        "aa-design-image-prompt-engineer"
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "id": "ai-llm-engineering",
+      "name": "AI & LLM Engineering",
+      "focus": "building and operating AI/LLM systems — models, RAG, prompts, agents, and voice",
+      "tone": "indigo",
+      "members": [
+        "aa-engineering-ai-data-remediation-engineer",
+        "aa-engineering-ai-engineer",
+        "aa-engineering-llm-post-training-engineer",
+        "aa-engineering-multi-agent-systems-architect",
+        "aa-engineering-prompt-engineer",
+        "aa-engineering-rag-pipeline-engineer",
+        "aa-engineering-voice-ai-integration-engineer"
+      ]
+    },
+    {
+      "id": "backend-data",
+      "name": "Backend & Data",
+      "focus": "server-side architecture, databases, data pipelines, and retrieval relevance",
+      "tone": "emerald",
+      "members": [
+        "aa-engineering-backend-architect",
+        "aa-engineering-data-engineer",
+        "aa-engineering-database-optimizer",
+        "aa-engineering-database-reliability-engineer",
+        "aa-engineering-gaussdb-expert",
+        "aa-engineering-knowledge-graph-engineer",
+        "aa-engineering-search-relevance-engineer"
+      ]
+    },
+    {
+      "id": "frontend-mobile",
+      "name": "Frontend & Mobile",
+      "focus": "web frontends, native and mini-program mobile apps, and realtime collaboration",
+      "tone": "sky",
+      "members": [
+        "aa-engineering-frontend-developer",
+        "aa-engineering-mobile-app-builder",
+        "aa-engineering-mobile-release-engineer",
+        "aa-engineering-wechat-mini-program-developer",
+        "aa-engineering-realtime-collaboration-engineer"
+      ]
+    },
+    {
+      "id": "ui-engineering-accessibility",
+      "name": "UI Engineering & Accessibility",
+      "focus": "desktop apps, data visualization, internationalization, and accessible interfaces",
+      "tone": "rose",
+      "members": [
+        "aa-engineering-data-visualization-engineer",
+        "aa-engineering-desktop-app-engineer",
+        "aa-engineering-i18n-engineer",
+        "aa-engineering-section-508-specialist",
+        "aa-engineering-webassembly-engineer"
+      ]
+    },
+    {
+      "id": "platform-reliability",
+      "name": "Platform & Reliability",
+      "focus": "DevOps, SRE, incident command, networks, cloud cost, and privacy infrastructure",
+      "tone": "amber",
+      "members": [
+        "aa-engineering-devops-automator",
+        "aa-engineering-finops-engineer",
+        "aa-engineering-incident-response-commander",
+        "aa-engineering-it-service-manager",
+        "aa-engineering-network-engineer",
+        "aa-engineering-privacy-engineer",
+        "aa-engineering-sre"
+      ]
+    },
+    {
+      "id": "code-quality-architecture",
+      "name": "Code Quality & Architecture",
+      "focus": "software architecture, review discipline, and safe refactoring",
+      "tone": "violet",
+      "members": [
+        "aa-engineering-code-reviewer",
+        "aa-engineering-minimal-change-engineer",
+        "aa-engineering-rust-refactoring-specialist",
+        "aa-engineering-senior-developer",
+        "aa-engineering-software-architect"
+      ]
+    },
+    {
+      "id": "tooling-onboarding-docs",
+      "name": "Tooling, Onboarding & Docs",
+      "focus": "developer tooling, git workflow, codebase onboarding, prototyping, and technical writing",
+      "tone": "indigo",
+      "members": [
+        "aa-engineering-codebase-onboarding-engineer",
+        "aa-engineering-developer-tooling-engineer",
+        "aa-engineering-git-workflow-master",
+        "aa-engineering-rapid-prototyper",
+        "aa-engineering-technical-writer"
+      ]
+    },
+    {
+      "id": "apis-integrations",
+      "name": "APIs & Integrations",
+      "focus": "API platforms, payments, identity, and third-party system integration",
+      "tone": "emerald",
+      "members": [
+        "aa-engineering-api-platform-engineer",
+        "aa-engineering-email-intelligence-engineer",
+        "aa-engineering-feishu-integration-developer",
+        "aa-engineering-identity-access-engineer",
+        "aa-engineering-payments-billing-engineer"
+      ]
+    },
+    {
+      "id": "web-platforms-cms",
+      "name": "Web Platforms & CMS",
+      "focus": "CMS and web platform delivery — WordPress, Drupal, USWDS, and commerce",
+      "tone": "sky",
+      "members": [
+        "aa-engineering-cms-developer",
+        "aa-engineering-drupal-performance",
+        "aa-engineering-drupal-shopping-cart",
+        "aa-engineering-filament-optimization-specialist",
+        "aa-engineering-uswds-developer",
+        "aa-engineering-wordpress-performance",
+        "aa-engineering-wordpress-shopping-cart"
+      ]
+    },
+    {
+      "id": "edge-embedded-emerging",
+      "name": "Edge, Embedded & Emerging",
+      "focus": "firmware, IoT fleets, streaming, smart contracts, and autonomous optimization",
+      "tone": "rose",
+      "members": [
+        "aa-engineering-autonomous-optimization-architect",
+        "aa-engineering-embedded-firmware-engineer",
+        "aa-engineering-iot-fleet-engineer",
+        "aa-engineering-orgscript-engineer",
+        "aa-engineering-solidity-smart-contract-engineer",
+        "aa-engineering-video-streaming-engineer"
+      ]
+    }
+  ],
+  "game-development": [
+    {
+      "id": "godot-blender",
+      "name": "Godot & Blender",
+      "focus": "Godot gameplay, multiplayer, shaders, and Blender tooling",
+      "tone": "indigo",
+      "members": [
+        "aa-blender-addon-engineer",
+        "aa-godot-gameplay-scripter",
+        "aa-godot-multiplayer-engineer",
+        "aa-godot-shader-developer"
+      ]
+    },
+    {
+      "id": "unity",
+      "name": "Unity",
+      "focus": "Unity architecture, editor tooling, multiplayer, and shader graph",
+      "tone": "emerald",
+      "members": [
+        "aa-unity-architect",
+        "aa-unity-editor-tool-developer",
+        "aa-unity-multiplayer-engineer",
+        "aa-unity-shader-graph-artist"
+      ]
+    },
+    {
+      "id": "unreal",
+      "name": "Unreal",
+      "focus": "Unreal multiplayer, systems, technical art, and world building",
+      "tone": "sky",
+      "members": [
+        "aa-unreal-multiplayer-architect",
+        "aa-unreal-systems-engineer",
+        "aa-unreal-technical-artist",
+        "aa-unreal-world-builder"
+      ]
+    },
+    {
+      "id": "roblox",
+      "name": "Roblox",
+      "focus": "Roblox experiences, avatars, and systems scripting",
+      "tone": "rose",
+      "members": [
+        "aa-roblox-avatar-creator",
+        "aa-roblox-experience-designer",
+        "aa-roblox-systems-scripter"
+      ]
+    },
+    {
+      "id": "game-design-production",
+      "name": "Game Design & Production",
+      "focus": "game, level, narrative and economy design plus audio and technical art",
+      "tone": "amber",
+      "members": [
+        "aa-game-designer",
+        "aa-level-designer",
+        "aa-narrative-designer",
+        "aa-economy-designer",
+        "aa-game-audio-engineer",
+        "aa-technical-artist"
+      ]
+    }
+  ],
+  "gis": [
+    {
+      "id": "spatial-data-analysis",
+      "name": "Spatial Data & Analysis",
+      "focus": "spatial data engineering, analysis, geoprocessing, GeoAI, and 3D capture",
+      "tone": "indigo",
+      "members": [
+        "aa-gis-analyst",
+        "aa-gis-spatial-data-engineer",
+        "aa-gis-spatial-data-scientist",
+        "aa-gis-geoprocessing-specialist",
+        "aa-gis-geoai-ml-engineer",
+        "aa-gis-drone-reality-mapping",
+        "aa-gis-3d-scene-developer"
+      ]
+    },
+    {
+      "id": "gis-delivery-design",
+      "name": "GIS Delivery & Design",
+      "focus": "cartography, web GIS, solution delivery, QA, and BIM integration",
+      "tone": "emerald",
+      "members": [
+        "aa-gis-cartography-designer",
+        "aa-gis-web-gis-developer",
+        "aa-gis-solution-engineer",
+        "aa-gis-technical-consultant",
+        "aa-gis-qa-engineer",
+        "aa-gis-bim-specialist"
+      ]
+    }
+  ],
   "marketing": [
     {
       "id": "search-aeo",
@@ -85,5 +347,230 @@
         "aa-marketing-book-co-author"
       ]
     }
-  ]
+  ],
+  "sales": [
+    {
+      "id": "revenue-strategy",
+      "name": "Revenue Strategy",
+      "focus": "accounts, deals, pipeline, offers, lead gen, and outbound motion",
+      "tone": "indigo",
+      "members": [
+        "aa-sales-account-strategist",
+        "aa-sales-deal-strategist",
+        "aa-sales-pipeline-analyst",
+        "aa-sales-offer-lead-gen-strategist",
+        "aa-sales-outbound-strategist"
+      ]
+    },
+    {
+      "id": "sales-execution-enablement",
+      "name": "Sales Execution & Enablement",
+      "focus": "coaching, discovery, solution selling, and proposals",
+      "tone": "emerald",
+      "members": [
+        "aa-sales-coach",
+        "aa-sales-discovery-coach",
+        "aa-sales-engineer",
+        "aa-sales-proposal-strategist"
+      ]
+    }
+  ],
+  "security": [
+    {
+      "id": "security-architecture-audit",
+      "name": "Security Architecture & Audit",
+      "focus": "security architecture, cloud and blockchain security, appsec, and compliance audit",
+      "tone": "indigo",
+      "members": [
+        "aa-security-architect",
+        "aa-security-cloud-security-architect",
+        "aa-security-compliance-auditor",
+        "aa-security-blockchain-security-auditor",
+        "aa-security-ai-generated-code-auditor",
+        "aa-security-appsec-engineer"
+      ]
+    },
+    {
+      "id": "secops-threat-response",
+      "name": "SecOps & Threat Response",
+      "focus": "security operations, detection, threat intel, incident response, and secrets hygiene",
+      "tone": "emerald",
+      "members": [
+        "aa-security-senior-secops",
+        "aa-security-threat-detection-engineer",
+        "aa-security-threat-intelligence-analyst",
+        "aa-security-incident-responder",
+        "aa-security-penetration-tester",
+        "aa-security-secrets-credential-engineer"
+      ]
+    }
+  ],
+  "specialized": [
+    {
+      "id": "finance-accounting",
+      "name": "Finance & Accounting",
+      "focus": "payables, billing, pricing, lending support, and the CFO function",
+      "tone": "indigo",
+      "members": [
+        "aa-accounts-payable-agent",
+        "aa-chief-financial-officer",
+        "aa-legal-billing-time-tracking",
+        "aa-loan-officer-assistant",
+        "aa-medical-billing-coding-specialist",
+        "aa-specialized-pricing-analyst"
+      ]
+    },
+    {
+      "id": "legal-privacy-compliance",
+      "name": "Legal, Privacy & Compliance",
+      "focus": "legal intake and review, privacy, ESG, and regulated compliance programs",
+      "tone": "emerald",
+      "members": [
+        "aa-data-privacy-officer",
+        "aa-esg-sustainability-officer",
+        "aa-healthcare-marketing-compliance",
+        "aa-legal-client-intake",
+        "aa-legal-document-review",
+        "aa-specialized-fedramp-rmf-compliance"
+      ]
+    },
+    {
+      "id": "people-hr",
+      "name": "People & HR",
+      "focus": "hiring, onboarding, training, organizational psychology, and career documents",
+      "tone": "sky",
+      "members": [
+        "aa-change-management-consultant",
+        "aa-corporate-training-designer",
+        "aa-hr-onboarding",
+        "aa-organizational-psychologist",
+        "aa-recruitment-specialist",
+        "aa-resume-tailor"
+      ]
+    },
+    {
+      "id": "customer-service-ops",
+      "name": "Customer & Service Ops",
+      "focus": "customer service, success, outreach, retail and hospitality support",
+      "tone": "rose",
+      "members": [
+        "aa-customer-service",
+        "aa-customer-success-manager",
+        "aa-healthcare-customer-service",
+        "aa-hospitality-guest-services",
+        "aa-retail-customer-returns",
+        "aa-sales-data-extraction-agent",
+        "aa-sales-outreach"
+      ]
+    },
+    {
+      "id": "executive-strategy",
+      "name": "Executive & Strategy",
+      "focus": "strategy, operations, M&A integration, planning, and executive support",
+      "tone": "amber",
+      "members": [
+        "aa-business-strategist",
+        "aa-government-digital-presales-consultant",
+        "aa-ma-integration-manager",
+        "aa-operations-manager",
+        "aa-specialized-chief-of-staff",
+        "aa-specialized-master-plan-architect",
+        "aa-specialized-strategy-duel-agent",
+        "aa-supply-chain-strategist"
+      ]
+    },
+    {
+      "id": "automation-agents",
+      "name": "Automation & Agents",
+      "focus": "designing, governing, and wiring up autonomous agents and workflows",
+      "tone": "violet",
+      "members": [
+        "aa-agentic-identity-trust",
+        "aa-agents-orchestrator",
+        "aa-automation-governance-architect",
+        "aa-report-distribution-agent",
+        "aa-specialized-document-generator",
+        "aa-specialized-mcp-builder",
+        "aa-specialized-workflow-architect"
+      ]
+    },
+    {
+      "id": "data-technical-specialists",
+      "name": "Data & Technical Specialists",
+      "focus": "data consolidation, identity graphs, codebases, model QA, CRM, and zero-knowledge systems",
+      "tone": "indigo",
+      "members": [
+        "aa-data-consolidation-agent",
+        "aa-identity-graph-operator",
+        "aa-lsp-index-engineer",
+        "aa-specialized-codebase-archaeologist",
+        "aa-specialized-model-qa",
+        "aa-specialized-salesforce-architect",
+        "aa-zk-steward"
+      ]
+    },
+    {
+      "id": "care-life-advisory",
+      "name": "Care & Life Advisory",
+      "focus": "personal guidance — elder care, property, education, and growth",
+      "tone": "emerald",
+      "members": [
+        "aa-healthcare-aging-parent-care-companion",
+        "aa-personal-growth-mentor",
+        "aa-real-estate-buyer-seller",
+        "aa-study-abroad-advisor"
+      ]
+    },
+    {
+      "id": "market-regional-navigators",
+      "name": "Market & Regional Navigators",
+      "focus": "translating and navigating specific markets, cultures, and developer audiences",
+      "tone": "sky",
+      "members": [
+        "aa-language-translator",
+        "aa-specialized-cultural-intelligence-strategist",
+        "aa-specialized-developer-advocate",
+        "aa-specialized-french-consulting-market",
+        "aa-specialized-korean-business-navigator"
+      ]
+    },
+    {
+      "id": "civil-grant-public-sector",
+      "name": "Civil, Grant & Public Sector",
+      "focus": "civil engineering and grant/public-sector writing",
+      "tone": "rose",
+      "members": [
+        "aa-grant-writer",
+        "aa-specialized-civil-engineer"
+      ]
+    }
+  ],
+  "testing": [
+    {
+      "id": "test-engineering",
+      "name": "Test Engineering",
+      "focus": "automation, API and performance testing, accessibility, and results analysis",
+      "tone": "indigo",
+      "members": [
+        "aa-testing-test-automation-engineer",
+        "aa-testing-api-tester",
+        "aa-testing-performance-benchmarker",
+        "aa-testing-accessibility-auditor",
+        "aa-testing-test-results-analyzer"
+      ]
+    },
+    {
+      "id": "quality-ops-evidence",
+      "name": "Quality Ops & Evidence",
+      "focus": "evidence collection, reality checks, tooling evaluation, and workflow optimization",
+      "tone": "emerald",
+      "members": [
+        "aa-testing-evidence-collector",
+        "aa-testing-reality-checker",
+        "aa-testing-tool-evaluator",
+        "aa-testing-workflow-optimizer"
+      ]
+    }
+  ],
+  "_comment": "Curated sub-team composition, keyed by domain. Each entry emits ONE teams/<id>.json payload + one registry entry. Member ids must match the `id` field inside src/agency/<domain>/*.json. Tones are limited to the 6 the UI supports: indigo, emerald, sky, rose, amber, violet. Domains with no entry fall back to one flat team per domain. Large domains (engineering 59, specialized 58, marketing 36) MUST stay composed: a lead persona concatenates every member contract, so a 59-member lead would blow the context window."
 }

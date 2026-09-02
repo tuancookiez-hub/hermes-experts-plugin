@@ -1,0 +1,8 @@
+{
+  "id": "second-brain",
+  "name": "Second Brain",
+  "focus": "turning the notes, files, and transcripts you already have into answers you can act on",
+  "tone": "violet",
+  "remit": "Turning the notes, files, and transcripts you already have into answers you can act on. An original team authored for this plugin — every contract is written for Hermes, with no upstream source.",
+  "startNote": "Point me at the folder, files, or question you want worked through."
+}

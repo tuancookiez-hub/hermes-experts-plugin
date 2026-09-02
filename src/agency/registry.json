@@ -1,9 +1,1442 @@
 {
   "domains": [
-    "marketing"
+    "academic",
+    "design",
+    "engineering",
+    "finance",
+    "game-development",
+    "gis",
+    "healthcare",
+    "integrations",
+    "marketing",
+    "paid-media",
+    "product",
+    "project-management",
+    "research",
+    "sales",
+    "security",
+    "spatial-computing",
+    "specialized",
+    "strategy",
+    "support",
+    "testing"
   ],
-  "count": 36,
+  "count": 277,
   "experts": [
+    {
+      "id": "aa-academic-anthropologist",
+      "name": "Anthropologist",
+      "domain": "academic",
+      "remit": "Expert in cultural systems, rituals, kinship, belief systems, and ethnographic method — builds culturally coherent societies that feel lived-in rather than invented",
+      "tags": [
+        "Academic",
+        "Agentic"
+      ],
+      "file": "src/agency/academic/academic-anthropologist.json",
+      "bytes": 7457
+    },
+    {
+      "id": "aa-academic-geographer",
+      "name": "Geographer",
+      "domain": "academic",
+      "remit": "Expert in physical and human geography, climate systems, cartography, and spatial analysis — builds geographically coherent worlds where terrain, climate, resources, and settlement patterns make scientific sense",
+      "tags": [
+        "Academic",
+        "Agentic"
+      ],
+      "file": "src/agency/academic/academic-geographer.json",
+      "bytes": 7334
+    },
+    {
+      "id": "aa-academic-historian",
+      "name": "Historian",
+      "domain": "academic",
+      "remit": "Expert in historical analysis, periodization, material culture, and historiography — validates historical coherence and enriches settings with authentic period detail grounded in primary and secondary sources",
+      "tags": [
+        "Academic",
+        "Agentic"
+      ],
+      "file": "src/agency/academic/academic-historian.json",
+      "bytes": 6861
+    },
+    {
+      "id": "aa-academic-narratologist",
+      "name": "Narratologist",
+      "domain": "academic",
+      "remit": "Expert in narrative theory, story structure, character arcs, and literary analysis — grounds advice in established frameworks from Propp to Campbell to modern narratology",
+      "tags": [
+        "Academic",
+        "Agentic"
+      ],
+      "file": "src/agency/academic/academic-narratologist.json",
+      "bytes": 6421
+    },
+    {
+      "id": "aa-academic-psychologist",
+      "name": "Psychologist",
+      "domain": "academic",
+      "remit": "Expert in human behavior, personality theory, motivation, and cognitive patterns — builds psychologically credible characters and interactions grounded in clinical and research frameworks",
+      "tags": [
+        "Academic",
+        "Agentic"
+      ],
+      "file": "src/agency/academic/academic-psychologist.json",
+      "bytes": 7444
+    },
+    {
+      "id": "aa-academic-statistician",
+      "name": "Statistician",
+      "domain": "academic",
+      "remit": "Expert in quantitative research methodology, experimental design, and statistical inference — pressure-tests claims, designs sound studies, and separates real signal from noise, chance, and bias",
+      "tags": [
+        "Academic",
+        "Agentic"
+      ],
+      "file": "src/agency/academic/academic-statistician.json",
+      "bytes": 11056
+    },
+    {
+      "id": "aa-design-brand-guardian",
+      "name": "Brand Guardian",
+      "domain": "design",
+      "remit": "Expert brand strategist and guardian specializing in brand identity development, consistency maintenance, and strategic brand positioning",
+      "tags": [
+        "Design",
+        "Agentic"
+      ],
+      "file": "src/agency/design/design-brand-guardian.json",
+      "bytes": 11309
+    },
+    {
+      "id": "aa-design-image-prompt-engineer",
+      "name": "Image Prompt Engineer",
+      "domain": "design",
+      "remit": "Expert photography prompt engineer specializing in crafting detailed, evocative prompts for AI image generation.",
+      "tags": [
+        "Design",
+        "Agentic"
+      ],
+      "file": "src/agency/design/design-image-prompt-engineer.json",
+      "bytes": 10724
+    },
+    {
+      "id": "aa-design-inclusive-visuals-specialist",
+      "name": "Inclusive Visuals Specialist",
+      "domain": "design",
+      "remit": "Representation expert who defeats systemic AI biases to generate culturally accurate, affirming, and non-stereotypical images and video.",
+      "tags": [
+        "Design",
+        "Agentic"
+      ],
+      "file": "src/agency/design/design-inclusive-visuals-specialist.json",
+      "bytes": 6438
+    },
+    {
+      "id": "aa-design-persona-walkthrough",
+      "name": "Persona Walkthrough Specialist",
+      "domain": "design",
+      "remit": "Simulate cognitive walkthroughs of web pages from a defined persona's psychological perspective — captures emotional reactions and rational thought at each scroll position, then delivers structured CRO reports grounded in LIFT, Cialdini, and Fogg frameworks",
+      "tags": [
+        "Design",
+        "Agentic"
+      ],
+      "file": "src/agency/design/design-persona-walkthrough.json",
+      "bytes": 16144
+    },
+    {
+      "id": "aa-design-ui-designer",
+      "name": "UI Designer",
+      "domain": "design",
+      "remit": "Expert UI designer specializing in visual design systems, component libraries, and pixel-perfect interface creation.",
+      "tags": [
+        "Design",
+        "Agentic"
+      ],
+      "file": "src/agency/design/design-ui-designer.json",
+      "bytes": 12901
+    },
+    {
+      "id": "aa-design-ui-finish-gate-reviewer",
+      "name": "UI Finish-Gate Reviewer",
+      "domain": "design",
+      "remit": "Product-interface reviewer who catches generic, interchangeable UI before it ships by grounding critique in real product evidence, a written design contract, and a hard implementation finish gate.",
+      "tags": [
+        "Design",
+        "Agentic"
+      ],
+      "file": "src/agency/design/design-ui-finish-gate-reviewer.json",
+      "bytes": 8492
+    },
+    {
+      "id": "aa-design-ux-architect",
+      "name": "UX Architect",
+      "domain": "design",
+      "remit": "Technical architecture and UX specialist who provides developers with solid foundations, CSS systems, and clear implementation guidance",
+      "tags": [
+        "Design",
+        "Agentic"
+      ],
+      "file": "src/agency/design/design-ux-architect.json",
+      "bytes": 15357
+    },
+    {
+      "id": "aa-design-ux-researcher",
+      "name": "UX Researcher",
+      "domain": "design",
+      "remit": "Expert user experience researcher specializing in user behavior analysis, usability testing, and data-driven design insights.",
+      "tags": [
+        "Design",
+        "Agentic"
+      ],
+      "file": "src/agency/design/design-ux-researcher.json",
+      "bytes": 12615
+    },
+    {
+      "id": "aa-design-visual-storyteller",
+      "name": "Visual Storyteller",
+      "domain": "design",
+      "remit": "Expert visual communication specialist focused on creating compelling visual narratives, multimedia content, and brand storytelling through design.",
+      "tags": [
+        "Design",
+        "Agentic"
+      ],
+      "file": "src/agency/design/design-visual-storyteller.json",
+      "bytes": 6948
+    },
+    {
+      "id": "aa-design-whimsy-injector",
+      "name": "Whimsy Injector",
+      "domain": "design",
+      "remit": "Expert creative specialist focused on adding personality, delight, and playful elements to brand experiences.",
+      "tags": [
+        "Design",
+        "Agentic"
+      ],
+      "file": "src/agency/design/design-whimsy-injector.json",
+      "bytes": 15408
+    },
+    {
+      "id": "aa-engineering-ai-data-remediation-engineer",
+      "name": "AI Data Remediation Engineer",
+      "domain": "engineering",
+      "remit": "Specialist in self-healing data pipelines — uses air-gapped local SLMs and semantic clustering to automatically detect, classify, and fix data anomalies at scale.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-ai-data-remediation-engineer.json",
+      "bytes": 10000
+    },
+    {
+      "id": "aa-engineering-ai-engineer",
+      "name": "AI Engineer",
+      "domain": "engineering",
+      "remit": "Expert AI/ML engineer specializing in machine learning model development, deployment, and integration into production systems.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-ai-engineer.json",
+      "bytes": 6958
+    },
+    {
+      "id": "aa-engineering-api-platform-engineer",
+      "name": "API Platform Engineer",
+      "domain": "engineering",
+      "remit": "Expert API platform engineer for public and partner APIs — contract-first design (OpenAPI/gRPC), versioning and deprecation policy, SDK generation, API gateway concerns (auth, rate limiting, quotas), and developer-portal DX.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-api-platform-engineer.json",
+      "bytes": 13059
+    },
+    {
+      "id": "aa-engineering-autonomous-optimization-architect",
+      "name": "Autonomous Optimization Architect",
+      "domain": "engineering",
+      "remit": "Intelligent system governor that continuously shadow-tests APIs for performance while enforcing strict financial and security guardrails against runaway costs.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-autonomous-optimization-architect.json",
+      "bytes": 7572
+    },
+    {
+      "id": "aa-engineering-backend-architect",
+      "name": "Backend Architect",
+      "domain": "engineering",
+      "remit": "Senior backend architect specializing in scalable system design, database architecture, API development, and cloud infrastructure.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-backend-architect.json",
+      "bytes": 10529
+    },
+    {
+      "id": "aa-engineering-cms-developer",
+      "name": "CMS Developer",
+      "domain": "engineering",
+      "remit": "Drupal and WordPress specialist for theme development, custom plugins/modules, content architecture, and code-first CMS implementation",
+      "tags": [
+        "Engineering"
+      ],
+      "file": "src/agency/engineering/engineering-cms-developer.json",
+      "bytes": 18983
+    },
+    {
+      "id": "aa-engineering-code-reviewer",
+      "name": "Code Reviewer",
+      "domain": "engineering",
+      "remit": "Expert code reviewer who provides constructive, actionable feedback focused on correctness, maintainability, security, and performance — not style preferences.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-code-reviewer.json",
+      "bytes": 2679
+    },
+    {
+      "id": "aa-engineering-codebase-onboarding-engineer",
+      "name": "Codebase Onboarding Engineer",
+      "domain": "engineering",
+      "remit": "Expert developer onboarding specialist who helps new engineers understand unfamiliar codebases fast by reading source code, tracing code paths, and stating only facts grounded in the code.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-codebase-onboarding-engineer.json",
+      "bytes": 9130
+    },
+    {
+      "id": "aa-engineering-data-engineer",
+      "name": "Data Engineer",
+      "domain": "engineering",
+      "remit": "Expert data engineer specializing in building reliable data pipelines, lakehouse architectures, and scalable data infrastructure.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-data-engineer.json",
+      "bytes": 13981
+    },
+    {
+      "id": "aa-engineering-data-visualization-engineer",
+      "name": "Data Visualization Engineer",
+      "domain": "engineering",
+      "remit": "Expert data visualization engineer — chart-type selection by data and question, perceptually honest encodings, colorblind-safe data palettes, accessible and interactive charts, and rendering large datasets performantly with D3, Vega, and charting libraries.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-data-visualization-engineer.json",
+      "bytes": 13191
+    },
+    {
+      "id": "aa-engineering-database-optimizer",
+      "name": "Database Optimizer",
+      "domain": "engineering",
+      "remit": "Expert database specialist focusing on schema design, query optimization, indexing strategies, and performance tuning for PostgreSQL, MySQL, and modern databases like Supabase and PlanetScale.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-database-optimizer.json",
+      "bytes": 5151
+    },
+    {
+      "id": "aa-engineering-database-reliability-engineer",
+      "name": "Database Reliability Engineer",
+      "domain": "engineering",
+      "remit": "Expert database reliability engineer (DBRE) — high availability and replication, automated failover, backup and point-in-time recovery, zero-downtime online schema migrations, connection pooling, and disaster-recovery drills.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-database-reliability-engineer.json",
+      "bytes": 13644
+    },
+    {
+      "id": "aa-engineering-desktop-app-engineer",
+      "name": "Desktop App Engineer",
+      "domain": "engineering",
+      "remit": "Expert desktop application engineer for Electron and Tauri — secure IPC and process isolation, code signing and notarization, auto-update pipelines, native OS integration, and resource-footprint discipline.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-desktop-app-engineer.json",
+      "bytes": 14042
+    },
+    {
+      "id": "aa-engineering-developer-tooling-engineer",
+      "name": "Developer Tooling Engineer",
+      "domain": "engineering",
+      "remit": "Expert developer-tooling and CLI engineer — building command-line tools and internal developer platforms with great DX: intuitive command design, helpful errors, shell completions, fast startup, cross-platform distribution, and scriptable, composable interfaces.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-developer-tooling-engineer.json",
+      "bytes": 12449
+    },
+    {
+      "id": "aa-engineering-devops-automator",
+      "name": "DevOps Automator",
+      "domain": "engineering",
+      "remit": "Expert DevOps engineer specializing in infrastructure automation, CI/CD pipeline development, and cloud operations",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-devops-automator.json",
+      "bytes": 12556
+    },
+    {
+      "id": "aa-engineering-drupal-performance",
+      "name": "Drupal Performance Engineer",
+      "domain": "engineering",
+      "remit": "Expert Drupal 10/11 performance engineer specializing in Core Web Vitals, render and dynamic page caching, BigPipe, cache tags and contexts, database query and Views optimization, CSS/JS aggregation, responsive images and lazy loading, CDN integration, and opcache/PHP-FPM tuning for fast, audit-passing sites",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-drupal-performance.json",
+      "bytes": 21980
+    },
+    {
+      "id": "aa-engineering-drupal-shopping-cart",
+      "name": "Drupal Shopping Cart Engineer",
+      "domain": "engineering",
+      "remit": "Expert Drupal e-commerce engineer specializing in Drupal Commerce for product catalog management, payment gateway integration, checkout workflow design, order management, tax and promotion configuration, and high-reliability storefront delivery on Drupal 10/11",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-drupal-shopping-cart.json",
+      "bytes": 19936
+    },
+    {
+      "id": "aa-engineering-email-intelligence-engineer",
+      "name": "Email Intelligence Engineer",
+      "domain": "engineering",
+      "remit": "Expert in extracting structured, reasoning-ready data from raw email threads for AI agents and automation systems",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-email-intelligence-engineer.json",
+      "bytes": 16211
+    },
+    {
+      "id": "aa-engineering-embedded-firmware-engineer",
+      "name": "Embedded Firmware Engineer",
+      "domain": "engineering",
+      "remit": "Specialist in bare-metal and RTOS firmware - ESP32/ESP-IDF, PlatformIO, Arduino, ARM Cortex-M, STM32 HAL/LL, Nordic nRF5/nRF Connect SDK, FreeRTOS, Zephyr",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-embedded-firmware-engineer.json",
+      "bytes": 6193
+    },
+    {
+      "id": "aa-engineering-feishu-integration-developer",
+      "name": "Feishu Integration Developer",
+      "domain": "engineering",
+      "remit": "Full-stack integration expert specializing in the Feishu (Lark) Open Platform — proficient in Feishu bots, mini programs, approval workflows, Bitable (multidimensional spreadsheets), interactive message cards, Webhooks, SSO authentication, and workflow automation, building enterprise-grade collaboration and automation solutions within the Feishu ecosystem.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-feishu-integration-developer.json",
+      "bytes": 20227
+    },
+    {
+      "id": "aa-engineering-filament-optimization-specialist",
+      "name": "Filament Optimization Specialist",
+      "domain": "engineering",
+      "remit": "Expert in restructuring and optimizing Filament PHP admin interfaces for maximum usability and efficiency.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-filament-optimization-specialist.json",
+      "bytes": 13777
+    },
+    {
+      "id": "aa-engineering-finops-engineer",
+      "name": "FinOps Engineer",
+      "domain": "engineering",
+      "remit": "Expert cloud cost engineer for AWS/GCP/Azure — cost allocation and tagging, rightsizing, commitment planning (reserved instances/savings plans), egress and storage optimization, and unit-economics dashboards that tie spend to business value.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-finops-engineer.json",
+      "bytes": 12345
+    },
+    {
+      "id": "aa-engineering-frontend-developer",
+      "name": "Frontend Developer",
+      "domain": "engineering",
+      "remit": "Expert frontend developer specializing in modern web technologies, React/Vue/Angular frameworks, UI implementation, and performance optimization",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-frontend-developer.json",
+      "bytes": 8939
+    },
+    {
+      "id": "aa-engineering-gaussdb-expert",
+      "name": "GaussDB Expert Engineer",
+      "domain": "engineering",
+      "remit": "Expert database specialist focusing on GaussDB OLTP — Huawei's self-developed enterprise-grade relational database (NOT GaussDB(DWS) OLAP, NOT GaussDB(for openGauss) cloud service, NOT GaussDB(for MySQL)).",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-gaussdb-expert.json",
+      "bytes": 14753
+    },
+    {
+      "id": "aa-engineering-git-workflow-master",
+      "name": "Git Workflow Master",
+      "domain": "engineering",
+      "remit": "Expert in Git workflows, branching strategies, and version control best practices including conventional commits, rebasing, worktrees, and CI-friendly branch management.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-git-workflow-master.json",
+      "bytes": 2812
+    },
+    {
+      "id": "aa-engineering-i18n-engineer",
+      "name": "Internationalization Engineer",
+      "domain": "engineering",
+      "remit": "Expert i18n engineer for ICU MessageFormat, CLDR plural rules, RTL and bidirectional layouts, locale-aware date/number/currency formatting, string extraction pipelines, and pseudo-localization testing.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-i18n-engineer.json",
+      "bytes": 12217
+    },
+    {
+      "id": "aa-engineering-identity-access-engineer",
+      "name": "Identity & Access Engineer",
+      "domain": "engineering",
+      "remit": "Expert identity engineer for OAuth 2.0/OIDC flows, enterprise SSO (SAML/OIDC) and SCIM provisioning, passkeys/WebAuthn, session architecture, and multi-tenant authorization with RBAC/ABAC.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-identity-access-engineer.json",
+      "bytes": 14285
+    },
+    {
+      "id": "aa-engineering-incident-response-commander",
+      "name": "Incident Response Commander",
+      "domain": "engineering",
+      "remit": "Expert incident commander specializing in production incident management, structured response coordination, post-mortem facilitation, SLO/SLI tracking, and on-call process design for reliable engineering organizations.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-incident-response-commander.json",
+      "bytes": 20630
+    },
+    {
+      "id": "aa-engineering-iot-fleet-engineer",
+      "name": "IoT Fleet Engineer",
+      "domain": "engineering",
+      "remit": "Expert IoT and edge fleet engineer — device provisioning and identity, MQTT/telemetry pipelines, staged over-the-air (OTA) firmware updates with rollback, edge compute, and observability across fleets of unreliable, intermittently-connected devices.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-iot-fleet-engineer.json",
+      "bytes": 12965
+    },
+    {
+      "id": "aa-engineering-it-service-manager",
+      "name": "IT Service Manager",
+      "domain": "engineering",
+      "remit": "Expert IT service management specialist using ITIL 4 framework for service catalog design, incident and problem management, change control, SLA governance, CMDB maintenance, and continual service improvement — ensuring IT delivers reliable, measurable business value across any organization size",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-it-service-manager.json",
+      "bytes": 25903
+    },
+    {
+      "id": "aa-engineering-knowledge-graph-engineer",
+      "name": "Knowledge Graph Engineer",
+      "domain": "engineering",
+      "remit": "Structures information and capabilities into interconnected nodes (entities) and edges (relationships) — enabling dynamic context navigation, modular competency chaining, lower token costs, and hallucination reduction.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-knowledge-graph-engineer.json",
+      "bytes": 22781
+    },
+    {
+      "id": "aa-engineering-llm-post-training-engineer",
+      "name": "LLM Post-Training Engineer",
+      "domain": "engineering",
+      "remit": "Evidence-driven owner for SFT, preference optimization, RLHF/RLVR, MoE post-training, and the release gates that turn a checkpoint into a defensible model change.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-llm-post-training-engineer.json",
+      "bytes": 10499
+    },
+    {
+      "id": "aa-engineering-minimal-change-engineer",
+      "name": "Minimal Change Engineer",
+      "domain": "engineering",
+      "remit": "Engineering specialist focused on minimum-viable diffs — fixes only what was asked, refuses scope creep, prefers three similar lines over a premature abstraction.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-minimal-change-engineer.json",
+      "bytes": 10723
+    },
+    {
+      "id": "aa-engineering-mobile-app-builder",
+      "name": "Mobile App Builder",
+      "domain": "engineering",
+      "remit": "Specialized mobile application developer with expertise in native iOS/Android development and cross-platform frameworks",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-mobile-app-builder.json",
+      "bytes": 16770
+    },
+    {
+      "id": "aa-engineering-mobile-release-engineer",
+      "name": "Mobile Release Engineer",
+      "domain": "engineering",
+      "remit": "Expert mobile release and distribution engineer for iOS and Android — code signing, provisioning, fastlane pipelines, App Store Connect and Play Console submission, phased rollouts, and crash-triaged release health.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-mobile-release-engineer.json",
+      "bytes": 13073
+    },
+    {
+      "id": "aa-engineering-multi-agent-systems-architect",
+      "name": "Multi-Agent Systems Architect",
+      "domain": "engineering",
+      "remit": "Systems architect specializing in the design, coordination, and governance of multi-agent AI pipelines — covering topology selection, context management, inter-agent trust, failure recovery, human-in-the-loop gating, and observability for production-grade agent systems.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-multi-agent-systems-architect.json",
+      "bytes": 28350
+    },
+    {
+      "id": "aa-engineering-network-engineer",
+      "name": "Network Engineer",
+      "domain": "engineering",
+      "remit": "Expert network engineer for Cisco IOS/IOS-XE, Cisco ASA/FTD, Juniper Junos, and Palo Alto PAN-OS routing, switching, firewalling, and troubleshooting.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-network-engineer.json",
+      "bytes": 13005
+    },
+    {
+      "id": "aa-engineering-orgscript-engineer",
+      "name": "OrgScript Engineer",
+      "domain": "engineering",
+      "remit": "Expert in designing, parsing, and implementing OrgScript grammar, AST validation, and business logic definitions.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-orgscript-engineer.json",
+      "bytes": 5288
+    },
+    {
+      "id": "aa-engineering-payments-billing-engineer",
+      "name": "Payments & Billing Engineer",
+      "domain": "engineering",
+      "remit": "Expert payments engineer for PSP integrations (Stripe, Adyen, Braintree, PayPal), idempotent payment flows, webhook processing, subscription billing, SCA/3DS, PCI scope reduction, and financial reconciliation.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-payments-billing-engineer.json",
+      "bytes": 12009
+    },
+    {
+      "id": "aa-engineering-privacy-engineer",
+      "name": "Privacy Engineer",
+      "domain": "engineering",
+      "remit": "Expert privacy engineer who implements privacy in code — PII discovery and classification, data minimization, consent enforcement at the API layer, automated DSAR and deletion across services, pseudonymization/tokenization, and retention automation.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-privacy-engineer.json",
+      "bytes": 13597
+    },
+    {
+      "id": "aa-engineering-prompt-engineer",
+      "name": "Prompt Engineer",
+      "domain": "engineering",
+      "remit": "Specialist in crafting, testing, and systematically optimizing prompts for LLMs — turning vague instructions into reliable, production-grade AI behaviors.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-prompt-engineer.json",
+      "bytes": 9058
+    },
+    {
+      "id": "aa-engineering-rag-pipeline-engineer",
+      "name": "RAG Pipeline Engineer",
+      "domain": "engineering",
+      "remit": "Production RAG specialist focused on chunking strategy, retrieval quality, hybrid search, re-ranking, and eval-driven iteration.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-rag-pipeline-engineer.json",
+      "bytes": 17777
+    },
+    {
+      "id": "aa-engineering-rapid-prototyper",
+      "name": "Rapid Prototyper",
+      "domain": "engineering",
+      "remit": "Specialized in ultra-fast proof-of-concept development and MVP creation using efficient tools and frameworks",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-rapid-prototyper.json",
+      "bytes": 15188
+    },
+    {
+      "id": "aa-engineering-realtime-collaboration-engineer",
+      "name": "Realtime Collaboration Engineer",
+      "domain": "engineering",
+      "remit": "Expert realtime systems engineer for WebSocket/SSE infrastructure, presence, CRDT and OT-based collaborative editing, offline-first sync engines, and fan-out scaling with reconnect-safe protocols.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-realtime-collaboration-engineer.json",
+      "bytes": 13620
+    },
+    {
+      "id": "aa-engineering-rust-refactoring-specialist",
+      "name": "Rust Refactoring Specialist",
+      "domain": "engineering",
+      "remit": "Expert Rust engineer for repository-scale refactoring, safe renames, module restructuring, duplication removal, panic hardening, ownership improvements, and compiler or Clippy remediation.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-rust-refactoring-specialist.json",
+      "bytes": 14448
+    },
+    {
+      "id": "aa-engineering-search-relevance-engineer",
+      "name": "Search Relevance Engineer",
+      "domain": "engineering",
+      "remit": "Expert search engineer for Elasticsearch and OpenSearch — index and analyzer design, BM25 query tuning, hybrid lexical+vector retrieval, and judgment-based relevance evaluation with nDCG and online experiments.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-search-relevance-engineer.json",
+      "bytes": 14518
+    },
+    {
+      "id": "aa-engineering-section-508-specialist",
+      "name": "Section 508 Accessibility Specialist",
+      "domain": "engineering",
+      "remit": "Expert U.S.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-section-508-specialist.json",
+      "bytes": 24725
+    },
+    {
+      "id": "aa-engineering-senior-developer",
+      "name": "Senior Developer",
+      "domain": "engineering",
+      "remit": "Premium implementation specialist - Masters Laravel/Livewire/FluxUI, advanced CSS, Three.js integration",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-senior-developer.json",
+      "bytes": 5953
+    },
+    {
+      "id": "aa-engineering-software-architect",
+      "name": "Software Architect",
+      "domain": "engineering",
+      "remit": "Expert software architect specializing in system design, domain-driven design, architectural patterns, and technical decision-making for scalable, maintainable systems.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-software-architect.json",
+      "bytes": 6081
+    },
+    {
+      "id": "aa-engineering-solidity-smart-contract-engineer",
+      "name": "Solidity Smart Contract Engineer",
+      "domain": "engineering",
+      "remit": "Expert Solidity developer specializing in EVM smart contract architecture, gas optimization, upgradeable proxy patterns, DeFi protocol development, and security-first contract design across Ethereum and L2 chains.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-solidity-smart-contract-engineer.json",
+      "bytes": 21234
+    },
+    {
+      "id": "aa-engineering-sre",
+      "name": "SRE (Site Reliability Engineer)",
+      "domain": "engineering",
+      "remit": "Expert site reliability engineer specializing in SLOs, error budgets, observability, chaos engineering, and toil reduction for production systems at scale.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-sre.json",
+      "bytes": 3488
+    },
+    {
+      "id": "aa-engineering-technical-writer",
+      "name": "Technical Writer",
+      "domain": "engineering",
+      "remit": "Expert technical writer specializing in developer documentation, API references, README files, and tutorials.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-technical-writer.json",
+      "bytes": 13770
+    },
+    {
+      "id": "aa-engineering-uswds-developer",
+      "name": "USWDS Developer",
+      "domain": "engineering",
+      "remit": "Expert U.S.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-uswds-developer.json",
+      "bytes": 22589
+    },
+    {
+      "id": "aa-engineering-video-streaming-engineer",
+      "name": "Video Streaming Engineer",
+      "domain": "engineering",
+      "remit": "Expert video streaming engineer for adaptive bitrate delivery — HLS/DASH packaging, ffmpeg transcode ladders, CMAF low-latency, DRM, CDN delivery, and QoE-driven player tuning.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-video-streaming-engineer.json",
+      "bytes": 12381
+    },
+    {
+      "id": "aa-engineering-voice-ai-integration-engineer",
+      "name": "Voice AI Integration Engineer",
+      "domain": "engineering",
+      "remit": "Expert in building end-to-end speech transcription pipelines using Whisper-style models and cloud ASR services — from raw audio ingestion through preprocessing, transcript cleanup, subtitle generation, speaker diarization, and structured downstream integration into apps, APIs, and CMS platforms.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-voice-ai-integration-engineer.json",
+      "bytes": 26688
+    },
+    {
+      "id": "aa-engineering-webassembly-engineer",
+      "name": "WebAssembly Engineer",
+      "domain": "engineering",
+      "remit": "Expert WebAssembly engineer — compiling Rust/C++/Go to Wasm, JS interop and the boundary marshalling cost, WASI and server-side runtimes (Wasmtime/Wasmer), the component model, and near-native performance tuning.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-webassembly-engineer.json",
+      "bytes": 12589
+    },
+    {
+      "id": "aa-engineering-wechat-mini-program-developer",
+      "name": "WeChat Mini Program Developer",
+      "domain": "engineering",
+      "remit": "Expert WeChat Mini Program developer specializing in 小程序 development with WXML/WXSS/WXS, WeChat API integration, payment systems, subscription messaging, and the full WeChat ecosystem.",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-wechat-mini-program-developer.json",
+      "bytes": 14946
+    },
+    {
+      "id": "aa-engineering-wordpress-performance",
+      "name": "WordPress Performance Engineer",
+      "domain": "engineering",
+      "remit": "Expert WordPress performance engineer specializing in Core Web Vitals, object caching (Redis/Memcached), page caching, database and WP_Query optimization, the Transients API, asset minification/deferral/critical CSS, image optimization and lazy loading, CDN integration, plugin performance auditing, and PHP-FPM/opcache tuning for fast, audit-passing sites",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-wordpress-performance.json",
+      "bytes": 22577
+    },
+    {
+      "id": "aa-engineering-wordpress-shopping-cart",
+      "name": "WordPress Shopping Cart Engineer",
+      "domain": "engineering",
+      "remit": "Expert WordPress e-commerce engineer specializing in WooCommerce for product catalog management, payment gateway integration, checkout customization, order management, tax and coupon configuration, and conversion-optimized storefront delivery on WordPress",
+      "tags": [
+        "Engineering",
+        "Agentic"
+      ],
+      "file": "src/agency/engineering/engineering-wordpress-shopping-cart.json",
+      "bytes": 20632
+    },
+    {
+      "id": "aa-finance-bookkeeper-controller",
+      "name": "Bookkeeper & Controller",
+      "domain": "finance",
+      "remit": "Expert bookkeeper and controller specializing in day-to-day accounting operations, financial reconciliations, month-end close processes, and internal controls.",
+      "tags": [
+        "Finance",
+        "Agentic"
+      ],
+      "file": "src/agency/finance/finance-bookkeeper-controller.json",
+      "bytes": 14688
+    },
+    {
+      "id": "aa-finance-financial-analyst",
+      "name": "Financial Analyst",
+      "domain": "finance",
+      "remit": "Expert financial analyst specializing in financial modeling, forecasting, scenario analysis, and data-driven decision support.",
+      "tags": [
+        "Finance",
+        "Agentic"
+      ],
+      "file": "src/agency/finance/finance-financial-analyst.json",
+      "bytes": 12906
+    },
+    {
+      "id": "aa-finance-fpa-analyst",
+      "name": "FP&A Analyst",
+      "domain": "finance",
+      "remit": "Expert Financial Planning & Analysis (FP&A) analyst specializing in budgeting, variance analysis, financial planning, rolling forecasts, and strategic decision support.",
+      "tags": [
+        "Finance",
+        "Agentic"
+      ],
+      "file": "src/agency/finance/finance-fpa-analyst.json",
+      "bytes": 16066
+    },
+    {
+      "id": "aa-finance-investment-researcher",
+      "name": "Investment Researcher",
+      "domain": "finance",
+      "remit": "Expert investment researcher specializing in market research, due diligence, portfolio analysis, and asset valuation.",
+      "tags": [
+        "Finance",
+        "Agentic"
+      ],
+      "file": "src/agency/finance/finance-investment-researcher.json",
+      "bytes": 15056
+    },
+    {
+      "id": "aa-finance-tax-strategist",
+      "name": "Tax Strategist",
+      "domain": "finance",
+      "remit": "Expert tax strategist specializing in tax optimization, multi-jurisdictional compliance, transfer pricing, and strategic tax planning.",
+      "tags": [
+        "Finance",
+        "Agentic"
+      ],
+      "file": "src/agency/finance/finance-tax-strategist.json",
+      "bytes": 13163
+    },
+    {
+      "id": "aa-blender-addon-engineer",
+      "name": "Blender Add-on Engineer",
+      "domain": "game-development",
+      "remit": "Blender tooling specialist - Builds Python add-ons, asset validators, exporters, and pipeline automations that turn repetitive DCC work into reliable one-click workflows",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/blender-addon-engineer.json",
+      "bytes": 10543
+    },
+    {
+      "id": "aa-economy-designer",
+      "name": "Economy Designer",
+      "domain": "game-development",
+      "remit": "Virtual economy architect - Masters currency systems, sources and sinks, monetization modeling, inflation control, and data-driven economic balancing for live games",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/economy-designer.json",
+      "bytes": 8452
+    },
+    {
+      "id": "aa-game-audio-engineer",
+      "name": "Game Audio Engineer",
+      "domain": "game-development",
+      "remit": "Interactive audio specialist - Masters FMOD/Wwise integration, adaptive music systems, spatial audio, and audio performance budgeting across all game engines",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/game-audio-engineer.json",
+      "bytes": 11874
+    },
+    {
+      "id": "aa-game-designer",
+      "name": "Game Designer",
+      "domain": "game-development",
+      "remit": "Systems and mechanics architect - Masters GDD authorship, player psychology, economy balancing, and gameplay loop design across all engines and genres",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/game-designer.json",
+      "bytes": 8050
+    },
+    {
+      "id": "aa-godot-gameplay-scripter",
+      "name": "Godot Gameplay Scripter",
+      "domain": "game-development",
+      "remit": "Composition and signal integrity specialist - Masters GDScript 2.0, C# integration, node-based architecture, and type-safe signal design for Godot 4 projects",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/godot-gameplay-scripter.json",
+      "bytes": 15104
+    },
+    {
+      "id": "aa-godot-multiplayer-engineer",
+      "name": "Godot Multiplayer Engineer",
+      "domain": "game-development",
+      "remit": "Godot 4 networking specialist - Masters the MultiplayerAPI, scene replication, ENet/WebRTC transport, RPCs, and authority models for real-time multiplayer games",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/godot-multiplayer-engineer.json",
+      "bytes": 13504
+    },
+    {
+      "id": "aa-godot-shader-developer",
+      "name": "Godot Shader Developer",
+      "domain": "game-development",
+      "remit": "Godot 4 visual effects specialist - Masters the Godot Shading Language (GLSL-like), VisualShader editor, CanvasItem and Spatial shaders, post-processing, and performance optimization for 2D/3D effects",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/godot-shader-developer.json",
+      "bytes": 12911
+    },
+    {
+      "id": "aa-level-designer",
+      "name": "Level Designer",
+      "domain": "game-development",
+      "remit": "Spatial storytelling and flow specialist - Masters layout theory, pacing architecture, encounter design, and environmental narrative across all game engines",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/level-designer.json",
+      "bytes": 9909
+    },
+    {
+      "id": "aa-narrative-designer",
+      "name": "Narrative Designer",
+      "domain": "game-development",
+      "remit": "Story systems and dialogue architect - Masters GDD-aligned narrative design, branching dialogue, lore architecture, and environmental storytelling across all game engines",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/narrative-designer.json",
+      "bytes": 12731
+    },
+    {
+      "id": "aa-roblox-avatar-creator",
+      "name": "Roblox Avatar Creator",
+      "domain": "game-development",
+      "remit": "Roblox UGC and avatar pipeline specialist - Masters Roblox's avatar system, UGC item creation, accessory rigging, texture standards, and the Creator Marketplace submission pipeline",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/roblox-avatar-creator.json",
+      "bytes": 13671
+    },
+    {
+      "id": "aa-roblox-experience-designer",
+      "name": "Roblox Experience Designer",
+      "domain": "game-development",
+      "remit": "Roblox platform UX and monetization specialist - Masters engagement loop design, DataStore-driven progression, Roblox monetization systems (Passes, Developer Products, UGC), and player retention for Roblox experiences",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/roblox-experience-designer.json",
+      "bytes": 14359
+    },
+    {
+      "id": "aa-roblox-systems-scripter",
+      "name": "Roblox Systems Scripter",
+      "domain": "game-development",
+      "remit": "Roblox platform engineering specialist - Masters Luau, the client-server security model, RemoteEvents/RemoteFunctions, DataStore, and module architecture for scalable Roblox experiences",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/roblox-systems-scripter.json",
+      "bytes": 14746
+    },
+    {
+      "id": "aa-technical-artist",
+      "name": "Technical Artist",
+      "domain": "game-development",
+      "remit": "Art-to-engine pipeline specialist - Masters shaders, VFX systems, LOD pipelines, performance budgeting, and cross-engine asset optimization",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/technical-artist.json",
+      "bytes": 10851
+    },
+    {
+      "id": "aa-unity-architect",
+      "name": "Unity Architect",
+      "domain": "game-development",
+      "remit": "Data-driven modularity specialist - Masters ScriptableObjects, decoupled systems, and single-responsibility component design for scalable Unity projects",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/unity-architect.json",
+      "bytes": 11850
+    },
+    {
+      "id": "aa-unity-editor-tool-developer",
+      "name": "Unity Editor Tool Developer",
+      "domain": "game-development",
+      "remit": "Unity editor automation specialist - Masters custom EditorWindows, PropertyDrawers, AssetPostprocessors, ScriptedImporters, and pipeline automation that saves teams hours per week",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/unity-editor-tool-developer.json",
+      "bytes": 14466
+    },
+    {
+      "id": "aa-unity-multiplayer-engineer",
+      "name": "Unity Multiplayer Engineer",
+      "domain": "game-development",
+      "remit": "Networked gameplay specialist - Masters Netcode for GameObjects, Unity Gaming Services (Relay/Lobby), client-server authority, lag compensation, and state synchronization",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/unity-multiplayer-engineer.json",
+      "bytes": 14522
+    },
+    {
+      "id": "aa-unity-shader-graph-artist",
+      "name": "Unity Shader Graph Artist",
+      "domain": "game-development",
+      "remit": "Visual effects and material specialist - Masters Unity Shader Graph, HLSL, URP/HDRP rendering pipelines, and custom pass authoring for real-time visual effects",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/unity-shader-graph-artist.json",
+      "bytes": 12637
+    },
+    {
+      "id": "aa-unreal-multiplayer-architect",
+      "name": "Unreal Multiplayer Architect",
+      "domain": "game-development",
+      "remit": "Unreal Engine networking specialist - Masters Actor replication, GameMode/GameState architecture, server-authoritative gameplay, network prediction, and dedicated server setup for UE5",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/unreal-multiplayer-architect.json",
+      "bytes": 13582
+    },
+    {
+      "id": "aa-unreal-systems-engineer",
+      "name": "Unreal Systems Engineer",
+      "domain": "game-development",
+      "remit": "Performance and hybrid architecture specialist - Masters C++/Blueprint continuum, Nanite geometry, Lumen GI, and Gameplay Ability System for AAA-grade Unreal Engine projects",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/unreal-systems-engineer.json",
+      "bytes": 15064
+    },
+    {
+      "id": "aa-unreal-technical-artist",
+      "name": "Unreal Technical Artist",
+      "domain": "game-development",
+      "remit": "Unreal Engine visual pipeline specialist - Masters the Material Editor, Niagara VFX, Procedural Content Generation, and the art-to-engine pipeline for UE5 projects",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/unreal-technical-artist.json",
+      "bytes": 11348
+    },
+    {
+      "id": "aa-unreal-world-builder",
+      "name": "Unreal World Builder",
+      "domain": "game-development",
+      "remit": "Open-world and environment specialist - Masters UE5 World Partition, Landscape, procedural foliage, HLOD, and large-scale level streaming for seamless open-world experiences",
+      "tags": [
+        "Game-Development",
+        "Agentic"
+      ],
+      "file": "src/agency/game-development/unreal-world-builder.json",
+      "bytes": 13526
+    },
+    {
+      "id": "aa-gis-3d-scene-developer",
+      "name": "3D & Scene Developer",
+      "domain": "gis",
+      "remit": "Web 3D visualization specialist who creates immersive 3D scenes, terrain models, point cloud visualizations, and interactive web experiences using Cesium, ArcGIS Scene Viewer, and modern 3D web frameworks.",
+      "tags": [
+        "Gis",
+        "Agentic"
+      ],
+      "file": "src/agency/gis/gis-3d-scene-developer.json",
+      "bytes": 5233
+    },
+    {
+      "id": "aa-gis-analyst",
+      "name": "GIS Analyst",
+      "domain": "gis",
+      "remit": "Day-to-day GIS operator who creates maps, manages layers, performs spatial queries, and maintains geospatial data integrity across desktop and web environments.",
+      "tags": [
+        "Gis",
+        "Agentic"
+      ],
+      "file": "src/agency/gis/gis-analyst.json",
+      "bytes": 4148
+    },
+    {
+      "id": "aa-gis-bim-specialist",
+      "name": "BIM/GIS Specialist",
+      "domain": "gis",
+      "remit": "Integration specialist who bridges Building Information Modeling and Geographic Information Systems — Revit/IFC data conversion, indoor mapping, digital twin architecture, and facility management data models.",
+      "tags": [
+        "Gis",
+        "Agentic"
+      ],
+      "file": "src/agency/gis/gis-bim-specialist.json",
+      "bytes": 5183
+    },
+    {
+      "id": "aa-gis-cartography-designer",
+      "name": "Cartography Designer",
+      "domain": "gis",
+      "remit": "Map aesthetics specialist who designs beautiful, readable, and effective maps — color theory, typography, label placement, basemap selection, and visual hierarchy for both print and web.",
+      "tags": [
+        "Gis",
+        "Agentic"
+      ],
+      "file": "src/agency/gis/gis-cartography-designer.json",
+      "bytes": 6580
+    },
+    {
+      "id": "aa-gis-drone-reality-mapping",
+      "name": "Drone/Reality Mapping Specialist",
+      "domain": "gis",
+      "remit": "Photogrammetry and reality capture expert who processes drone imagery into orthomosaics, digital terrain models, point clouds, and 3D meshes — bridging field capture and GIS-ready products.",
+      "tags": [
+        "Gis",
+        "Agentic"
+      ],
+      "file": "src/agency/gis/gis-drone-reality-mapping.json",
+      "bytes": 5615
+    },
+    {
+      "id": "aa-gis-geoai-ml-engineer",
+      "name": "GeoAI/ML Engineer",
+      "domain": "gis",
+      "remit": "Geospatial machine learning specialist who builds models for feature extraction, object detection, image segmentation, and land cover classification from satellite and aerial imagery.",
+      "tags": [
+        "Gis",
+        "Agentic"
+      ],
+      "file": "src/agency/gis/gis-geoai-ml-engineer.json",
+      "bytes": 4577
+    },
+    {
+      "id": "aa-gis-geoprocessing-specialist",
+      "name": "Geoprocessing Specialist",
+      "domain": "gis",
+      "remit": "ArcPy and Python toolbox expert who automates spatial workflows — builds .pyt toolboxes, Model Builder processes, batch geoprocessing automation, and custom analysis scripts for ArcGIS Pro.",
+      "tags": [
+        "Gis",
+        "Agentic"
+      ],
+      "file": "src/agency/gis/gis-geoprocessing-specialist.json",
+      "bytes": 4438
+    },
+    {
+      "id": "aa-gis-qa-engineer",
+      "name": "GIS QA Engineer",
+      "domain": "gis",
+      "remit": "Quality assurance specialist who validates geospatial data integrity — topology checks, metadata audits, CRS consistency, accuracy assessment, and compliance verification.",
+      "tags": [
+        "Gis",
+        "Agentic"
+      ],
+      "file": "src/agency/gis/gis-qa-engineer.json",
+      "bytes": 4973
+    },
+    {
+      "id": "aa-gis-solution-engineer",
+      "name": "Solution Engineer",
+      "domain": "gis",
+      "remit": "Hands-on GIS prototype builder who takes strategy from Technical Consultant and turns it into working demos, proof-of-concepts, and technical validations across the full Esri and open-source stack.",
+      "tags": [
+        "Gis",
+        "Agentic"
+      ],
+      "file": "src/agency/gis/gis-solution-engineer.json",
+      "bytes": 4220
+    },
+    {
+      "id": "aa-gis-spatial-data-engineer",
+      "name": "Spatial Data Engineer",
+      "domain": "gis",
+      "remit": "ETL specialist who transforms messy geospatial data from any source into clean, standardized, production-ready datasets — format conversion, CRS reprojection, attribute normalization, and automated pipelines.",
+      "tags": [
+        "Gis",
+        "Agentic"
+      ],
+      "file": "src/agency/gis/gis-spatial-data-engineer.json",
+      "bytes": 4515
+    },
+    {
+      "id": "aa-gis-spatial-data-scientist",
+      "name": "Spatial Data Scientist",
+      "domain": "gis",
+      "remit": "Advanced spatial analytics specialist who applies statistical modeling, spatial econometrics, clustering, and predictive analytics to geospatial data — finding patterns that aren't visible on a map.",
+      "tags": [
+        "Gis",
+        "Agentic"
+      ],
+      "file": "src/agency/gis/gis-spatial-data-scientist.json",
+      "bytes": 5451
+    },
+    {
+      "id": "aa-gis-technical-consultant",
+      "name": "Technical Consultant",
+      "domain": "gis",
+      "remit": "Strategic GIS advisor who translates business problems into geospatial solutions — gap analysis, technology roadmaps, RFP responses, and digital transformation strategy across Esri and open-source ecosystems.",
+      "tags": [
+        "Gis",
+        "Agentic"
+      ],
+      "file": "src/agency/gis/gis-technical-consultant.json",
+      "bytes": 4084
+    },
+    {
+      "id": "aa-gis-web-gis-developer",
+      "name": "Web GIS Developer",
+      "domain": "gis",
+      "remit": "Full-stack web GIS engineer who builds interactive mapping applications — MapLibre GL JS, ArcGIS JS API, Leaflet, real-time dashboards, REST API integration, and geospatial web services.",
+      "tags": [
+        "Gis",
+        "Agentic"
+      ],
+      "file": "src/agency/gis/gis-web-gis-developer.json",
+      "bytes": 4946
+    },
+    {
+      "id": "aa-healthcare-clinical-evidence-agent",
+      "name": "Clinical Evidence Agent",
+      "domain": "healthcare",
+      "remit": "Evidence standards and clinical credibility framework for AI agents",
+      "tags": [
+        "Healthcare",
+        "Agentic"
+      ],
+      "file": "src/agency/healthcare/healthcare-clinical-evidence-agent.json",
+      "bytes": 9691
+    },
+    {
+      "id": "aa-healthcare-innovation-strategist",
+      "name": "Healthcare Innovation Strategist",
+      "domain": "healthcare",
+      "remit": "Strategic narrative architect for healthcare founders operating at",
+      "tags": [
+        "Healthcare",
+        "Agentic"
+      ],
+      "file": "src/agency/healthcare/healthcare-innovation-strategist.json",
+      "bytes": 19651
+    },
+    {
+      "id": "aa-healthcare-sovereign-health-systems-agent",
+      "name": "Sovereign Health Systems Agent",
+      "domain": "healthcare",
+      "remit": "Government health mandate engagement framework for AI agents",
+      "tags": [
+        "Healthcare",
+        "Agentic"
+      ],
+      "file": "src/agency/healthcare/healthcare-sovereign-health-systems-agent.json",
+      "bytes": 14228
+    },
+    {
+      "id": "aa-README",
+      "name": "README",
+      "domain": "integrations",
+      "remit": "",
+      "tags": [
+        "Integrations"
+      ],
+      "file": "src/agency/integrations/README.json",
+      "bytes": 6528
+    },
     {
       "id": "aa-marketing-aeo-foundations",
       "name": "AEO Foundations Architect",
@@ -13,7 +1446,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-aeo-foundations.json",
+      "file": "src/agency/marketing/marketing-aeo-foundations.json",
       "bytes": 14843
     },
     {
@@ -25,7 +1458,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-agentic-search-optimizer.json",
+      "file": "src/agency/marketing/marketing-agentic-search-optimizer.json",
       "bytes": 14980
     },
     {
@@ -37,7 +1470,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-ai-citation-strategist.json",
+      "file": "src/agency/marketing/marketing-ai-citation-strategist.json",
       "bytes": 8963
     },
     {
@@ -49,7 +1482,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-app-store-optimizer.json",
+      "file": "src/agency/marketing/marketing-app-store-optimizer.json",
       "bytes": 12805
     },
     {
@@ -61,7 +1494,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-baidu-seo-specialist.json",
+      "file": "src/agency/marketing/marketing-baidu-seo-specialist.json",
       "bytes": 11940
     },
     {
@@ -73,7 +1506,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-bilibili-content-strategist.json",
+      "file": "src/agency/marketing/marketing-bilibili-content-strategist.json",
       "bytes": 10743
     },
     {
@@ -85,7 +1518,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-book-co-author.json",
+      "file": "src/agency/marketing/marketing-book-co-author.json",
       "bytes": 4742
     },
     {
@@ -97,7 +1530,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-carousel-growth-engine.json",
+      "file": "src/agency/marketing/marketing-carousel-growth-engine.json",
       "bytes": 14123
     },
     {
@@ -109,7 +1542,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-china-ecommerce-operator.json",
+      "file": "src/agency/marketing/marketing-china-ecommerce-operator.json",
       "bytes": 15995
     },
     {
@@ -121,7 +1554,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-china-market-localization-strategist.json",
+      "file": "src/agency/marketing/marketing-china-market-localization-strategist.json",
       "bytes": 15977
     },
     {
@@ -133,7 +1566,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-content-creator.json",
+      "file": "src/agency/marketing/marketing-content-creator.json",
       "bytes": 2729
     },
     {
@@ -145,7 +1578,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-cross-border-ecommerce.json",
+      "file": "src/agency/marketing/marketing-cross-border-ecommerce.json",
       "bytes": 16955
     },
     {
@@ -157,7 +1590,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-douyin-strategist.json",
+      "file": "src/agency/marketing/marketing-douyin-strategist.json",
       "bytes": 6561
     },
     {
@@ -169,7 +1602,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-email-strategist.json",
+      "file": "src/agency/marketing/marketing-email-strategist.json",
       "bytes": 15588
     },
     {
@@ -181,7 +1614,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-global-podcast-strategist.json",
+      "file": "src/agency/marketing/marketing-global-podcast-strategist.json",
       "bytes": 21084
     },
     {
@@ -193,7 +1626,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-growth-hacker.json",
+      "file": "src/agency/marketing/marketing-growth-hacker.json",
       "bytes": 2647
     },
     {
@@ -205,7 +1638,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-instagram-curator.json",
+      "file": "src/agency/marketing/marketing-instagram-curator.json",
       "bytes": 6215
     },
     {
@@ -217,7 +1650,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-kuaishou-strategist.json",
+      "file": "src/agency/marketing/marketing-kuaishou-strategist.json",
       "bytes": 13145
     },
     {
@@ -229,7 +1662,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-linkedin-content-creator.json",
+      "file": "src/agency/marketing/marketing-linkedin-content-creator.json",
       "bytes": 12723
     },
     {
@@ -241,7 +1674,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-livestream-commerce-coach.json",
+      "file": "src/agency/marketing/marketing-livestream-commerce-coach.json",
       "bytes": 16687
     },
     {
@@ -253,7 +1686,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-multi-platform-publisher.json",
+      "file": "src/agency/marketing/marketing-multi-platform-publisher.json",
       "bytes": 11845
     },
     {
@@ -265,7 +1698,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-podcast-strategist.json",
+      "file": "src/agency/marketing/marketing-podcast-strategist.json",
       "bytes": 17558
     },
     {
@@ -277,7 +1710,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-pr-communications-manager.json",
+      "file": "src/agency/marketing/marketing-pr-communications-manager.json",
       "bytes": 23273
     },
     {
@@ -289,7 +1722,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-private-domain-operator.json",
+      "file": "src/agency/marketing/marketing-private-domain-operator.json",
       "bytes": 15764
     },
     {
@@ -301,7 +1734,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-reddit-community-builder.json",
+      "file": "src/agency/marketing/marketing-reddit-community-builder.json",
       "bytes": 7162
     },
     {
@@ -313,7 +1746,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-seo-specialist.json",
+      "file": "src/agency/marketing/marketing-seo-specialist.json",
       "bytes": 20823
     },
     {
@@ -325,7 +1758,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-short-video-editing-coach.json",
+      "file": "src/agency/marketing/marketing-short-video-editing-coach.json",
       "bytes": 30249
     },
     {
@@ -337,7 +1770,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-social-media-strategist.json",
+      "file": "src/agency/marketing/marketing-social-media-strategist.json",
       "bytes": 6994
     },
     {
@@ -349,7 +1782,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-tiktok-strategist.json",
+      "file": "src/agency/marketing/marketing-tiktok-strategist.json",
       "bytes": 7222
     },
     {
@@ -361,7 +1794,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-twitter-engager.json",
+      "file": "src/agency/marketing/marketing-twitter-engager.json",
       "bytes": 7387
     },
     {
@@ -373,7 +1806,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-video-optimization-specialist.json",
+      "file": "src/agency/marketing/marketing-video-optimization-specialist.json",
       "bytes": 5872
     },
     {
@@ -385,7 +1818,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-wechat-official-account.json",
+      "file": "src/agency/marketing/marketing-wechat-official-account.json",
       "bytes": 9422
     },
     {
@@ -397,7 +1830,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-weibo-strategist.json",
+      "file": "src/agency/marketing/marketing-weibo-strategist.json",
       "bytes": 15241
     },
     {
@@ -409,7 +1842,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-x-twitter-intelligence-analyst.json",
+      "file": "src/agency/marketing/marketing-x-twitter-intelligence-analyst.json",
       "bytes": 9300
     },
     {
@@ -421,7 +1854,7 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-xiaohongshu-specialist.json",
+      "file": "src/agency/marketing/marketing-xiaohongshu-specialist.json",
       "bytes": 9237
     },
     {
@@ -433,8 +1866,1481 @@
         "Marketing",
         "Agentic"
       ],
-      "file": "experts/marketing/marketing-zhihu-strategist.json",
+      "file": "src/agency/marketing/marketing-zhihu-strategist.json",
       "bytes": 11633
+    },
+    {
+      "id": "aa-paid-media-auditor",
+      "name": "Paid Media Auditor",
+      "domain": "paid-media",
+      "remit": "Comprehensive paid media auditor who systematically evaluates Google Ads, Microsoft Ads, and Meta accounts across 200+ checkpoints spanning account structure, tracking, bidding, creative, audiences, and competitive positioning.",
+      "tags": [
+        "Paid-Media",
+        "Agentic"
+      ],
+      "file": "src/agency/paid-media/paid-media-auditor.json",
+      "bytes": 4994
+    },
+    {
+      "id": "aa-paid-media-creative-strategist",
+      "name": "Ad Creative Strategist",
+      "domain": "paid-media",
+      "remit": "Paid media creative specialist focused on ad copywriting, RSA optimization, asset group design, and creative testing frameworks across Google, Meta, Microsoft, and programmatic platforms.",
+      "tags": [
+        "Paid-Media",
+        "Agentic"
+      ],
+      "file": "src/agency/paid-media/paid-media-creative-strategist.json",
+      "bytes": 4652
+    },
+    {
+      "id": "aa-paid-media-paid-social-strategist",
+      "name": "Paid Social Strategist",
+      "domain": "paid-media",
+      "remit": "Cross-platform paid social advertising specialist covering Meta (Facebook/Instagram), LinkedIn, TikTok, Pinterest, X, and Snapchat.",
+      "tags": [
+        "Paid-Media",
+        "Agentic"
+      ],
+      "file": "src/agency/paid-media/paid-media-paid-social-strategist.json",
+      "bytes": 4918
+    },
+    {
+      "id": "aa-paid-media-ppc-strategist",
+      "name": "PPC Campaign Strategist",
+      "domain": "paid-media",
+      "remit": "Senior paid media strategist specializing in large-scale search, shopping, and performance max campaign architecture across Google, Microsoft, and Amazon ad platforms.",
+      "tags": [
+        "Paid-Media",
+        "Agentic"
+      ],
+      "file": "src/agency/paid-media/paid-media-ppc-strategist.json",
+      "bytes": 4443
+    },
+    {
+      "id": "aa-paid-media-programmatic-buyer",
+      "name": "Programmatic & Display Buyer",
+      "domain": "paid-media",
+      "remit": "Display advertising and programmatic media buying specialist covering managed placements, Google Display Network, DV360, trade desk platforms, partner media (newsletters, sponsored content), and ABM display strategies via platforms like Demandbase and 6Sense.",
+      "tags": [
+        "Paid-Media",
+        "Agentic"
+      ],
+      "file": "src/agency/paid-media/paid-media-programmatic-buyer.json",
+      "bytes": 4758
+    },
+    {
+      "id": "aa-paid-media-search-query-analyst",
+      "name": "Search Query Analyst",
+      "domain": "paid-media",
+      "remit": "Specialist in search term analysis, negative keyword architecture, and query-to-intent mapping.",
+      "tags": [
+        "Paid-Media",
+        "Agentic"
+      ],
+      "file": "src/agency/paid-media/paid-media-search-query-analyst.json",
+      "bytes": 4448
+    },
+    {
+      "id": "aa-paid-media-tracking-specialist",
+      "name": "Tracking & Measurement Specialist",
+      "domain": "paid-media",
+      "remit": "Expert in conversion tracking architecture, tag management, and attribution modeling across Google Tag Manager, GA4, Google Ads, Meta CAPI, LinkedIn Insight Tag, and server-side implementations.",
+      "tags": [
+        "Paid-Media",
+        "Agentic"
+      ],
+      "file": "src/agency/paid-media/paid-media-tracking-specialist.json",
+      "bytes": 4788
+    },
+    {
+      "id": "aa-product-behavioral-nudge-engine",
+      "name": "Behavioral Nudge Engine",
+      "domain": "product",
+      "remit": "Behavioral psychology specialist that adapts software interaction cadences and styles to maximize user motivation and success.",
+      "tags": [
+        "Product",
+        "Agentic"
+      ],
+      "file": "src/agency/product/product-behavioral-nudge-engine.json",
+      "bytes": 4976
+    },
+    {
+      "id": "aa-product-feedback-synthesizer",
+      "name": "Feedback Synthesizer",
+      "domain": "product",
+      "remit": "Expert in collecting, analyzing, and synthesizing user feedback from multiple channels to extract actionable product insights.",
+      "tags": [
+        "Product",
+        "Agentic"
+      ],
+      "file": "src/agency/product/product-feedback-synthesizer.json",
+      "bytes": 6850
+    },
+    {
+      "id": "aa-product-manager",
+      "name": "Product Manager",
+      "domain": "product",
+      "remit": "Holistic product leader who owns the full product lifecycle — from discovery and strategy through roadmap, stakeholder alignment, go-to-market, and outcome measurement.",
+      "tags": [
+        "Product",
+        "Agentic"
+      ],
+      "file": "src/agency/product/product-manager.json",
+      "bytes": 21923
+    },
+    {
+      "id": "aa-product-sprint-prioritizer",
+      "name": "Sprint Prioritizer",
+      "domain": "product",
+      "remit": "Expert product manager specializing in agile sprint planning, feature prioritization, and resource allocation.",
+      "tags": [
+        "Product",
+        "Agentic"
+      ],
+      "file": "src/agency/product/product-sprint-prioritizer.json",
+      "bytes": 9035
+    },
+    {
+      "id": "aa-product-trend-researcher",
+      "name": "Trend Researcher",
+      "domain": "product",
+      "remit": "Expert market intelligence analyst specializing in identifying emerging trends, competitive analysis, and opportunity assessment.",
+      "tags": [
+        "Product",
+        "Agentic"
+      ],
+      "file": "src/agency/product/product-trend-researcher.json",
+      "bytes": 10090
+    },
+    {
+      "id": "aa-project-management-experiment-tracker",
+      "name": "Experiment Tracker",
+      "domain": "project-management",
+      "remit": "Expert project manager specializing in experiment design, execution tracking, and data-driven decision making.",
+      "tags": [
+        "Project-Management",
+        "Agentic"
+      ],
+      "file": "src/agency/project-management/project-management-experiment-tracker.json",
+      "bytes": 9010
+    },
+    {
+      "id": "aa-project-management-jira-workflow-steward",
+      "name": "Jira Workflow Steward",
+      "domain": "project-management",
+      "remit": "Expert delivery operations specialist who enforces Jira-linked Git workflows, traceable commits, structured pull requests, and release-safe branch strategy across software teams.",
+      "tags": [
+        "Project-Management",
+        "Agentic"
+      ],
+      "file": "src/agency/project-management/project-management-jira-workflow-steward.json",
+      "bytes": 13026
+    },
+    {
+      "id": "aa-project-management-meeting-notes-specialist",
+      "name": "Meeting Notes Specialist",
+      "domain": "project-management",
+      "remit": "Extract structured decisions, action items, and open questions from meeting transcripts or rough notes into a clean 4-section summary.",
+      "tags": [
+        "Project-Management",
+        "Agentic"
+      ],
+      "file": "src/agency/project-management/project-management-meeting-notes-specialist.json",
+      "bytes": 5255
+    },
+    {
+      "id": "aa-project-management-project-shepherd",
+      "name": "Project Shepherd",
+      "domain": "project-management",
+      "remit": "Expert project manager specializing in cross-functional project coordination, timeline management, and stakeholder alignment.",
+      "tags": [
+        "Project-Management",
+        "Agentic"
+      ],
+      "file": "src/agency/project-management/project-management-project-shepherd.json",
+      "bytes": 9351
+    },
+    {
+      "id": "aa-project-management-studio-operations",
+      "name": "Studio Operations",
+      "domain": "project-management",
+      "remit": "Expert operations manager specializing in day-to-day studio efficiency, process optimization, and resource coordination.",
+      "tags": [
+        "Project-Management",
+        "Agentic"
+      ],
+      "file": "src/agency/project-management/project-management-studio-operations.json",
+      "bytes": 9447
+    },
+    {
+      "id": "aa-project-management-studio-producer",
+      "name": "Studio Producer",
+      "domain": "project-management",
+      "remit": "Senior strategic leader specializing in high-level creative and technical project orchestration, resource allocation, and multi-project portfolio management.",
+      "tags": [
+        "Project-Management",
+        "Agentic"
+      ],
+      "file": "src/agency/project-management/project-management-studio-producer.json",
+      "bytes": 10388
+    },
+    {
+      "id": "aa-project-manager-senior",
+      "name": "Senior Project Manager",
+      "domain": "project-management",
+      "remit": "Converts specs to tasks and remembers previous projects.",
+      "tags": [
+        "Project-Management",
+        "Agentic"
+      ],
+      "file": "src/agency/project-management/project-manager-senior.json",
+      "bytes": 4986
+    },
+    {
+      "id": "aa-research-synthesist",
+      "name": "Research Synthesist",
+      "domain": "research",
+      "remit": "Expert in literature review, source evaluation, and evidence synthesis — turns a scattered pile of sources into a structured, honestly-weighted map of what the evidence actually supports",
+      "tags": [
+        "Research",
+        "Agentic"
+      ],
+      "file": "src/agency/research/research-synthesist.json",
+      "bytes": 10261
+    },
+    {
+      "id": "aa-sales-account-strategist",
+      "name": "Account Strategist",
+      "domain": "sales",
+      "remit": "Expert post-sale account strategist specializing in land-and-expand execution, stakeholder mapping, QBR facilitation, and net revenue retention.",
+      "tags": [
+        "Sales",
+        "Agentic"
+      ],
+      "file": "src/agency/sales/sales-account-strategist.json",
+      "bytes": 14370
+    },
+    {
+      "id": "aa-sales-coach",
+      "name": "Sales Coach",
+      "domain": "sales",
+      "remit": "Expert sales coaching specialist focused on rep development, pipeline review facilitation, call coaching, deal strategy, and forecast accuracy.",
+      "tags": [
+        "Sales",
+        "Agentic"
+      ],
+      "file": "src/agency/sales/sales-coach.json",
+      "bytes": 20549
+    },
+    {
+      "id": "aa-sales-deal-strategist",
+      "name": "Deal Strategist",
+      "domain": "sales",
+      "remit": "Senior deal strategist specializing in MEDDPICC qualification, competitive positioning, and win planning for complex B2B sales cycles.",
+      "tags": [
+        "Sales",
+        "Agentic"
+      ],
+      "file": "src/agency/sales/sales-deal-strategist.json",
+      "bytes": 13242
+    },
+    {
+      "id": "aa-sales-discovery-coach",
+      "name": "Discovery Coach",
+      "domain": "sales",
+      "remit": "Coaches sales teams on elite discovery methodology — question design, current-state mapping, gap quantification, and call structure that surfaces real buying motivation.",
+      "tags": [
+        "Sales",
+        "Agentic"
+      ],
+      "file": "src/agency/sales/sales-discovery-coach.json",
+      "bytes": 13090
+    },
+    {
+      "id": "aa-sales-engineer",
+      "name": "Sales Engineer",
+      "domain": "sales",
+      "remit": "Senior pre-sales engineer specializing in technical discovery, demo engineering, POC scoping, competitive battlecards, and bridging product capabilities to business outcomes.",
+      "tags": [
+        "Sales",
+        "Agentic"
+      ],
+      "file": "src/agency/sales/sales-engineer.json",
+      "bytes": 13523
+    },
+    {
+      "id": "aa-sales-offer-lead-gen-strategist",
+      "name": "Offer & Lead Gen Strategist",
+      "domain": "sales",
+      "remit": "Top-of-funnel architect who designs irresistible offers and lead magnets that attract qualified buyers at scale.",
+      "tags": [
+        "Sales",
+        "Agentic"
+      ],
+      "file": "src/agency/sales/sales-offer-lead-gen-strategist.json",
+      "bytes": 15366
+    },
+    {
+      "id": "aa-sales-outbound-strategist",
+      "name": "Outbound Strategist",
+      "domain": "sales",
+      "remit": "Signal-based outbound specialist who designs multi-channel prospecting sequences, defines ICPs, and builds pipeline through research-driven personalization — not volume.",
+      "tags": [
+        "Sales",
+        "Agentic"
+      ],
+      "file": "src/agency/sales/sales-outbound-strategist.json",
+      "bytes": 10372
+    },
+    {
+      "id": "aa-sales-pipeline-analyst",
+      "name": "Pipeline Analyst",
+      "domain": "sales",
+      "remit": "Revenue operations analyst specializing in pipeline health diagnostics, deal velocity analysis, forecast accuracy, and data-driven sales coaching.",
+      "tags": [
+        "Sales",
+        "Agentic"
+      ],
+      "file": "src/agency/sales/sales-pipeline-analyst.json",
+      "bytes": 18331
+    },
+    {
+      "id": "aa-sales-proposal-strategist",
+      "name": "Proposal Strategist",
+      "domain": "sales",
+      "remit": "Strategic proposal architect who transforms RFPs and sales opportunities into compelling win narratives.",
+      "tags": [
+        "Sales",
+        "Agentic"
+      ],
+      "file": "src/agency/sales/sales-proposal-strategist.json",
+      "bytes": 13836
+    },
+    {
+      "id": "aa-security-ai-generated-code-auditor",
+      "name": "AI-Generated Code Security Auditor",
+      "domain": "security",
+      "remit": "Security reviewer for AI-generated and vibe-coded apps — hunts the hardcoded secrets, broken row-level security, and prompt-injection sinks that coding assistants ship by default, then drives a scan, fix, and rescan loop with honest, CWE-mapped findings.",
+      "tags": [
+        "Security",
+        "Agentic"
+      ],
+      "file": "src/agency/security/security-ai-generated-code-auditor.json",
+      "bytes": 16541
+    },
+    {
+      "id": "aa-security-appsec-engineer",
+      "name": "Application Security Engineer",
+      "domain": "security",
+      "remit": "AppSec specialist who secures the software development lifecycle through threat modeling, secure code review, SAST/DAST integration, and developer security education that makes secure code the default.",
+      "tags": [
+        "Security",
+        "Agentic"
+      ],
+      "file": "src/agency/security/security-appsec-engineer.json",
+      "bytes": 25298
+    },
+    {
+      "id": "aa-security-architect",
+      "name": "Security Architect",
+      "domain": "security",
+      "remit": "Expert security architect specializing in threat modeling, secure-by-design architecture, trust-boundary analysis, defense-in-depth, and risk-based security reviews across web, API, cloud-native, and distributed systems.",
+      "tags": [
+        "Security",
+        "Agentic"
+      ],
+      "file": "src/agency/security/security-architect.json",
+      "bytes": 17401
+    },
+    {
+      "id": "aa-security-blockchain-security-auditor",
+      "name": "Blockchain Security Auditor",
+      "domain": "security",
+      "remit": "Expert smart contract security auditor specializing in vulnerability detection, formal verification, exploit analysis, and comprehensive audit report writing for DeFi protocols and blockchain applications.",
+      "tags": [
+        "Security",
+        "Agentic"
+      ],
+      "file": "src/agency/security/security-blockchain-security-auditor.json",
+      "bytes": 20660
+    },
+    {
+      "id": "aa-security-cloud-security-architect",
+      "name": "Cloud Security Architect",
+      "domain": "security",
+      "remit": "Cloud-native security specialist designing zero trust architectures, implementing defense-in-depth across AWS, Azure, and GCP, and securing infrastructure-as-code pipelines from day one.",
+      "tags": [
+        "Security",
+        "Agentic"
+      ],
+      "file": "src/agency/security/security-cloud-security-architect.json",
+      "bytes": 22573
+    },
+    {
+      "id": "aa-security-compliance-auditor",
+      "name": "Compliance Auditor",
+      "domain": "security",
+      "remit": "Expert technical compliance auditor specializing in SOC 2, ISO 27001, HIPAA, and PCI-DSS audits — from readiness assessment through evidence collection to certification.",
+      "tags": [
+        "Security",
+        "Agentic"
+      ],
+      "file": "src/agency/security/security-compliance-auditor.json",
+      "bytes": 6847
+    },
+    {
+      "id": "aa-security-incident-responder",
+      "name": "Incident Responder",
+      "domain": "security",
+      "remit": "Digital forensics and incident response specialist who leads breach investigations, contains active threats, coordinates crisis response, and writes post-mortems that prevent recurrence.",
+      "tags": [
+        "Security",
+        "Agentic"
+      ],
+      "file": "src/agency/security/security-incident-responder.json",
+      "bytes": 23849
+    },
+    {
+      "id": "aa-security-penetration-tester",
+      "name": "Penetration Tester",
+      "domain": "security",
+      "remit": "Offensive security specialist conducting authorized penetration tests, red team operations, and vulnerability assessments across networks, web applications, and cloud infrastructure.",
+      "tags": [
+        "Security",
+        "Agentic"
+      ],
+      "file": "src/agency/security/security-penetration-tester.json",
+      "bytes": 21001
+    },
+    {
+      "id": "aa-security-secrets-credential-engineer",
+      "name": "Secrets & Credential Hygiene Engineer",
+      "domain": "security",
+      "remit": "Owns the full lifecycle of secrets and credentials — detection, prevention, vaulting, rotation, and leak response — so an application runs on short-lived, least-privilege credentials that are never in the code and are already rotated by the time a leak is found.",
+      "tags": [
+        "Security",
+        "Agentic"
+      ],
+      "file": "src/agency/security/security-secrets-credential-engineer.json",
+      "bytes": 12682
+    },
+    {
+      "id": "aa-security-senior-secops",
+      "name": "Senior SecOps Engineer",
+      "domain": "security",
+      "remit": "Defensive application security specialist who scans every code submission for secrets and sensitive data exposure before anything else, then implements or audits security controls following the organization's security standard — covering authentication, authorization, tokens, cookies, HTTP headers, CORS, rate limiting, CSP, secrets management, input validation, and secure logging.",
+      "tags": [
+        "Security",
+        "Agentic"
+      ],
+      "file": "src/agency/security/security-senior-secops.json",
+      "bytes": 29918
+    },
+    {
+      "id": "aa-security-threat-detection-engineer",
+      "name": "Threat Detection Engineer",
+      "domain": "security",
+      "remit": "Expert detection engineer specializing in SIEM rule development, MITRE ATT&CK coverage mapping, threat hunting, alert tuning, and detection-as-code pipelines for security operations teams.",
+      "tags": [
+        "Security",
+        "Agentic"
+      ],
+      "file": "src/agency/security/security-threat-detection-engineer.json",
+      "bytes": 24416
+    },
+    {
+      "id": "aa-security-threat-intelligence-analyst",
+      "name": "Threat Intelligence Analyst",
+      "domain": "security",
+      "remit": "Cyber threat intelligence specialist who tracks adversary groups, maps attack campaigns to MITRE ATT&CK, produces actionable intelligence reports, and builds detection rules that catch real threats.",
+      "tags": [
+        "Security",
+        "Agentic"
+      ],
+      "file": "src/agency/security/security-threat-intelligence-analyst.json",
+      "bytes": 27931
+    },
+    {
+      "id": "aa-macos-spatial-metal-engineer",
+      "name": "macOS Spatial/Metal Engineer",
+      "domain": "spatial-computing",
+      "remit": "Native Swift and Metal specialist building high-performance 3D rendering systems and spatial computing experiences for macOS and Vision Pro",
+      "tags": [
+        "Spatial-Computing",
+        "Agentic"
+      ],
+      "file": "src/agency/spatial-computing/macos-spatial-metal-engineer.json",
+      "bytes": 11797
+    },
+    {
+      "id": "aa-terminal-integration-specialist",
+      "name": "Terminal Integration Specialist",
+      "domain": "spatial-computing",
+      "remit": "Terminal emulation, text rendering optimization, and SwiftTerm integration for modern Swift applications",
+      "tags": [
+        "Spatial-Computing",
+        "Agentic"
+      ],
+      "file": "src/agency/spatial-computing/terminal-integration-specialist.json",
+      "bytes": 3846
+    },
+    {
+      "id": "aa-visionos-spatial-engineer",
+      "name": "visionOS Spatial Engineer",
+      "domain": "spatial-computing",
+      "remit": "Native visionOS spatial computing, SwiftUI volumetric interfaces, and Liquid Glass design implementation",
+      "tags": [
+        "Spatial-Computing",
+        "Agentic"
+      ],
+      "file": "src/agency/spatial-computing/visionos-spatial-engineer.json",
+      "bytes": 3141
+    },
+    {
+      "id": "aa-xr-cockpit-interaction-specialist",
+      "name": "XR Cockpit Interaction Specialist",
+      "domain": "spatial-computing",
+      "remit": "Specialist in designing and developing immersive cockpit-based control systems for XR environments",
+      "tags": [
+        "Spatial-Computing",
+        "Agentic"
+      ],
+      "file": "src/agency/spatial-computing/xr-cockpit-interaction-specialist.json",
+      "bytes": 1510
+    },
+    {
+      "id": "aa-xr-immersive-developer",
+      "name": "XR Immersive Developer",
+      "domain": "spatial-computing",
+      "remit": "Expert WebXR and immersive technology developer with specialization in browser-based AR/VR/XR applications",
+      "tags": [
+        "Spatial-Computing",
+        "Agentic"
+      ],
+      "file": "src/agency/spatial-computing/xr-immersive-developer.json",
+      "bytes": 1563
+    },
+    {
+      "id": "aa-xr-interface-architect",
+      "name": "XR Interface Architect",
+      "domain": "spatial-computing",
+      "remit": "Spatial interaction designer and interface strategist for immersive AR/VR/XR environments",
+      "tags": [
+        "Spatial-Computing",
+        "Agentic"
+      ],
+      "file": "src/agency/spatial-computing/xr-interface-architect.json",
+      "bytes": 1422
+    },
+    {
+      "id": "aa-accounts-payable-agent",
+      "name": "Accounts Payable Agent",
+      "domain": "specialized",
+      "remit": "Autonomous payment processing specialist that executes vendor payments, contractor invoices, and recurring bills across any payment rail — crypto, fiat, stablecoins.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/accounts-payable-agent.json",
+      "bytes": 6345
+    },
+    {
+      "id": "aa-agentic-identity-trust",
+      "name": "Agentic Identity & Trust Architect",
+      "domain": "specialized",
+      "remit": "Designs identity, authentication, and trust verification systems for autonomous AI agents operating in multi-agent environments.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/agentic-identity-trust.json",
+      "bytes": 17893
+    },
+    {
+      "id": "aa-agents-orchestrator",
+      "name": "Agents Orchestrator",
+      "domain": "specialized",
+      "remit": "Autonomous pipeline manager that orchestrates the entire development workflow.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/agents-orchestrator.json",
+      "bytes": 15321
+    },
+    {
+      "id": "aa-automation-governance-architect",
+      "name": "Automation Governance Architect",
+      "domain": "specialized",
+      "remit": "Governance-first architect for business automations (n8n-first) who audits value, risk, and maintainability before implementation.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/automation-governance-architect.json",
+      "bytes": 5520
+    },
+    {
+      "id": "aa-business-strategist",
+      "name": "Business Strategist",
+      "domain": "specialized",
+      "remit": "Senior management consulting specialist for competitive analysis, market entry strategy, business model design, growth planning, organizational strategy, and strategic decision-making — translating complex market dynamics into clear, actionable strategies that create sustainable competitive advantage",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/business-strategist.json",
+      "bytes": 23615
+    },
+    {
+      "id": "aa-change-management-consultant",
+      "name": "Change Management Consultant",
+      "domain": "specialized",
+      "remit": "Expert change management specialist using ADKAR, Kotter, and Prosci frameworks to guide organizations through technology implementations, restructuring, culture transformation, and M&A integration — managing resistance, building adoption, and ensuring changes stick long after go-live",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/change-management-consultant.json",
+      "bytes": 25468
+    },
+    {
+      "id": "aa-chief-financial-officer",
+      "name": "Chief Financial Officer",
+      "domain": "specialized",
+      "remit": "Strategic finance executive who governs capital allocation, treasury operations, financial planning, M&A finance, investor relations, and board reporting — translating financial complexity into clear decisions that drive business performance and stakeholder confidence.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/chief-financial-officer.json",
+      "bytes": 17898
+    },
+    {
+      "id": "aa-corporate-training-designer",
+      "name": "Corporate Training Designer",
+      "domain": "specialized",
+      "remit": "Expert in enterprise training system design and curriculum development — proficient in training needs analysis, instructional design methodology, blended learning program design, internal trainer development, leadership programs, and training effectiveness evaluation and continuous optimization.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/corporate-training-designer.json",
+      "bytes": 15038
+    },
+    {
+      "id": "aa-customer-service",
+      "name": "Customer Service",
+      "domain": "specialized",
+      "remit": "Friendly, professional customer service specialist for any industry — handling inquiries, complaints, account support, FAQs, and seamless escalation with warmth, efficiency, and a genuine commitment to customer satisfaction",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/customer-service.json",
+      "bytes": 18000
+    },
+    {
+      "id": "aa-customer-success-manager",
+      "name": "Customer Success Manager",
+      "domain": "specialized",
+      "remit": "Strategic customer success specialist for onboarding, health scoring, QBR facilitation, churn prevention, expansion identification, and renewal management — driving net revenue retention by turning customers into long-term partners who achieve measurable outcomes",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/customer-success-manager.json",
+      "bytes": 21848
+    },
+    {
+      "id": "aa-data-consolidation-agent",
+      "name": "Data Consolidation Agent",
+      "domain": "specialized",
+      "remit": "AI agent that consolidates extracted sales data into live reporting dashboards with territory, rep, and pipeline summaries",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/data-consolidation-agent.json",
+      "bytes": 2110
+    },
+    {
+      "id": "aa-data-privacy-officer",
+      "name": "Data Privacy Officer",
+      "domain": "specialized",
+      "remit": "Corporate data privacy specialist and DPO who builds GDPR, CCPA, and global privacy compliance programs — covering data mapping, privacy impact assessments, consent management, breach response, vendor due diligence, and regulatory engagement.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/data-privacy-officer.json",
+      "bytes": 21700
+    },
+    {
+      "id": "aa-esg-sustainability-officer",
+      "name": "ESG & Sustainability Officer",
+      "domain": "specialized",
+      "remit": "Corporate sustainability strategist and ESG reporting specialist who builds environmental, social, and governance programs, manages disclosures, drives decarbonization initiatives, and aligns business strategy with stakeholder and regulatory expectations.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/esg-sustainability-officer.json",
+      "bytes": 20111
+    },
+    {
+      "id": "aa-government-digital-presales-consultant",
+      "name": "Government Digital Presales Consultant",
+      "domain": "specialized",
+      "remit": "Presales expert for China's government digital transformation market (ToG), proficient in policy interpretation, solution design, bid document preparation, POC validation, compliance requirements (classified protection/cryptographic assessment/Xinchuang domestic IT), and stakeholder management — helping technical teams efficiently win government IT projects.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/government-digital-presales-consultant.json",
+      "bytes": 22071
+    },
+    {
+      "id": "aa-grant-writer",
+      "name": "Grant Writer",
+      "domain": "specialized",
+      "remit": "Expert grant writing specialist for nonprofits, research institutions, and social enterprises — covering prospect research, letter of inquiry writing, full proposal development, budget narratives, federal and foundation grants, and post-award reporting to maximize funding success",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/grant-writer.json",
+      "bytes": 25169
+    },
+    {
+      "id": "aa-healthcare-aging-parent-care-companion",
+      "name": "Aging Parent Care Companion",
+      "domain": "specialized",
+      "remit": "Compassionate, HIPAA-aligned care coordination and decision-support agent for family caregivers managing an aging parent's appointments, medications, care team communication, and their own caregiver wellbeing",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/healthcare-aging-parent-care-companion.json",
+      "bytes": 24160
+    },
+    {
+      "id": "aa-healthcare-customer-service",
+      "name": "Healthcare Customer Service",
+      "domain": "specialized",
+      "remit": "Empathetic healthcare customer service specialist for patient support, billing inquiries, appointment management, insurance questions, complaint resolution, and seamless escalation to clinical or administrative staff",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/healthcare-customer-service.json",
+      "bytes": 21030
+    },
+    {
+      "id": "aa-healthcare-marketing-compliance",
+      "name": "Healthcare Marketing Compliance Specialist",
+      "domain": "specialized",
+      "remit": "Expert in healthcare marketing compliance in China, proficient in the Advertising Law, Medical Advertisement Management Measures, Drug Administration Law, and related regulations — covering pharmaceuticals, medical devices, medical aesthetics, health supplements, and internet healthcare across content review, risk control, platform rule interpretation, and patient privacy protection, helping enterprises conduct effective health marketing within legal boundaries.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/healthcare-marketing-compliance.json",
+      "bytes": 34477
+    },
+    {
+      "id": "aa-hospitality-guest-services",
+      "name": "Hospitality Guest Services",
+      "domain": "specialized",
+      "remit": "Comprehensive hospitality guest services specialist for hotels, resorts, restaurants, and event venues — covering reservations, check-in/check-out, concierge services, guest complaint resolution, loyalty program management, and post-stay follow-up to deliver exceptional guest experiences that drive loyalty and revenue",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/hospitality-guest-services.json",
+      "bytes": 25576
+    },
+    {
+      "id": "aa-hr-onboarding",
+      "name": "HR Onboarding",
+      "domain": "specialized",
+      "remit": "Comprehensive HR onboarding specialist for employee orientation, documentation management, compliance tracking, benefits enrollment, culture integration, and new hire support — delivering a seamless first-day-to-first-year experience that drives retention and productivity",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/hr-onboarding.json",
+      "bytes": 22651
+    },
+    {
+      "id": "aa-identity-graph-operator",
+      "name": "Identity Graph Operator",
+      "domain": "specialized",
+      "remit": "Operates a shared identity graph that multiple AI agents resolve against.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/identity-graph-operator.json",
+      "bytes": 13671
+    },
+    {
+      "id": "aa-language-translator",
+      "name": "Language Translator",
+      "domain": "specialized",
+      "remit": "Real-time Spanish English translation specialist with cultural context, regional dialect awareness, travel phrase guidance, and tone-appropriate communication for everyday, business, and emergency situations",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/language-translator.json",
+      "bytes": 15107
+    },
+    {
+      "id": "aa-legal-billing-time-tracking",
+      "name": "Legal Billing & Time Tracking",
+      "domain": "specialized",
+      "remit": "Comprehensive legal billing and time tracking specialist for accurate time capture, invoice generation, billing narrative writing, collections management, trust account compliance, and billing analysis — maximizing revenue recovery while maintaining client relationships and ethical compliance across any firm size or billing model",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/legal-billing-time-tracking.json",
+      "bytes": 25272
+    },
+    {
+      "id": "aa-legal-client-intake",
+      "name": "Legal Client Intake",
+      "domain": "specialized",
+      "remit": "Comprehensive legal client intake specialist for qualifying prospects, collecting case information, scheduling consultations, managing conflict checks, and delivering attorney-ready intake summaries across any practice area and firm size",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/legal-client-intake.json",
+      "bytes": 23660
+    },
+    {
+      "id": "aa-legal-document-review",
+      "name": "Legal Document Review",
+      "domain": "specialized",
+      "remit": "Comprehensive legal document review specialist for contracts, litigation documents, and real estate agreements — summarizing documents, flagging risk clauses, comparing contract versions, and checking compliance across any law firm size or practice area",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/legal-document-review.json",
+      "bytes": 22520
+    },
+    {
+      "id": "aa-loan-officer-assistant",
+      "name": "Loan Officer Assistant",
+      "domain": "specialized",
+      "remit": "Comprehensive loan officer assistant for mortgage and lending professionals — covering borrower intake, pre-qualification, document collection, pipeline management, compliance tracking, rate quoting, and closing coordination across residential, commercial, and consumer lending",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/loan-officer-assistant.json",
+      "bytes": 26001
+    },
+    {
+      "id": "aa-lsp-index-engineer",
+      "name": "LSP/Index Engineer",
+      "domain": "specialized",
+      "remit": "Language Server Protocol specialist building unified code intelligence systems through LSP client orchestration and semantic indexing",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/lsp-index-engineer.json",
+      "bytes": 10857
+    },
+    {
+      "id": "aa-ma-integration-manager",
+      "name": "M&A Integration Manager",
+      "domain": "specialized",
+      "remit": "Mergers and acquisitions integration specialist who designs and executes post-merger integration programs — covering Day 1 readiness, 100-day planning, synergy tracking, cultural integration, functional workstream coordination, and transition service agreement management.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/ma-integration-manager.json",
+      "bytes": 20682
+    },
+    {
+      "id": "aa-medical-billing-coding-specialist",
+      "name": "Medical Billing & Coding Specialist",
+      "domain": "specialized",
+      "remit": "Expert medical billing and coding specialist for ICD-10-CM/PCS, CPT, and HCPCS coding, claim submission, denial management, revenue cycle optimization, compliance auditing, and payer contract analysis — maximizing clean claim rates and revenue recovery for healthcare providers of all sizes",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/medical-billing-coding-specialist.json",
+      "bytes": 23019
+    },
+    {
+      "id": "aa-operations-manager",
+      "name": "Operations Manager",
+      "domain": "specialized",
+      "remit": "Business operations specialist who applies Lean, Six Sigma, and systems thinking to process mapping, capacity planning, KPI governance, vendor management, and organizational efficiency — turning operational complexity into repeatable, measurable performance.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/operations-manager.json",
+      "bytes": 18520
+    },
+    {
+      "id": "aa-organizational-psychologist",
+      "name": "Organizational Psychologist",
+      "domain": "specialized",
+      "remit": "Applied organizational psychologist who diagnoses team dynamics, psychological safety, burnout risk, and culture health — using evidence-based frameworks to help leaders build high-performing, resilient, and psychologically safe organizations.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/organizational-psychologist.json",
+      "bytes": 21913
+    },
+    {
+      "id": "aa-personal-growth-mentor",
+      "name": "Personal Growth Mentor",
+      "domain": "specialized",
+      "remit": "Cross-domain personal development mentor for goal clarity, habit design, strategic decisions, and accountability without motivational fluff.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/personal-growth-mentor.json",
+      "bytes": 7497
+    },
+    {
+      "id": "aa-real-estate-buyer-seller",
+      "name": "Real Estate Buyer & Seller",
+      "domain": "specialized",
+      "remit": "Comprehensive real estate agent assistant for buyer representation, seller representation, listing management, offer negotiation, transaction coordination, and closing support — delivering a world-class client experience from first showing to final closing across residential and investment real estate",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/real-estate-buyer-seller.json",
+      "bytes": 27746
+    },
+    {
+      "id": "aa-recruitment-specialist",
+      "name": "Recruitment Specialist",
+      "domain": "specialized",
+      "remit": "Expert recruitment operations and talent acquisition specialist — skilled in China's major hiring platforms, talent assessment frameworks, and labor law compliance.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/recruitment-specialist.json",
+      "bytes": 28523
+    },
+    {
+      "id": "aa-report-distribution-agent",
+      "name": "Report Distribution Agent",
+      "domain": "specialized",
+      "remit": "AI agent that automates distribution of consolidated sales reports to representatives based on territorial parameters",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/report-distribution-agent.json",
+      "bytes": 2375
+    },
+    {
+      "id": "aa-resume-tailor",
+      "name": "Resume Tailor",
+      "domain": "specialized",
+      "remit": "Candidate-side resume optimization specialist who analyzes job descriptions, maps real experience to role requirements, improves ATS keyword alignment, and rewrites bullets without fabricating qualifications.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/resume-tailor.json",
+      "bytes": 10836
+    },
+    {
+      "id": "aa-retail-customer-returns",
+      "name": "Retail Customer Returns",
+      "domain": "specialized",
+      "remit": "Comprehensive retail customer returns specialist for processing returns, exchanges, and refunds across in-store, online, and omnichannel retail — handling policy enforcement, fraud prevention, customer retention, vendor returns, and returns analytics to maximize recovery while preserving customer loyalty",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/retail-customer-returns.json",
+      "bytes": 25396
+    },
+    {
+      "id": "aa-sales-data-extraction-agent",
+      "name": "Sales Data Extraction Agent",
+      "domain": "specialized",
+      "remit": "AI agent specialized in monitoring Excel files and extracting key sales metrics (MTD, YTD, Year End) for internal live reporting",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/sales-data-extraction-agent.json",
+      "bytes": 2407
+    },
+    {
+      "id": "aa-sales-outreach",
+      "name": "Sales Outreach",
+      "domain": "specialized",
+      "remit": "Consultative B2B sales outreach specialist for cold prospecting, lead follow-up, objection handling, proposal writing, and pipeline management — combining data-driven targeting with genuine relationship-building to open doors and close deals",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/sales-outreach.json",
+      "bytes": 19511
+    },
+    {
+      "id": "aa-specialized-chief-of-staff",
+      "name": "Chief of Staff",
+      "domain": "specialized",
+      "remit": "Master coordinator for founders and executives — filters noise, owns processes, enforces consistency, routes decisions, and positions outputs for impact so the boss can think clearly.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/specialized-chief-of-staff.json",
+      "bytes": 17680
+    },
+    {
+      "id": "aa-specialized-civil-engineer",
+      "name": "Civil Engineer",
+      "domain": "specialized",
+      "remit": "Expert civil and structural engineer with global standards coverage — Eurocode, DIN, ACI, AISC, ASCE, AS/NZS, CSA, GB, IS, AIJ, and more.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/specialized-civil-engineer.json",
+      "bytes": 16245
+    },
+    {
+      "id": "aa-specialized-codebase-archaeologist",
+      "name": "Codebase Archaeologist",
+      "domain": "specialized",
+      "remit": "Multi-session, multi-tool drift detection specialist who audits codebases touched by several AI coding tools (Claude, Cursor, Copilot, Windsurf, etc.) over time, finding silent logic mismatches, dead code, and doc-vs-code divergence that no single session would ever notice on its own.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/specialized-codebase-archaeologist.json",
+      "bytes": 25435
+    },
+    {
+      "id": "aa-specialized-cultural-intelligence-strategist",
+      "name": "Cultural Intelligence Strategist",
+      "domain": "specialized",
+      "remit": "CQ specialist that detects invisible exclusion, researches global context, and ensures software resonates authentically across intersectional identities.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/specialized-cultural-intelligence-strategist.json",
+      "bytes": 6259
+    },
+    {
+      "id": "aa-specialized-developer-advocate",
+      "name": "Developer Advocate",
+      "domain": "specialized",
+      "remit": "Expert developer advocate specializing in building developer communities, creating compelling technical content, optimizing developer experience (DX), and driving platform adoption through authentic engineering engagement.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/specialized-developer-advocate.json",
+      "bytes": 14234
+    },
+    {
+      "id": "aa-specialized-document-generator",
+      "name": "Document Generator",
+      "domain": "specialized",
+      "remit": "Expert document creation specialist who generates professional PDF, PPTX, DOCX, and XLSX files using code-based approaches with proper formatting, charts, and data visualization.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/specialized-document-generator.json",
+      "bytes": 2070
+    },
+    {
+      "id": "aa-specialized-fedramp-rmf-compliance",
+      "name": "FedRAMP & RMF Compliance Engineer",
+      "domain": "specialized",
+      "remit": "Expert FedRAMP and NIST Risk Management Framework compliance engineer specializing in both FedRAMP authorization pathways — the traditional Rev5 path (NIST 800-53 Rev 5 control implementation, System Security Plans, 3PAO assessment, agency authorization) and the modernized FedRAMP 20x path (Key Security Indicators, automated machine-readable validation, compliance-as-code) — plus the ATO process, continuous monitoring (ConMon), POA&M management, FIPS 199 categorization, authorization boundary diagrams, OSCAL machine-readable packages, and cloud security compliance for government and regulated industries",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/specialized-fedramp-rmf-compliance.json",
+      "bytes": 30273
+    },
+    {
+      "id": "aa-specialized-french-consulting-market",
+      "name": "French Consulting Market Navigator",
+      "domain": "specialized",
+      "remit": "Navigate the French ESN/SI freelance ecosystem — margin models, platform mechanics (Malt, collective.work), portage salarial, rate positioning, and payment cycle realities",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/specialized-french-consulting-market.json",
+      "bytes": 10546
+    },
+    {
+      "id": "aa-specialized-korean-business-navigator",
+      "name": "Korean Business Navigator",
+      "domain": "specialized",
+      "remit": "Korean business culture for foreign professionals — 품의 decision process, nunchi reading, KakaoTalk business etiquette, hierarchy navigation, and relationship-first deal mechanics",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/specialized-korean-business-navigator.json",
+      "bytes": 12926
+    },
+    {
+      "id": "aa-specialized-master-plan-architect",
+      "name": "Master Plan Architect",
+      "domain": "specialized",
+      "remit": "Master planning architect, technical educator, and ruthless plan critic who specializes in deep architectural teaching, Red Teaming / risk critique, and crafting comprehensive Implementation Plans in Markdown with ZERO code execution.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/specialized-master-plan-architect.json",
+      "bytes": 10073
+    },
+    {
+      "id": "aa-specialized-mcp-builder",
+      "name": "MCP Builder",
+      "domain": "specialized",
+      "remit": "Expert Model Context Protocol developer who designs, builds, and tests MCP servers that extend AI agent capabilities with custom tools, resources, and prompts.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/specialized-mcp-builder.json",
+      "bytes": 11650
+    },
+    {
+      "id": "aa-specialized-model-qa",
+      "name": "Model QA Specialist",
+      "domain": "specialized",
+      "remit": "Independent model QA expert who audits ML and statistical models end-to-end - from documentation review and data reconstruction to replication, calibration testing, interpretability analysis, performance monitoring, and audit-grade reporting.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/specialized-model-qa.json",
+      "bytes": 19671
+    },
+    {
+      "id": "aa-specialized-pricing-analyst",
+      "name": "Pricing Analyst",
+      "domain": "specialized",
+      "remit": "Specialized pricing analyst who develops optimal pricing models through market research, competitor analysis, cost structure evaluation, and margin optimization — turning pricing from guesswork into a data-driven competitive advantage.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/specialized-pricing-analyst.json",
+      "bytes": 12110
+    },
+    {
+      "id": "aa-specialized-salesforce-architect",
+      "name": "Salesforce Architect",
+      "domain": "specialized",
+      "remit": "Solution architecture for Salesforce platform — multi-cloud design, integration patterns, governor limits, deployment strategy, and data model governance for enterprise-scale orgs",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/specialized-salesforce-architect.json",
+      "bytes": 9162
+    },
+    {
+      "id": "aa-specialized-strategy-duel-agent",
+      "name": "Strategy Duel Agent",
+      "domain": "specialized",
+      "remit": "Conducts live strategy duels using game theory and the 36 Chinese stratagems",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/specialized-strategy-duel-agent.json",
+      "bytes": 4908
+    },
+    {
+      "id": "aa-specialized-workflow-architect",
+      "name": "Workflow Architect",
+      "domain": "specialized",
+      "remit": "Workflow design specialist who maps complete workflow trees for every system, user journey, and agent interaction — covering happy paths, all branch conditions, failure modes, recovery paths, handoff contracts, and observable states to produce build-ready specs that agents can implement against and QA can test against.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/specialized-workflow-architect.json",
+      "bytes": 25870
+    },
+    {
+      "id": "aa-study-abroad-advisor",
+      "name": "Study Abroad Advisor",
+      "domain": "specialized",
+      "remit": "Full-spectrum study abroad planning expert covering the US, UK, Canada, Australia, Europe, Hong Kong, and Singapore — proficient in undergraduate, master's, and PhD application strategy, school selection, essay coaching, profile enhancement, standardized test planning, visa preparation, and overseas life adaptation, helping Chinese students craft personalized end-to-end study abroad plans.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/study-abroad-advisor.json",
+      "bytes": 16292
+    },
+    {
+      "id": "aa-supply-chain-strategist",
+      "name": "Supply Chain Strategist",
+      "domain": "specialized",
+      "remit": "Expert supply chain management and procurement strategy specialist — skilled in supplier development, strategic sourcing, quality control, and supply chain digitalization.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/supply-chain-strategist.json",
+      "bytes": 31461
+    },
+    {
+      "id": "aa-zk-steward",
+      "name": "ZK Steward",
+      "domain": "specialized",
+      "remit": "Knowledge-base steward in the spirit of Niklas Luhmann's Zettelkasten.",
+      "tags": [
+        "Specialized",
+        "Agentic"
+      ],
+      "file": "src/agency/specialized/zk-steward.json",
+      "bytes": 10258
+    },
+    {
+      "id": "aa-EXECUTIVE-BRIEF",
+      "name": "EXECUTIVE BRIEF",
+      "domain": "strategy",
+      "remit": "",
+      "tags": [
+        "Strategy"
+      ],
+      "file": "src/agency/strategy/EXECUTIVE-BRIEF.json",
+      "bytes": 5533
+    },
+    {
+      "id": "aa-QUICKSTART",
+      "name": "QUICKSTART",
+      "domain": "strategy",
+      "remit": "",
+      "tags": [
+        "Strategy"
+      ],
+      "file": "src/agency/strategy/QUICKSTART.json",
+      "bytes": 7977
+    },
+    {
+      "id": "aa-nexus-strategy",
+      "name": "Nexus Strategy",
+      "domain": "strategy",
+      "remit": "",
+      "tags": [
+        "Strategy"
+      ],
+      "file": "src/agency/strategy/nexus-strategy.json",
+      "bytes": 51281
+    },
+    {
+      "id": "aa-support-analytics-reporter",
+      "name": "Analytics Reporter",
+      "domain": "support",
+      "remit": "Expert data analyst transforming raw data into actionable business insights.",
+      "tags": [
+        "Support",
+        "Agentic"
+      ],
+      "file": "src/agency/support/support-analytics-reporter.json",
+      "bytes": 15375
+    },
+    {
+      "id": "aa-support-executive-summary-generator",
+      "name": "Executive Summary Generator",
+      "domain": "support",
+      "remit": "Consultant-grade AI specialist trained to think and communicate like a senior strategy consultant.",
+      "tags": [
+        "Support",
+        "Agentic"
+      ],
+      "file": "src/agency/support/support-executive-summary-generator.json",
+      "bytes": 8480
+    },
+    {
+      "id": "aa-support-finance-tracker",
+      "name": "Finance Tracker",
+      "domain": "support",
+      "remit": "Expert financial analyst and controller specializing in financial planning, budget management, and business performance analysis.",
+      "tags": [
+        "Support",
+        "Agentic"
+      ],
+      "file": "src/agency/support/support-finance-tracker.json",
+      "bytes": 18809
+    },
+    {
+      "id": "aa-support-infrastructure-maintainer",
+      "name": "Infrastructure Maintainer",
+      "domain": "support",
+      "remit": "Expert infrastructure specialist focused on system reliability, performance optimization, and technical operations management.",
+      "tags": [
+        "Support",
+        "Agentic"
+      ],
+      "file": "src/agency/support/support-infrastructure-maintainer.json",
+      "bytes": 21900
+    },
+    {
+      "id": "aa-support-legal-compliance-checker",
+      "name": "Legal Compliance Checker",
+      "domain": "support",
+      "remit": "Expert legal and compliance specialist ensuring business operations, data handling, and content creation comply with relevant laws, regulations, and industry standards across multiple jurisdictions.",
+      "tags": [
+        "Support",
+        "Agentic"
+      ],
+      "file": "src/agency/support/support-legal-compliance-checker.json",
+      "bytes": 26114
+    },
+    {
+      "id": "aa-support-support-responder",
+      "name": "Support Responder",
+      "domain": "support",
+      "remit": "Expert customer support specialist delivering exceptional customer service, issue resolution, and user experience optimization.",
+      "tags": [
+        "Support",
+        "Agentic"
+      ],
+      "file": "src/agency/support/support-support-responder.json",
+      "bytes": 24222
+    },
+    {
+      "id": "aa-testing-accessibility-auditor",
+      "name": "Accessibility Auditor",
+      "domain": "testing",
+      "remit": "Expert accessibility specialist who audits interfaces against WCAG standards, tests with assistive technologies, and ensures inclusive design.",
+      "tags": [
+        "Testing",
+        "Agentic"
+      ],
+      "file": "src/agency/testing/testing-accessibility-auditor.json",
+      "bytes": 14798
+    },
+    {
+      "id": "aa-testing-api-tester",
+      "name": "API Tester",
+      "domain": "testing",
+      "remit": "Expert API testing specialist focused on comprehensive API validation, performance testing, and quality assurance across all systems and third-party integrations",
+      "tags": [
+        "Testing",
+        "Agentic"
+      ],
+      "file": "src/agency/testing/testing-api-tester.json",
+      "bytes": 12213
+    },
+    {
+      "id": "aa-testing-evidence-collector",
+      "name": "Evidence Collector",
+      "domain": "testing",
+      "remit": "Screenshot-obsessed, fantasy-allergic QA specialist - Default to finding 3-5 issues, requires visual proof for everything",
+      "tags": [
+        "Testing",
+        "Agentic"
+      ],
+      "file": "src/agency/testing/testing-evidence-collector.json",
+      "bytes": 8005
+    },
+    {
+      "id": "aa-testing-performance-benchmarker",
+      "name": "Performance Benchmarker",
+      "domain": "testing",
+      "remit": "Expert performance testing and optimization specialist focused on measuring, analyzing, and improving system performance across all applications and infrastructure",
+      "tags": [
+        "Testing",
+        "Agentic"
+      ],
+      "file": "src/agency/testing/testing-performance-benchmarker.json",
+      "bytes": 11842
+    },
+    {
+      "id": "aa-testing-reality-checker",
+      "name": "Reality Checker",
+      "domain": "testing",
+      "remit": "Stops fantasy approvals, evidence-based certification - Default to \"NEEDS WORK\", requires overwhelming proof for production readiness",
+      "tags": [
+        "Testing",
+        "Agentic"
+      ],
+      "file": "src/agency/testing/testing-reality-checker.json",
+      "bytes": 10485
+    },
+    {
+      "id": "aa-testing-test-automation-engineer",
+      "name": "Test Automation Engineer",
+      "domain": "testing",
+      "remit": "Expert end-to-end test automation engineer for Playwright and Cypress — resilient selectors, flake elimination, isolated test data, CI parallelization, and trace-driven failure debugging.",
+      "tags": [
+        "Testing",
+        "Agentic"
+      ],
+      "file": "src/agency/testing/testing-test-automation-engineer.json",
+      "bytes": 11792
+    },
+    {
+      "id": "aa-testing-test-results-analyzer",
+      "name": "Test Results Analyzer",
+      "domain": "testing",
+      "remit": "Expert test analysis specialist focused on comprehensive test result evaluation, quality metrics analysis, and actionable insight generation from testing activities",
+      "tags": [
+        "Testing",
+        "Agentic"
+      ],
+      "file": "src/agency/testing/testing-test-results-analyzer.json",
+      "bytes": 14221
+    },
+    {
+      "id": "aa-testing-tool-evaluator",
+      "name": "Tool Evaluator",
+      "domain": "testing",
+      "remit": "Expert technology assessment specialist focused on evaluating, testing, and recommending tools, software, and platforms for business use and productivity optimization",
+      "tags": [
+        "Testing",
+        "Agentic"
+      ],
+      "file": "src/agency/testing/testing-tool-evaluator.json",
+      "bytes": 17154
+    },
+    {
+      "id": "aa-testing-workflow-optimizer",
+      "name": "Workflow Optimizer",
+      "domain": "testing",
+      "remit": "Expert process improvement specialist focused on analyzing, optimizing, and automating workflows across all business functions for maximum productivity and efficiency",
+      "tags": [
+        "Testing",
+        "Agentic"
+      ],
+      "file": "src/agency/testing/testing-workflow-optimizer.json",
+      "bytes": 21685
     }
   ]
 }

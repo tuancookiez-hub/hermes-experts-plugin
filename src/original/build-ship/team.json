@@ -1,0 +1,8 @@
+{
+  "id": "build-ship",
+  "name": "Build Ship",
+  "focus": "taking an idea to a working, verifiable artifact plus the notes needed to hand it over",
+  "tone": "emerald",
+  "remit": "Taking an idea to a working, verifiable artifact plus the notes needed to hand it over. An original team authored for this plugin — every contract is written for Hermes, with no upstream source.",
+  "startNote": "Describe the thing you want built and how you will know it works."
+}
