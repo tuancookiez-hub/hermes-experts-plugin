@@ -1738,24 +1738,11 @@ function ActiveExpertChip() {
   })
 }
 
-// A palette shortcut straight into a lead run, for every ported team.
-function teamCommands() {
-  return TEAMS.filter((team) => team.ported).map((team) => ({
-    id: 'shortcut-' + team.id,
-    area: PALETTE_AREA,
-    data: {
-      id: 'experts.run.' + team.id,
-      label: 'Experts: Start a ' + team.name + ' run',
-      keywords: [team.name.toLowerCase(), 'team', 'run'].concat(team.id.split('-')),
-      run: () => {
-        runLead(team.id, INTRO_TASK).then(
-          () => notify(team.name + ' team started', 'info'),
-          (err) => notifyError('Could not start: ' + (err && err.message ? err.message : 'unknown'))
-        )
-      },
-    },
-  }))
-}
+// The 55 per-team palette shortcuts were dropped — the Experts nav pane
+// (SIDEBAR_NAV_AREA) is the single entry point. Same for the
+// `experts.open` and `experts.ping` commands; the latter was a build/load
+// diagnostic that is no longer needed now that the chip in the status bar
+// shows build provenance.
 
 export default {
   id: ID, // must match the folder name
@@ -1788,31 +1775,7 @@ export default {
           order: 130,
           render: () => jsx(ActiveExpertChip, {}),
         },
-
-        // Reachable even when the rail is collapsed: Cmd/Ctrl+K.
-        {
-          id: 'open',
-          area: PALETTE_AREA,
-          data: {
-            id: 'experts.open',
-            label: 'Open Experts',
-            keywords: ['expert', 'experts', 'team', 'teams', 'research'],
-            run: () => go(PAGE),
-          },
-        },
-
-        // Diagnostic step 2: a toast with no rendering involved at all.
-        {
-          id: 'ping',
-          area: PALETTE_AREA,
-          data: {
-            id: 'experts.ping',
-            label: 'Experts: Ping (prove the plugin is loaded)',
-            keywords: ['experts', 'ping', 'diagnostic', 'debug', 'loaded'],
-            run: () => notify('Experts plugin is loaded and registered - build ' + BUILD, 'info'),
-          },
-        },
-      ].concat(teamCommands())
+      ]
     )
   },
 }
