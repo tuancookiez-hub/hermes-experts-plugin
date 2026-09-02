@@ -91,6 +91,31 @@ function checkPayload(payload, label, team) {
   console.log('  sample expert  :', team.members[0].name, '-> solo persona', sampleP.length, 'chars')
 }
 
+// Part C uses a STRUCTURAL-only check. The deep content assertions (capability
+// map + anti-slop standard) run on the local files in Part A (static) and Part B
+// (local HTTP), which are the source of truth. Part C only proves the payload is
+// actually LIVE on GitHub (existence + structural validity) — the real "did you
+// push?" guard. We avoid content-asserting the raw URL because raw.githubusercontent
+// is CDN-cached and lags seconds-to-minutes behind a push, which would make the
+// harness flaky without catching anything Part A/B miss.
+function checkRemote(payload, label, team) {
+  const teamId = team.id
+  const memberIds = team.members.map((m) => m.id)
+  console.log('\n--- ' + label + ' (' + team.name + ' / ' + teamId + ') ---')
+  assert(payload && payload.id === teamId, label + ': payload.id matches team')
+  assert(payload.leadHead && payload.leadHead.length > 100, label + ': leadHead present')
+  assert(payload.leadTail && payload.leadTail.length > 100, label + ': leadTail present')
+  const keys = Object.keys(payload.members || {})
+  assert(keys.length === memberIds.length, label + ': payload has ' + memberIds.length + ' contracts (got ' + keys.length + ')')
+  let missing = 0
+  for (const m of team.members) {
+    if (!(payload.members && payload.members[m.id])) missing++
+  }
+  assert(missing === 0, label + ': every registry member resolves to a contract (' + missing + ' missing)')
+  console.log('  members        :', keys.length)
+  console.log('  missing        :', missing)
+}
+
 let totalAgents = 0
 for (const t of registry) totalAgents += t.members.length
 
@@ -136,7 +161,7 @@ for (const team of registry) {
     if (res.ok) {
       remoteOk++
       const payload = await res.json()
-      checkPayload(payload, 'Part C — GitHub raw teams/' + team.id + '.json', team)
+      checkRemote(payload, 'Part C — GitHub raw teams/' + team.id + '.json', team)
     } else {
       fail.push('Part C: GitHub raw HTTP ' + res.status + ' for teams/' + team.id + '.json (did you push?)')
     }
@@ -155,4 +180,4 @@ if (fail.length) {
   fail.forEach((f) => console.error('  - ' + f))
   process.exit(1)
 }
-console.log('  all ' + totalAgents + ' agents across ' + registry.length + ' teams download + render correctly (static + live)')
+console.log('  all ' + totalAgents + ' agents across ' + registry.length + ' teams download + render correctly (static + local HTTP + GitHub raw reachable)')
