@@ -1,0 +1,89 @@
+{
+  "_comment": "Curated sub-team composition for domains that are too flat as a single 36-agent blob. Each entry under a domain emits ONE teams/<id>.json payload + one registry entry. Member ids must match the `id` field inside src/agency/<domain>/*.json. Tones are limited to the 6 the UI supports: indigo, emerald, sky, rose, amber, violet.",
+  "marketing": [
+    {
+      "id": "search-aeo",
+      "name": "Search & AEO",
+      "focus": "organic and AI-engine discoverability — technical SEO, AEO/GEO citations, app-store optimization, and Baidu",
+      "tone": "sky",
+      "members": [
+        "aa-marketing-seo-specialist",
+        "aa-marketing-aeo-foundations",
+        "aa-marketing-ai-citation-strategist",
+        "aa-marketing-agentic-search-optimizer",
+        "aa-marketing-app-store-optimizer",
+        "aa-marketing-baidu-seo-specialist"
+      ]
+    },
+    {
+      "id": "western-social",
+      "name": "Western Social & Community",
+      "focus": "English-language social platforms and community growth — LinkedIn, X/Twitter, Instagram, Reddit, and TikTok",
+      "tone": "indigo",
+      "members": [
+        "aa-marketing-linkedin-content-creator",
+        "aa-marketing-social-media-strategist",
+        "aa-marketing-twitter-engager",
+        "aa-marketing-x-twitter-intelligence-analyst",
+        "aa-marketing-instagram-curator",
+        "aa-marketing-reddit-community-builder",
+        "aa-marketing-tiktok-strategist",
+        "aa-marketing-carousel-growth-engine"
+      ]
+    },
+    {
+      "id": "china-social",
+      "name": "China Social & Content",
+      "focus": "China's social ecosystem — WeChat, Weibo, Xiaohongshu, Zhihu, Bilibili, Douyin, and Kuaishou",
+      "tone": "rose",
+      "members": [
+        "aa-marketing-wechat-official-account",
+        "aa-marketing-weibo-strategist",
+        "aa-marketing-xiaohongshu-specialist",
+        "aa-marketing-zhihu-strategist",
+        "aa-marketing-bilibili-content-strategist",
+        "aa-marketing-douyin-strategist",
+        "aa-marketing-kuaishou-strategist",
+        "aa-marketing-multi-platform-publisher"
+      ]
+    },
+    {
+      "id": "media-production",
+      "name": "Media & Live Production",
+      "focus": "video and audio production, editing, optimization, and livestream commerce",
+      "tone": "violet",
+      "members": [
+        "aa-marketing-short-video-editing-coach",
+        "aa-marketing-video-optimization-specialist",
+        "aa-marketing-livestream-commerce-coach",
+        "aa-marketing-podcast-strategist",
+        "aa-marketing-global-podcast-strategist"
+      ]
+    },
+    {
+      "id": "ecommerce",
+      "name": "E-Commerce & China Retail",
+      "focus": "China and cross-border commerce — Taobao/Tmall/PDD/JD, Amazon/Shopee/Temu, private domain, and go-to-market",
+      "tone": "amber",
+      "members": [
+        "aa-marketing-china-ecommerce-operator",
+        "aa-marketing-cross-border-ecommerce",
+        "aa-marketing-private-domain-operator",
+        "aa-marketing-china-market-localization-strategist"
+      ]
+    },
+    {
+      "id": "content-comms",
+      "name": "Content, Email & PR",
+      "focus": "editorial content, CRM email, public relations, growth engineering, and thought-leadership books",
+      "tone": "emerald",
+      "members": [
+        "aa-marketing-content-creator",
+        "aa-marketing-email-strategist",
+        "aa-marketing-pr-communications-manager",
+        "aa-marketing-growth-hacker",
+        "aa-marketing-book-co-author"
+      ]
+    }
+  ]
+}

@@ -4,29 +4,30 @@
  *   node verify-pipeline.mjs
  *
  * Two proofs that the plugin's "Install / Summon fetches teams/<id>.json and
- * builds a persona" path actually works for all 36 marketing agents:
+ * builds a persona" path actually works for EVERY curated team (all agents):
  *
- *   Part A  static  — read teams/marketing.json + src/registry.json, assert
- *                     every registry member resolves to a non-empty contract,
- *                     and that the persona builders yield real prose.
- *   Part B  live    — serve the repo over HTTP and fetch the payload the SAME
+ *   Part A  static  — read every teams/<id>.json + src/registry.json, assert
+ *                     each registry member resolves to a non-empty contract and
+ *                     that the persona builders yield real prose.
+ *   Part B  live    — serve the repo over HTTP and fetch each payload the SAME
  *                     way the plugin does (fetch -> .json()), then re-run the
- *                     same assertions on the downloaded bytes. This exercises
- *                     the real network path, not just a file read.
+ *                     assertions on the downloaded bytes. Exercises the real
+ *                     network path, not just a file read.
+ *
+ *   Part C  remote  — best-effort: hit the real GitHub raw URL for each team.
+ *                     Skipped (warned) when the sandbox has no network; fails
+ *                     when GitHub IS reachable but returns non-200 (catches a
+ *                     stale/forgotten push).
  */
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import http from 'node:http'
-import { bareSpecifiers } from './src/bare-specifiers.mjs'
 
 const here = path.dirname(fileURLToPath(import.meta.url))
 const registry = JSON.parse(fs.readFileSync(path.join(here, 'src', 'registry.json'), 'utf8'))
 const soloTail = (fs.readFileSync(path.join(here, 'src', 'shared', 'solo-tail.md'), 'utf8').trim() + '\n\n' +
   fs.readFileSync(path.join(here, 'src', 'shared', 'capabilities.md'), 'utf8').trim()).trim()
-const team = registry[0]
-const teamId = team.id
-const memberIds = team.members.map((m) => m.id)
 
 const fail = []
 const assert = (cond, msg) => { if (!cond) fail.push(msg) }
@@ -45,8 +46,10 @@ function leadPersona(leadHead, leadTail, members) {
   return [leadHead, '', '## MEMBER CONTRACTS', '', contracts, '', leadTail].join('\n')
 }
 
-function checkPayload(payload, label) {
-  console.log('\n--- ' + label + ' ---')
+function checkPayload(payload, label, team) {
+  const teamId = team.id
+  const memberIds = team.members.map((m) => m.id)
+  console.log('\n--- ' + label + ' (' + team.name + ' / ' + teamId + ') ---')
   assert(payload && payload.id === teamId, label + ': payload.id matches team')
   assert(payload.leadHead && payload.leadHead.length > 100, label + ': leadHead present')
   assert(payload.leadTail && payload.leadTail.length > 100, label + ': leadTail present')
@@ -78,12 +81,17 @@ function checkPayload(payload, label) {
   console.log('  members        :', keys.length)
   console.log('  missing/short  :', missing + ' / ' + short)
   console.log('  lead persona   :', lp.length, 'chars')
-  console.log('  sample expert  :', team.members[0].name, '-> solo persona', soloPersona({ name: team.members[0].name, role: team.members[0].role, contract: payload.members[team.members[0].id] }, team.name).length, 'chars')
+  console.log('  sample expert  :', team.members[0].name, '-> solo persona', sampleP.length, 'chars')
 }
 
+let totalAgents = 0
+for (const t of registry) totalAgents += t.members.length
+
 // ══ Part A: static files ══
-const staticPayload = JSON.parse(fs.readFileSync(path.join(here, 'teams', teamId + '.json'), 'utf8'))
-checkPayload(staticPayload, 'Part A — static teams/' + teamId + '.json')
+for (const team of registry) {
+  const p = JSON.parse(fs.readFileSync(path.join(here, 'teams', team.id + '.json'), 'utf8'))
+  checkPayload(p, 'Part A — static teams/' + team.id + '.json', team)
+}
 
 // ══ Part B: live HTTP fetch (same mechanism the plugin uses) ══
 const server = http.createServer((req, res) => {
@@ -95,23 +103,44 @@ const server = http.createServer((req, res) => {
   res.writeHead(200, { 'content-type': 'application/json' })
   res.end(fs.readFileSync(file))
 })
-
 await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve))
 const port = server.address().port
 const base = 'http://127.0.0.1:' + port + '/'
-process.env['experts:github-base-override'] = base // not read by node, just documents intent
 
-let livePayload = null
-try {
-  const res = await fetch(base + 'teams/' + teamId + '.json')
-  assert(res.ok, 'Part B: HTTP ' + res.status + ' for teams/' + teamId + '.json')
-  livePayload = await res.json()
-} catch (e) {
-  fail.push('Part B: fetch failed: ' + e.message)
+for (const team of registry) {
+  try {
+    const res = await fetch(base + 'teams/' + team.id + '.json')
+    assert(res.ok, 'Part B: HTTP ' + res.status + ' for teams/' + team.id + '.json')
+    if (res.ok) checkPayload(await res.json(), 'Part B — fetched over HTTP (' + team.id + ')', team)
+  } catch (e) {
+    fail.push('Part B: fetch failed for ' + team.id + ': ' + e.message)
+  }
 }
-if (livePayload) checkPayload(livePayload, 'Part B — fetched over HTTP')
-
 server.close()
+
+// ══ Part C: real GitHub raw URL (best-effort) ══
+const GITHUB_BASE = 'https://raw.githubusercontent.com/tuancookiez-hub/hermes-experts-plugin/main/teams/'
+let remoteTried = 0
+let remoteOk = 0
+for (const team of registry) {
+  try {
+    const res = await fetch(GITHUB_BASE + team.id + '.json')
+    remoteTried++
+    if (res.ok) {
+      remoteOk++
+      const payload = await res.json()
+      checkPayload(payload, 'Part C — GitHub raw teams/' + team.id + '.json', team)
+    } else {
+      fail.push('Part C: GitHub raw HTTP ' + res.status + ' for teams/' + team.id + '.json (did you push?)')
+    }
+  } catch (e) {
+    console.log('\n  (Part C skipped for ' + team.id + ' — no network to GitHub: ' + e.message + ')')
+  }
+}
+
+console.log('\nregistry: ' + registry.length + ' teams / ' + totalAgents + ' agents')
+if (remoteTried) console.log('GitHub raw: ' + remoteOk + '/' + remoteTried + ' reachable + valid')
+else console.log('GitHub raw: skipped (no network in this environment)')
 
 console.log('')
 if (fail.length) {
@@ -119,4 +148,4 @@ if (fail.length) {
   fail.forEach((f) => console.error('  - ' + f))
   process.exit(1)
 }
-console.log('  all ' + memberIds.length + ' ' + team.name + ' agents download + render correctly (static + live)')
+console.log('  all ' + totalAgents + ' agents across ' + registry.length + ' teams download + render correctly (static + live)')
