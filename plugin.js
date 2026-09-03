@@ -131,9 +131,9 @@ const INTRO_TASK =
 // ═══════════════════════════════════════════════════════════════════════════
 
 const DATA = {
-  "build": "2026-09-02.1-shell",
+  "build": "2026-09-03.1-shell",
   "source": {
-    "updated": "2026-09-02",
+    "updated": "2026-09-03",
     "note": "agency-agents (MIT) catalog — download-on-demand"
   },
   "soloTail": "You are working directly with the user on a single task, not being\ncoordinated by a team lead, so:\n- Do the work described above and hand the result to the user.\n- If the task needs something outside your specialism, say so plainly\n  rather than attempting it badly.\n- If you cannot meet the standard above (for example, not enough sources),\n  say so explicitly instead of quietly lowering it.\n\n## Tool reality in this environment (Hermes)\n\nThis expert runs inside **Hermes Desktop**. Its toolset is smaller and more\ngeneric than the Claude-Code environment many persona sources assume. Read this\nbefore promising anything. Where a contract above names a Claude-Code tool,\nuse the Hermes equivalent in the table.\n\n### Available — use these\n\n| Need | Hermes tool | Notes |\n|------|------------|-------|\n| Search the web | web search toolset | real and usable |\n| Fetch a URL | web fetch toolset | real and usable |\n| Read a file | file Read toolset | use absolute paths |\n| Write a file | file Write toolset | use absolute paths |\n| Edit a file | file Edit toolset | use absolute paths |\n| Run a command / script | terminal toolset | bash, and ffmpeg / ffprobe / whisper |\n| Generate an image | image_generate (toolset image_gen) | gated on a configured provider |\n| Generate a video | video_generate (toolset video_gen) | gated on a configured provider |\n| Inspect an image | vision_analyze (toolset vision) | **images only — not video** |\n| Delegate a subtask | spawn a sub-session | no literal Task tool; break work into steps or a child session |\n\n### Not available — do not reference, do not promise\n\n- **Publishing APIs:** Douyin / Xiaohongshu / Kuaishou / Bilibili / WeChat /\n  TikTok / YouTube / Meta / Threads. Restate as a manual step the user performs;\n  deliver the asset plus a publish checklist, never \"published\".\n- **WorkBuddy / Tencent model IDs** (`hy-video-1.5`, `yt-video-2.0`,\n  `yt-video-humanactor`, `yt-video-fx`, `hy-image-v3.0`, `hy-image-lite`,\n  `youtu-vita`, `ImageGen`, `ImageEdit`) — these names do not exist here. Use\n  image_generate / video_generate instead.\n- **Voice cloning and lip sync** — do not exist.\n- **Cloud editing systems** (Track / EditParam) and **3D generation** — do not exist.\n- **MCP skills and other cloud-only integrations** — check before assuming.\n\n### Rule\n\nCheck a tool's availability before relying on it. If it is unavailable, deliver\nthe spec and a checklist and say that is what it is — never claim an asset was\nproduced when it was not.\n\n# Anti-Slop Contract Standard — applies to EVERY expert\n\nYou follow this one contract on every task. It is not optional, and it overrides\nany looser habit in your source training. Its job is to stop competent-looking\nslop: confident numbers you never verified, promises you cannot keep, and output\nin the wrong language.\n\n## INPUT you require before producing anything\n\nDo not start the real work until you have, or have explicitly declined to guess:\n\n- **Goal + where the result is used** — if missing, ask; never assume the intent.\n- **Audience** — who consumes it and what they already know.\n- **Deliverable form** — doc / script / plan / post / spec / spreadsheet.\n- **Hard constraints** — length, tone, banned claims, must-include elements.\n- **Source material already available** — or you fetch it; never invent it.\n- **Deliverable language** — always the language the user wrote in.\n\nIf a required INPUT is missing, state what you need and STOP. Guessing the goal\nand shipping is the most common failure mode — do not do it.\n\n## OUTPUT you must always return\n\nEvery deliverable ends with, in order:\n\n1. **The deliverable itself**, in the user's language.\n2. **One-line rationale** — why this, not the obvious alternative.\n3. **Assumptions made** — explicit, few, stated as assumptions.\n4. **What you could NOT do and why** — tool unavailable, data missing, scope cut.\n5. **The single next action** you recommend.\n\nNever return only \"here you go\" with no rationale or no caveats. A deliverable with\nno stated limits is a liability, not a help.\n\n## Hard constraints (non-negotiable)\n\n- **No fabricated evidence.** No stats, citations, URLs, case studies, screenshots,\n  or \"studies show\" you did not verify. Need a number → fetch it or label it\n  `unverified`.\n- **No tool you do not actually have.** If a capability is unavailable here, deliver\n  the spec and name the gap (see the tool-reality map). Never imply a publish,\n  render, or post that cannot run in this environment.\n- **No unkeepable promises.** No \"viral\", \"#1\", \"guaranteed reach\", or platform\n  behaviour you cannot control. Replace with a method + an honest range.\n- **No off-language output.** Answer in the language the user used. A Chinese prompt\n  gets a Chinese answer.\n- **No silent patching.** If a sub-step failed, say so. Do not paper over it.\n\n## Named failure traps (catch these in yourself)\n\n- **Hallucinated metric** — you wrote a figure you never verified. Fix: cite the\n  source or mark it `unverified`.\n- **Over-promise** — you claimed a result you cannot guarantee. Fix: swap the claim\n  for a method + honest range.\n- **Off-language** — you replied in English to a non-English prompt. Fix: redo\n  in-language.\n- **Hidden tool gap** — you described a publish/render/edit as if it ran here.\n  Fix: deliver the spec and state it is not executable in this environment.\n- **Assumption as fact** — you said \"best practice is…\" with no basis. Fix: attribute\n  it or scope it as your judgement.\n- **Missing INPUT** — you produced output from a guess. Fix: ask, do not ship.\n\nIf you catch yourself in any trap, correct it before the user sees the message.",
@@ -9190,36 +9190,103 @@ function importCache(text) {
   }
 }
 
-// ── Selection pub-sub ──────────────────────────────────────────────────────
+// ── Selection pub-sub (per-session) ───────────────────────────────────────
 // The composer pill and the status-bar indicator both need to know which
 // expert the user has currently picked. They are two separate React trees
 // (the page in the workspace pane, the chip in the status bar) with no
 // shared state, so a tiny module-level pub-sub is the cleanest way to
 // bridge them.
 //
-//   publishSelection(expert)  — set/clear; called by the page on Summon
-//                               and on × clear
-//   readSelection()           — current value (or null)
-//   subscribeSelection(fn)     — called on every change; returns an
-//                               unsubscribe
+//   publishSelection(expert, sessionId)
+//                              — bind an expert to a session (the one
+//                                Summon just created). sessionId is the
+//                                stored_id from session.create; that is
+//                                what `host.state.focusedStoredSessionId`
+//                                reports, so it survives reloads.
+//   clearSelection(sessionId)  — drop the binding for a session.
+//   readSelection()            — expert for the FOCUSED session, or null.
+//                                Reads host.state.focusedStoredSessionId
+//                                so the chip is correct after a session
+//                                switch, not just after a Summon.
+//   subscribeSelection(fn)     — called whenever either the focused
+//                                session or a session's expert changes;
+//                                returns an unsubscribe.
+//
+// Per-session rather than a single global slot, so switching to another
+// bot's chat does not leak an unrelated expert into the status bar —
+// the same invariant the core context-usage chip already honors.
 //
 // Listeners are best-effort: a throwing listener does not block the others
 // or the state update.
 
-let _activeSelection = null
+const _expertBySession = new Map()
 const _selectionSubs = new Set()
-function publishSelection(expert) {
-  _activeSelection = expert
+let _cachedFocusId = null
+
+function _focusedStoredId() {
+  try {
+    const state = host && host.state
+    if (state && state.focusedStoredSessionId && typeof state.focusedStoredSessionId.get === 'function') {
+      return state.focusedStoredSessionId.get() || null
+    }
+  } catch (e) { /* host not available yet */ }
+  return null
+}
+
+function _notify(expert) {
   for (const fn of _selectionSubs) {
     try { fn(expert) } catch (e) { /* best-effort: don't let a listener crash the publish */ }
   }
 }
-function readSelection() {
-  return _activeSelection
+
+function _recomputeAndNotify() {
+  const next = _focusedStoredId()
+  if (next === _cachedFocusId) {
+    // Same focus; only emit if there is an actual change (e.g. clear).
+    const sel = next ? _expertBySession.get(next) || null : null
+    _notify(sel)
+  } else {
+    _cachedFocusId = next
+    _notify(next ? _expertBySession.get(next) || null : null)
+  }
 }
+
+function publishSelection(expert, sessionId) {
+  if (!sessionId) return
+  if (expert) _expertBySession.set(sessionId, expert)
+  else _expertBySession.delete(sessionId)
+  _recomputeAndNotify()
+}
+
+function clearSelection(sessionId) {
+  if (!sessionId) return
+  _expertBySession.delete(sessionId)
+  _recomputeAndNotify()
+}
+
+function readSelection() {
+  const id = _focusedStoredId()
+  return id ? (_expertBySession.get(id) || null) : null
+}
+
 function subscribeSelection(fn) {
   _selectionSubs.add(fn)
-  return function unsubscribe() { _selectionSubs.delete(fn) }
+
+  // Re-emit whenever the FOCUSED session changes too — without this the
+  // chip would only refresh on a Summon, never on a session switch.
+  let unsubFocus = () => {}
+  try {
+    const state = host && host.state
+    if (state && state.focusedStoredSessionId && typeof state.focusedStoredSessionId.listen === 'function') {
+      state.focusedStoredSessionId.listen(() => _recomputeAndNotify())
+    }
+  } catch (e) { /* host missing on the render harness; ignore */ }
+
+  const wrappedUnsubscribe = function () {
+    _selectionSubs.delete(fn)
+    unsubFocus()
+  }
+  return wrappedUnsubscribe
 }
 
 // ── Personas ──────────────────────────────────────────────────────────────
@@ -9238,6 +9305,15 @@ function findAgent(agentId) {
 
 function teamById(teamId) {
   return TEAMS.filter((entry) => entry.id === teamId)[0] || null
+}
+
+/** Letter/tone pair the chip renders next to the expert name. Mirrors the
+ *  shape used by the registry items (`avatar.letter` + `avatar.tone`). */
+function avatarFor(entity) {
+  if (!entity) return { letter: '?', tone: 'amber' }
+  const tone = (entity.avatar && entity.avatar.tone) || 'amber'
+  const letter = (entity.avatar && entity.avatar.letter) || ((entity.name || '?').charAt(0))
+  return { letter: String(letter).toUpperCase(), tone: String(tone) }
 }
 
 function soloPersona(member, team) {
@@ -9495,7 +9571,11 @@ function runSolo(agentId, task) {
       title: member.name + ' · ' + member.role,
       persona: soloPersona(member, team),
       task: task,
-    })
+    }).then((sessionId) => ({
+      sessionId: sessionId,
+      storedId: sessionId,
+      expert: { id: member.id, name: member.name + ' — ' + member.role, team: team.id, kind: 'solo', avatar: avatarFor(member) }
+    }))
   })
 }
 
@@ -9509,7 +9589,11 @@ function runLead(teamId, task) {
       title: team.name + ' · ' + team.lead.name,
       persona: leadPersona(t),
       task: task,
-    })
+    }).then((sessionId) => ({
+      sessionId: sessionId,
+      storedId: sessionId,
+      expert: { id: t.lead.id, name: t.lead.name + ' — ' + t.lead.role, team: t.id, kind: 'lead', avatar: avatarFor(t.lead) }
+    }))
   })
 }
 
@@ -10343,11 +10427,16 @@ function ExpertsPage() {
     setBusy(true)
     const label = selected.name
     try {
+      let result
       if (selected.run && selected.run.kind === 'lead') {
-        await runLead(selected.run.team, body)
+        result = await runLead(selected.run.team, body)
       } else {
-        await runSolo(selected.run.agent, body)
+        result = await runSolo(selected.run.agent, body)
       }
+      // Bind this expert to the session that was just opened. publishSelection
+      // reads host.state.focusedStoredSessionId internally so this lands on
+      // the right session even if the user is not looking at it yet.
+      if (result) publishSelection(result.expert, result.storedId)
       notify('Started ' + label, 'info')
       setText('')
       bumpInstalled() // a not-yet-installed team is now cached after the on-the-fly download

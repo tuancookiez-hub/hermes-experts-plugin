@@ -345,36 +345,103 @@ function importCache(text) {
   }
 }
 
-// ── Selection pub-sub ──────────────────────────────────────────────────────
+// ── Selection pub-sub (per-session) ───────────────────────────────────────
 // The composer pill and the status-bar indicator both need to know which
 // expert the user has currently picked. They are two separate React trees
 // (the page in the workspace pane, the chip in the status bar) with no
 // shared state, so a tiny module-level pub-sub is the cleanest way to
 // bridge them.
 //
-//   publishSelection(expert)  — set/clear; called by the page on Summon
-//                               and on × clear
-//   readSelection()           — current value (or null)
-//   subscribeSelection(fn)     — called on every change; returns an
-//                               unsubscribe
+//   publishSelection(expert, sessionId)
+//                              — bind an expert to a session (the one
+//                                Summon just created). sessionId is the
+//                                stored_id from session.create; that is
+//                                what `host.state.focusedStoredSessionId`
+//                                reports, so it survives reloads.
+//   clearSelection(sessionId)  — drop the binding for a session.
+//   readSelection()            — expert for the FOCUSED session, or null.
+//                                Reads host.state.focusedStoredSessionId
+//                                so the chip is correct after a session
+//                                switch, not just after a Summon.
+//   subscribeSelection(fn)     — called whenever either the focused
+//                                session or a session's expert changes;
+//                                returns an unsubscribe.
+//
+// Per-session rather than a single global slot, so switching to another
+// bot's chat does not leak an unrelated expert into the status bar —
+// the same invariant the core context-usage chip already honors.
 //
 // Listeners are best-effort: a throwing listener does not block the others
 // or the state update.
 
-let _activeSelection = null
+const _expertBySession = new Map()
 const _selectionSubs = new Set()
-function publishSelection(expert) {
-  _activeSelection = expert
+let _cachedFocusId = null
+
+function _focusedStoredId() {
+  try {
+    const state = host && host.state
+    if (state && state.focusedStoredSessionId && typeof state.focusedStoredSessionId.get === 'function') {
+      return state.focusedStoredSessionId.get() || null
+    }
+  } catch (e) { /* host not available yet */ }
+  return null
+}
+
+function _notify(expert) {
   for (const fn of _selectionSubs) {
     try { fn(expert) } catch (e) { /* best-effort: don't let a listener crash the publish */ }
   }
 }
-function readSelection() {
-  return _activeSelection
+
+function _recomputeAndNotify() {
+  const next = _focusedStoredId()
+  if (next === _cachedFocusId) {
+    // Same focus; only emit if there is an actual change (e.g. clear).
+    const sel = next ? _expertBySession.get(next) || null : null
+    _notify(sel)
+  } else {
+    _cachedFocusId = next
+    _notify(next ? _expertBySession.get(next) || null : null)
+  }
 }
+
+function publishSelection(expert, sessionId) {
+  if (!sessionId) return
+  if (expert) _expertBySession.set(sessionId, expert)
+  else _expertBySession.delete(sessionId)
+  _recomputeAndNotify()
+}
+
+function clearSelection(sessionId) {
+  if (!sessionId) return
+  _expertBySession.delete(sessionId)
+  _recomputeAndNotify()
+}
+
+function readSelection() {
+  const id = _focusedStoredId()
+  return id ? (_expertBySession.get(id) || null) : null
+}
+
 function subscribeSelection(fn) {
   _selectionSubs.add(fn)
-  return function unsubscribe() { _selectionSubs.delete(fn) }
+
+  // Re-emit whenever the FOCUSED session changes too — without this the
+  // chip would only refresh on a Summon, never on a session switch.
+  let unsubFocus = () => {}
+  try {
+    const state = host && host.state
+    if (state && state.focusedStoredSessionId && typeof state.focusedStoredSessionId.listen === 'function') {
+      state.focusedStoredSessionId.listen(() => _recomputeAndNotify())
+    }
+  } catch (e) { /* host missing on the render harness; ignore */ }
+
+  const wrappedUnsubscribe = function () {
+    _selectionSubs.delete(fn)
+    unsubFocus()
+  }
+  return wrappedUnsubscribe
 }
 
 // ── Personas ──────────────────────────────────────────────────────────────
@@ -393,6 +460,15 @@ function findAgent(agentId) {
 
 function teamById(teamId) {
   return TEAMS.filter((entry) => entry.id === teamId)[0] || null
+}
+
+/** Letter/tone pair the chip renders next to the expert name. Mirrors the
+ *  shape used by the registry items (`avatar.letter` + `avatar.tone`). */
+function avatarFor(entity) {
+  if (!entity) return { letter: '?', tone: 'amber' }
+  const tone = (entity.avatar && entity.avatar.tone) || 'amber'
+  const letter = (entity.avatar && entity.avatar.letter) || ((entity.name || '?').charAt(0))
+  return { letter: String(letter).toUpperCase(), tone: String(tone) }
 }
 
 function soloPersona(member, team) {
@@ -650,7 +726,11 @@ function runSolo(agentId, task) {
       title: member.name + ' · ' + member.role,
       persona: soloPersona(member, team),
       task: task,
-    })
+    }).then((sessionId) => ({
+      sessionId: sessionId,
+      storedId: sessionId,
+      expert: { id: member.id, name: member.name + ' — ' + member.role, team: team.id, kind: 'solo', avatar: avatarFor(member) }
+    }))
   })
 }
 
@@ -664,7 +744,11 @@ function runLead(teamId, task) {
       title: team.name + ' · ' + team.lead.name,
       persona: leadPersona(t),
       task: task,
-    })
+    }).then((sessionId) => ({
+      sessionId: sessionId,
+      storedId: sessionId,
+      expert: { id: t.lead.id, name: t.lead.name + ' — ' + t.lead.role, team: t.id, kind: 'lead', avatar: avatarFor(t.lead) }
+    }))
   })
 }
 
@@ -1498,11 +1582,16 @@ function ExpertsPage() {
     setBusy(true)
     const label = selected.name
     try {
+      let result
       if (selected.run && selected.run.kind === 'lead') {
-        await runLead(selected.run.team, body)
+        result = await runLead(selected.run.team, body)
       } else {
-        await runSolo(selected.run.agent, body)
+        result = await runSolo(selected.run.agent, body)
       }
+      // Bind this expert to the session that was just opened. publishSelection
+      // reads host.state.focusedStoredSessionId internally so this lands on
+      // the right session even if the user is not looking at it yet.
+      if (result) publishSelection(result.expert, result.storedId)
       notify('Started ' + label, 'info')
       setText('')
       bumpInstalled() // a not-yet-installed team is now cached after the on-the-fly download
