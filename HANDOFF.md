@@ -114,6 +114,14 @@ Files in the repo (`C:/Users/tuanc/hermes-experts-plugin`):
 - `src/release.json` — **single source of truth for the payload ref** (`ref:"v1.0.0"`).
   build-shell.mjs bakes it into `DATA.github.ref`/`DATA.base`; verify-pipeline.mjs Part C
   proves the SAME immutable tag over the network.
+- **Per-session expert tracking (active selection pub-sub):** `_expertBySession` is
+  a `Map<storedSessionId, expert>` rather than a single global slot. `publishSelection(expert, sessionId)`
+  writes the binding; `readSelection()` returns the expert for the FOCUSED session
+  (reads `host.state.focusedStoredSessionId`). `subscribeSelection` also wires
+  `focusedStoredSessionId.listen` so the chip re-renders on session switches,
+  not just on Summon. `runLead`/`runSolo` return `{ sessionId, storedId, expert }`
+  so the `send()` function wires the binding atomically. The chip now correctly
+  disappears when the user switches to a non-expert session.
 - `src/shared/domain-lead-head.md` + `domain-lead-tail.md` — generic synthetic
   domain-orchestrator lead (WorkBuddy-style iron rules / parameter card /
   routing / quality bar). `emit-teams.mjs` fills `{DOMAIN}`/`{COUNT}`. Used by the
